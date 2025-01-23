@@ -8,21 +8,16 @@ https://ksizorcode.github.io/2025DesWeb/
 ## Este es el markdown readme.md del curso de Dicampus (2025)
 En este respositorio de Github iremos volcando algunos de los ejercicios y prácticas llevadas a cabo durante el curso
 
-### Organigrama del curso
-
-- Módulo Formativo 1
- - Unidad Formativa 1
- - Unidad Formativa 2
-
-- Módulo Formativo 2
- - Unidad Formativa 2.1
- - Unidad Formativa 2.1
-
 
  ## Recursos
  ### Programación:
 - [codepen](https://codepen.io/ksizorcode)
 - [picsumphotos](https://picsum.photos/)
+
+## Visual Studio Code (VS Code)
+- [Snippets Generator](https://snippet-generator.app/)
+- [Visual Studio Code Online](https://vscode.dev/)
+- [Atajos de teclado](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 ### Ui UX Inspiración / Referencias:
 - [Dribbble](htttps://dribbbble.com)
