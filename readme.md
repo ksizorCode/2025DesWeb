@@ -76,3 +76,11 @@ https://web.dev/learn/javascript
 - [Popular Codepen 2020](https://codepen.io/2020/popular/pens)
 - [Popular Codepen 2019](https://codepen.io/2019/popular/pens)
 - [Popular Codepen 2018](https://codepen.io/2019/popular/pens)
+
+
+
+
+
+
+### Accesibilidad y Posicionamiento Web
+- [Esquema marketing online](https://www.figma.com/board/UPl9oiZTN5HWpwcP4ROq0g/Esquema-Marketing-Online-2022?node-id=0-1&t=fcOQUXoaNlZ7TIFM-1)
