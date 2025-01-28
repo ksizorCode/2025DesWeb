@@ -88,4 +88,6 @@ https://web.dev/learn/javascript
 
 
 ### CSS Lea Verouo
+#### Videos de Lea Veour:
  - [Video CSS Secrets con Lea Verou](https://www.youtube.com/watch?v=2627LPygack)
+ - [Libro](http://repo.darmajaya.ac.id/4018/1/CSS%20Secrets_%20Better%20Solutions%20to%20Everyday%20Web%20Design%20Problems%20%28%20PDFDrive%20%29.pdf)
