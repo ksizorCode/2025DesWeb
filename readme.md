@@ -84,3 +84,8 @@ https://web.dev/learn/javascript
 
 ### Accesibilidad y Posicionamiento Web
 - [Esquema marketing online](https://www.figma.com/board/UPl9oiZTN5HWpwcP4ROq0g/Esquema-Marketing-Online-2022?node-id=0-1&t=fcOQUXoaNlZ7TIFM-1)
+
+
+
+### CSS Lea Verouo
+ - [Video CSS Secrets con Lea Verou](https://www.youtube.com/watch?v=2627LPygack)
