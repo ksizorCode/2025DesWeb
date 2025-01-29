@@ -3,7 +3,7 @@
     "short_name": "BaileVetusta",
     "description": "Escuela de baile en Oviedo especializada en Bachata, Salsa y Flamenco.",
     "start_url": "/index.html",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#FF6347",
     "theme_color": "#FF6347",
     "lang": "es",
