@@ -13,6 +13,8 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
  ### Programación:
 - [codepen](https://codepen.io/ksizorcode)
 - [picsumphotos](https://picsum.photos/)
+- [W3Schools](https://w3schools.com)
+- [MCLIbre](https://www.mclibre.org/)
 
 ## Visual Studio Code (VS Code)
 - [Snippets Generator](https://snippet-generator.app/)
