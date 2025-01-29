@@ -28,32 +28,126 @@
    <link rel="icon" type="image/png" sizes="32x32" href="img/faviconos/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="96x96" href="img/faviconos/favicon-96x96.png">
    <link rel="icon" type="image/png" sizes="16x16" href="img/faviconos/favicon-16x16.png">
-   <link rel="manifest" href="img/faviconos/manifest.json">
+   <link rel="manifest" href="manifest.json">
    <meta name="msapplication-TileColor" content="purple">
    <meta name="msapplication-TileImage" content="img/faviconos/ms-icon-144x144.png">
    <meta name="theme-color" content="purple">
 
    <!-- texto para redes sociales y whatsapp -->
-   <meta property="og:title" content="Clases de Baile Vetusta" />
-   <meta property="og:description" content="Flamenco, Salsa y Bachata en Oviedo">
-   <meta property="og:image" content="img/favicon/favicon.png">
-
-      
-   <meta name="description" content="Flamenco, Salsa y Bachata en Oviedo">
-   <meta name="author" content="miguelesteban.net">
+   <meta name="description" content="¡Ven a redescubrir tu ritmo interior! Vetusta es la academia de baile en Oviedo especializada en salsa, bachata y flamenco. Clases para todos los niveles, desde principiantes hasta avanzados. ¡Conviértete en parte de nuestra comunidad de baile!">
+   <meta name="author" content="Academia Vetusta">
    <meta name="language" content="spanish">
-    <meta name="distribution" content="global">
+   <meta name="distribution" content="global">
+     
+   <meta name="keywords" content="baile, salsa, bachata, ritmo, Oviedo, academia de baile, clases de baile, flamenco, danza, escuela de baile">
+   <meta name="robots" content="index, follow">
    
+   <!-- Open Graph Meta Tags -->
+   <meta property="og:title" content="Academia de Baile Vetusta - Salsa, Bachata y Flamenco en Oviedo">
+   <meta property="og:description" content="¡Ven a redescubrir tu ritmo interior! Aprende salsa, bachata y flamenco en Vetusta, la mejor academia de baile de Oviedo. Clases para todos los niveles y una experiencia única de danza.">
+   <meta property="og:image" content="https://www.vetustabaile.com/imagen-representativa.jpg">
+   <meta property="og:url" content="https://www.vetustabaile.com">
+   <meta property="og:type" content="website">
+   <meta property="og:locale" content="es_ES">
+   <meta property="og:site_name" content="Academia Vetusta">
    
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:site" content="@VetustaAcademia">
+   <meta name="twitter:title" content="Academia de Baile Vetusta - Salsa, Bachata y Flamenco en Oviedo">
+   <meta name="twitter:description" content="¡Ven a redescubrir tu ritmo interior! Aprende salsa, bachata y flamenco en la academia Vetusta en Oviedo. Clases para todos los niveles y una comunidad vibrante de baile.">
+   <meta name="twitter:image" content="https://www.vetustabaile.com/imagen-representativa.jpg">
    
-   
+
+<!-- App de Apple iOS-->
+ <!-- Habilitar Web App Capable -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- Color de fondo para la pantalla de inicio -->
+<meta name="apple-mobile-web-app-status-bar-style" content="purple">
+
+
+<!-- Nombre de la app que aparece debajo del icono -->
+<meta name="apple-mobile-web-app-title" content="Baile Vetusta">
+
    <style>
+    :root{
+        --colorFondo:white;
+        --colorTexto:black;
+        --colorEnlace:rgb(0, 38, 255);
+        --ff:sans-serif;
+    }
+
+     
+
+
+        @media (prefers-color-scheme: dark) {
+            :root{
+        --colorFondo:black;
+        --colorTexto:white;
+        --colorEnlace:yellow;
+        --ff:monospace;
+    }
+
+        }
+
+
+
+
+
         body{
+            background:var(--colorFondo);
+            color:var(--colorTexto);
+
             max-width:450px;
             margin:0 auto;
             padding: 20px;
-            font-family: sans-serif;
+            font-family: var(--ff);
         }
+a{
+    color:var(--colorEnlace);
+    display: block;
+}
+
+p{ transition: 1s;}
+
+p:hover{
+    scale:1.2;
+}
+
+
+@keyframes anim1{
+    0% {rotate:40deg;}
+    100% {rotate:-30deg;}
+}
+
+h1, a{
+    animation: anim1 2s infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important; /* Desactivar las transiciones */
+                animation: none !important;  /* Desactivar las animaciones */
+            }
+
+            p:hover{
+                scale:1 !important;
+            }
+
+        }
+
+
+body main h1{
+    color:red;
+}
+
+
+h1{
+    color:green;
+}
+
+
     </style>
 </head>
 <body>
