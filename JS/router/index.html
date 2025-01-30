@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vanilla JS Router</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
     <nav>
-        <a href="/" onclick="route()">Home</a>
-        <a href="/about" onclick="route()">About</a>
-        <a href="/lorem" onclick="route()">Lorem</a>
+        <a href="/" data-link>Inicio</a>
+        <a href="/about" data-link>Sobre Nosotros</a>
+        <a href="/contact" data-link>Contacto</a>
     </nav>
-</header>
 
-    <h1>Inicio</h1>
+    <div id="app" class="fade"></div>
 
-    <script src="router.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
