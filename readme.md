@@ -13,8 +13,21 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
  ### Programación:
 - [codepen](https://codepen.io/ksizorcode)
 - [picsumphotos](https://picsum.photos/)
+
+#### HTML
 - [W3Schools](https://w3schools.com)
 - [MCLIbre](https://www.mclibre.org/)
+
+#### CSS
+-[Nuevo CSS](https://www.youtube.com/watch?v=Bfdqyws-Ixw)
+
+##### CSS Frameworks
+- [Bootstrap](https://getbootstrap.com/)
+- [Bulma](https://bulma.io/)
+- [Foundation](https://get.foundation/)
+- [Materializer](https://materializecss.com/)
+- [Tailwind](https://tailwindcss.com/)
+- [ionic](https://ionicframework.com/)
 
 ## Visual Studio Code (VS Code)
 - [Snippets Generator](https://snippet-generator.app/)
