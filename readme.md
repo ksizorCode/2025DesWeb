@@ -21,13 +21,22 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 #### CSS
 -[Nuevo CSS](https://www.youtube.com/watch?v=Bfdqyws-Ixw)
 
-##### CSS Frameworks
+##### CSS Frameworks - bibliotecas de estilos CSS
+Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no más bien una biblioteca de estilos, ya que son un conjunto de reglas CSS predefinidas para facilitar el desarrollo de interfaces responsivas. Componentes reutilizables como botones, formularios, tarjetas y menús de navegación. Un sistema de grillas que facilita la distribución del contenido. Utilidades CSS para gestionar espaciados, colores, tipografías y más.
+
 - [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
 - [Foundation](https://get.foundation/)
 - [Materializer](https://materializecss.com/)
 - [Tailwind](https://tailwindcss.com/)
 - [ionic](https://ionicframework.com/)
+- [Semantic UI](https://semantic-ui.com/)
+- [UI Kit](https://getuikit.com/)
+- [Skeleton](http://getskeleton.com/)
+- [Pure.css](https://pure-css.github.io/)
+
+##### CSS Recursos Frikis
+- [Dibujo con CSS](https://gra.dient.art/)
 
 ## Visual Studio Code (VS Code)
 - [Snippets Generator](https://snippet-generator.app/)
