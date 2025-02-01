@@ -10,18 +10,18 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 
 
  ## Recursos
- ### Programación:
+ ### 👨‍💻Programación:
 - [codepen](https://codepen.io/ksizorcode)
 - [picsumphotos](https://picsum.photos/)
 
 ### Emmet Atajos
 - [🧶Emmet](https://docs.emmet.io/cheat-sheet/)
 
-#### HTML
+#### 📝HTML
 - [W3Schools](https://w3schools.com)
 - [MCLIbre](https://www.mclibre.org/)
 
-#### CSS
+#### 🎨CSS
 -[Nuevo CSS](https://www.youtube.com/watch?v=Bfdqyws-Ixw)
 
 ##### CSS Frameworks - bibliotecas de estilos CSS
@@ -46,7 +46,7 @@ Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no m
 - [Visual Studio Code Online](https://vscode.dev/)
 - [Atajos de teclado](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
-### Ui UX Inspiración / Referencias:
+### 📱Ui UX Inspiración / Referencias:
 - [Dribbble](htttps://dribbbble.com)
 - [Behacne](htttps://behance.com)
 - [Sketc App Resources](https://sketchappsources.com/)
@@ -128,7 +128,7 @@ https://web.dev/learn/javascript
 - [Guias y manuales en PDF ](https://books.goalkicker.com)
 
 
- # PHP
+ # 🐘PHP
 
 Contenido:
 - [Libreta PHP](https://codesandbox.io/p/live/ec29d918-4e9a-4823-975b-f6a3ce892a5e)
