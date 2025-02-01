@@ -16,6 +16,9 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 - [Codesandbox](https://codesandbox.io)
 - vscode.dec
 
+- [JS Bin](https://jsbin.com/)
+- [JSfiddle](https://jsfiddle.net/)
+
 ### Emmet Atajos
 - [🧶Emmet](https://docs.emmet.io/cheat-sheet/)
 
