@@ -124,6 +124,9 @@ https://web.dev/learn/javascript
 
 
 
+## PDFs libros y manuales
+- [Guias y manuales en PDF ](https://books.goalkicker.com)
+
 
  # PHP
 
