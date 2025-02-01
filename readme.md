@@ -13,6 +13,8 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
  ### 👨‍💻Programación:
 - [codepen](https://codepen.io/ksizorcode)
 - [picsumphotos](https://picsum.photos/)
+- [Codesandbox](https://codesandbox.io)
+- vscode.dec
 
 ### Emmet Atajos
 - [🧶Emmet](https://docs.emmet.io/cheat-sheet/)
