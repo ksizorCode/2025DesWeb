@@ -139,3 +139,8 @@ https://web.dev/learn/javascript
 
 Contenido:
 - [Libreta PHP](https://codesandbox.io/p/live/ec29d918-4e9a-4823-975b-f6a3ce892a5e)
+
+
+# 🧻 JSON
+- [Tabler Converter JSON -> CSV -> SQL -> Table](https://tableconvert.com/csv-to-json#google_vignette)
+- [CSV to JSON ](https://csvjson.com/)
