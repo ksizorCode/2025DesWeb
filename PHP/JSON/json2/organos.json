@@ -1,0 +1,49 @@
+{
+    "organos": [
+        {
+            "nombre": "Corazón",
+            "funcion": "Bombear sangre a todo el cuerpo",
+            "ubicacion": "Tórax",
+            "sistema": "Circulatorio"
+        },
+        {
+            "nombre": "Pulmones",
+            "funcion": "Intercambiar oxígeno y dióxido de carbono",
+            "ubicacion": "Tórax",
+            "sistema": "Respiratorio"
+        },
+        {
+            "nombre": "Hígado",
+            "funcion": "Desintoxicar la sangre y producir bilis",
+            "ubicacion": "Abdomen",
+            "sistema": "Digestivo"
+        },
+        {
+            "nombre": "Riñones",
+            "funcion": "Filtrar la sangre y producir orina",
+            "ubicacion": "Abdomen",
+            "sistema": "Urinario"
+        },
+        {
+            "nombre": "Cerebro",
+            "funcion": "Controlar las funciones del cuerpo y procesar información",
+            "ubicacion": "Cabeza",
+            "sistema": "Nervioso"
+        },
+        {
+            "nombre": "6547698798789asdfasdf"
+        },
+        {
+            "nombre": null
+        },
+        {
+            "nombre": "Estómago"
+        },
+        {
+            "nombre": "Estómago"
+        },
+        {
+            "nombre": "Estómago"
+        }
+    ]
+}
