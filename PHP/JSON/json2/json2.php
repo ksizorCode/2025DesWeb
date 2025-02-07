@@ -32,7 +32,6 @@ if(isset( $_GET['nombreOrgano'])){
     
 <h1>Abrir y guardar JSON</h1>
 
-
 <form action="json2.php" method="get">
     <label>
         Nombre órgano:
@@ -41,11 +40,7 @@ if(isset( $_GET['nombreOrgano'])){
     <input type="submit" value="Añadir Organo al JSON">
 </form>
 
-
-
 <?php
-
-
 
 // DEBUG 
 $debug=0;
