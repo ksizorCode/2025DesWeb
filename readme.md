@@ -144,3 +144,7 @@ Contenido:
 # 🧻 JSON
 - [Tabler Converter JSON -> CSV -> SQL -> Table](https://tableconvert.com/csv-to-json#google_vignette)
 - [CSV to JSON ](https://csvjson.com/)
+
+
+# 🍕 FIGMA JAM compartido
+- [Ver Esquema en Figma Jam](https://www.figma.com/board/L2MXWrvZijz7BhNK9lWS47/Esquema-JS?node-id=0-1&t=wWra2Wj2pIibcCB3-1)
