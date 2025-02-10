@@ -45,6 +45,9 @@ Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no m
 - [Skeleton](http://getskeleton.com/)
 - [Pure.css](https://pure-css.github.io/)
 
+
+- [💍Composiciones con Tailwinds](https://preline.co/index.html)
+- [🍄Plantillas](https://htmlrev.com/”
 ##### CSS Recursos Frikis
 - [Dibujo con CSS](https://gra.dient.art/)
 
