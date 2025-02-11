@@ -47,7 +47,7 @@ Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no m
 
 
 - [💍Composiciones con Tailwinds](https://preline.co/index.html)
-- [🍄Plantillas](https://htmlrev.com/”
+- [🍄Plantillas](https://htmlrev.com/)
 ##### CSS Recursos Frikis
 - [Dibujo con CSS](https://gra.dient.art/)
 
