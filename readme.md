@@ -45,8 +45,19 @@ Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no m
 - [Skeleton](http://getskeleton.com/)
 - [Pure.css](https://pure-css.github.io/)
 
+
+- [💍Composiciones con Tailwinds](https://preline.co/index.html)
+- [🍄Plantillas](https://htmlrev.com/)
+
 ##### CSS Recursos Frikis
 - [Dibujo con CSS](https://gra.dient.art/)
+
+#### Genedadores de Layout y Estructuras
+- [Massonry Layaut](https://w3bits.com/tools/masonry-generator/)
+- [Massonry 2](https://masonry.desandro.com/)
+- [Isotope](https://isotope.metafizzy.co/)
+- [Packery](https://packery.metafizzy.co/)
+- [Bricks.js](http://callmecavs.com/bricks.js/)
 
 ## Visual Studio Code (VS Code)
 - [Snippets Generator](https://snippet-generator.app/)
