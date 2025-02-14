@@ -1,0 +1,37 @@
+{
+    "expo": [
+      {
+        "titulo": "Los Secretos del Renacimiento",
+        "descripcion": "Una colección única de obras maestras del siglo XV y XVI. Sumérgete en el arte de la época dorada.",
+        "fecha": "Del 10 de marzo al 30 de junio de 2025",
+        "img": "https://concepto.de/wp-content/uploads/2020/05/boticelli-nacimiento-de-venus.jpg",
+        "alt": "La Venus de Botticelli",
+        "link": "#"
+      },
+      {
+        "titulo": "Impresionismo: Luz y Color",
+        "descripcion": "Un recorrido por las pinturas más icónicas del movimiento impresionista, con piezas de Monet y Renoir.",
+        "fecha": "Del 5 de abril al 15 de agosto de 2025",
+        "img": "https://www.muyinteresante.com/wp-content/uploads/sites/5/2022/10/14/63492d7257d7d.jpeg",
+        "alt": "Obra impresionista",
+        "link": "#"
+      },
+      {
+        "titulo": "El Arte Barroco y su Dramaticidad",
+        "descripcion": "Explora la intensidad y teatralidad del Barroco con obras de Caravaggio, Rubens y Velázquez.",
+        "fecha": "Del 20 de mayo al 10 de septiembre de 2025",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLleRDQvakx1rRPeEdZqHQfLy_1e_vW941Yw&s",
+        "alt": "Judith decapitando a Holofernes",
+        "link": "#"
+      },
+      {
+        "titulo": "Conferencia: Dramabarroco. Dr. Ceñera.",
+        "descripcion": "Conferencia de la mano de el Licenciao en Historia del Arte, Dr. Ceñera. En esta conferencia se abordará el tema del Churrigueresco con Canva",
+        "fecha": "Del 14 de Febrero de 2025",
+        "img": "assets/img/daniCeñera.webp",
+        "alt": "Daniel Ceñera",
+        "link": "#"
+      }
+    ]
+  }
+  

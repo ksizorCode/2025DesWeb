@@ -3,74 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Directorio</title>
     <style>
-        html{
-            background: tan;
-        }
-        body{
-            max-width:560px;
-            padding: 20px;
-            margin: 20px auto;
-            font-family: sans-serif;
-            background: white;
-            border-radius: 20px;
-        }
+       body {
+    font-family: sans-serif;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+}
 
-        a{
-            text-decoration: none;
-            color:grey
-        }
+a {
+    text-decoration: none;
+    color: black;
+}
 
-        h2{
-            color:tan;
-        }
+ul.galeria {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul.galeria li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    flex: 1 1 100px;
+    transition: .3s ease-in-out;
+    outline: solid 2px white;
+    outline-offset:-4px;
+}
+
+ul.galeria li a:hover {
+    outline: solid 2px black;
+    outline-offset:0px;
+}
+
+/* Colores según el tipo */
+.nombreArchivo { 
+    background: lightgreen; 
+}
+
+.carpeta { 
+    background-color: orange; 
+}
+
+.destacar { 
+    background-color: red; 
+}
+ 
     </style>
 </head>
 <body>
 
-<h1>Índice de archivos PHP</h1>
-<h2>What we do in the clasroom</h2>
-
-<ul>
-    <li><a href="dia3">Dia 3</a></li>
-    <li><a href="alumnado/alumnos.php">Bucles de Alumnos</a></li>
-</ul>
-
-
-
+<h1>Los Ejercicios de Clase de Miguel</h1>
+<a href="index.php">🏠 Volver al Inicio</a>
+<ul class="galeria">
 <?php
 
-$datos=[
-    // Nombre ,     Ruta ,              Visible/activo/inactivo
-    ['Dia 1',       '/dia1',                    1   ],
-    ['Variables',   '/var/mivariable.php',      1   ],
-    ['JSON',       '/JSON',                     1   ],
-    ['cargarJSON',  '/JSON/cargarJSON.php',     1   ],
-    ['GET',         '/GET',                     1   ],
-    ['Dia 5',       '/dia5',                    1   ],
-    ['Dia 6',       '/dia6',                    1   ],
-    ['Dia 7',       '/dia7',                    0   ]
-];
+$directorio = "./";
 
-foreach($datos as $valor){
-    if($valor[2]){
-    echo '<li>Carpeta: <a href="'.$valor[1].'">'.$valor[0].'</a></li>';
+// Verifica si hay GET en la URL y es un directorio
+if (isset($_GET['dir'])) {
+    $dirLimpio = basename($_GET['dir']); // Evita ataques
+    $directorio .= $dirLimpio . '/';
+}
+
+if (!is_dir($directorio)) {
+    echo "<p>Error: El directorio está vacío.</p>";
+}
+else {
+    $arrayDirectorio = scandir($directorio);
+    $arrayNoQuiero = ['.', '..']; // Elementos a no mostrar
+
+    $arrayDirectorio = array_diff($arrayDirectorio, $arrayNoQuiero); // Filtra elementos
+
+    foreach ($arrayDirectorio as $nombreArchivo) {
+        $clase = '';
+        
+        if ($nombreArchivo == 'index.php' || $nombreArchivo == 'index.html') {
+            $clase = "destacar ";
+        }
+        if ($nombreArchivo == 'style.css') {
+            $clase = "estilo ";
+        }
+        
+        $rutaCompleta = $directorio . $nombreArchivo;
+        if (is_file($rutaCompleta)) {
+            $icono = "📄";
+            $clase .= "nombreArchivo";
+            $link = $rutaCompleta;
+        } else {
+            $icono = "📂";
+            $clase .= "carpeta";
+            $link = "index.php?dir=" . urlencode($rutaCompleta);
+        }
+        echo "<li><a href='$link' class='$clase'>$icono $nombreArchivo</a></li>";
     }
 }
 
-/*
-//Con el bucle for
-for($i=0; $i<count($datos); $i++){
-    echo '<li><a href="'.$datos[$i][1].'">'.$datos[$i][0].'</a></li>';
-}
-*/
-
-
-
 ?>
-
-
-    
+</ul>
 </body>
 </html>
