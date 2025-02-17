@@ -1,3 +1,5 @@
+<div class='aviso'>Has accedido al panel de Administración</div>
+
 <form action="admin.php" method="post" class="form-obras">
     <label for="obra">Nombre de la obra:</label>
     <input type="text" name="obra" id="obra" placeholder="Nombre de la obra" required> <br>

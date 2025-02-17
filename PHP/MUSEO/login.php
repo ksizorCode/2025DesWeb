@@ -2,11 +2,10 @@
 <? include 'bloques/header.php'; ?>
 
 
-
 <?
 //Definimos Usuario y Contraseña que han de ser introducidos por el usuario
-$usuarioCorrecto  = 'richard';
-$passwordCorrecto = 'mate';
+// $usuarioCorrecto  = 'richard';
+// $passwordCorrecto = 'mate';
 
 //Creamos un array con los datos del usuario
 $datosUsuario = [
@@ -24,8 +23,7 @@ $datosUsuario = [
     ]
 ];
 
-
-
+$logueado=false;
 
 //Comprobamos si el formulario ha sido rellenado (via POST)
 if(isset($_POST['usuario']) && isset($_POST['password'])){
@@ -37,14 +35,20 @@ if(isset($_POST['usuario']) && isset($_POST['password'])){
    _debug("El usuario es: $usuarioIngresado <br>");
    _debug("El password es: $passwordIngresado <br>");
 
-   //Comprobamos si el usuario y la contraseñas son correctos
-   if($usuarioCorrecto==$usuarioIngresado && $passwordCorrecto==$passwordIngresado){
-        //header ('Location: contacto.php');
-        include 'bloques/admin.php';
+//Comprobación de credenciales
+foreach($datosUsuario as $valor){
+    if($valor['user']==$usuarioIngresado && $valor['pass']==$passwordIngresado){
+        $logueado=true;
+    }
+}
 
-   }
+//Si el usuario ha introducido correctamente los datos, mostramos un mensaje de bienvenida
+    if($logueado){
+    //header ('Location: contacto.php');
+    include 'bloques/admin.php';
+    }
    else{
-        echo "<div>Las credenciales son incorrectas <a href='login.php'>Volver a intentar</a></div>";
+        echo "<div class='aviso'>Las credenciales son incorrectas <a href='login.php'>Volver a intentar</a></div>";
    }
 }
 

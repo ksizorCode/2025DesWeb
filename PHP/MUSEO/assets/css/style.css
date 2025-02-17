@@ -306,3 +306,19 @@ input[type="submit"]:hover {
     font-family: monospace;
     margin:20px 30px;
 }
+
+
+.aviso {
+    padding: 20px;
+    outline: solid 1px var(--c1);
+    border-radius: 50px;
+    color: var(--c1);
+    text-align: center;
+    max-width:450px;
+    margin: 10px auto;
+}
+
+.aviso a{
+    text-decoration: underline;
+    font-weight: bold;
+}
