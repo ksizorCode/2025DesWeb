@@ -3,9 +3,7 @@
 
 
 <?
-// sesion_start(); ya está abierta en el config.php
-$_SESSION['logueado']=true; // testeo temporal!!!!!!! ⚠⚠⚠⚠
-$_SESSION['usuario']="Richar"; // testeo temporal!!!!!!! ⚠⚠⚠⚠
+session_start();    // Iniciamos Sesión
 
 //Este array contiene los datos de acceso del 
 $datosUsuario = [
@@ -22,10 +20,6 @@ $datosUsuario = [
     'role' => 'usuario'
     ]
 ];
-
-
-
-
 //SI EL USUARIO HA RELLENADO EL FORMULARIO DE USUARIO/CONTRASEÑA haces todo esto:
         //Comprobamos si el formulario ha sido rellenado (via POST)
         if(isset($_POST['usuario']) && isset($_POST['password'])){
@@ -41,6 +35,8 @@ $datosUsuario = [
             foreach($datosUsuario as $valor){
                 if($valor['user']==$usuarioIngresado && $valor['pass']==$passwordIngresado){
                     $logueado=true;
+                    $_SESSION['logueado']=true;
+                    $_SESSION['usuario']=$_POST['usuario'];
                     break; //Salimos de el bucle
                 }
             }

@@ -13,8 +13,18 @@
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="expo.php">Exposiciones</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="logout.php">CerrarSesión</a></li>
             <li><a href="contacto.php">Contacto</a></li>
+
+<?php
+    if($logueado){
+        echo '<li class="login"><a href="login.php"><img src="assets/img/avatar.png"><span>'.$_SESSION["usuario"].'</span></a></li>';
+        }
+    else{
+        echo '<li><a href="login.php">Login</a></li>';
+    }
+?>
+
         </ul> 
     </nav>
 </header>

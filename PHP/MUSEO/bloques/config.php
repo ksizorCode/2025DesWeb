@@ -47,4 +47,24 @@ function cargarJSON($archivo){
 
 
 
+
+// INICIO DE SESIÓN -------
+
+session_start();   // Iniciamos comprobación de sesión
+
+if(isset($_SESSION['logueado'])){
+    echo "<p>✅ Bienvenido; Has iniciado sesión.</p>";
+    $logueado=true;
+}
+else{
+    echo "<p>⛔ No has iniciado sesión.</p>";
+    $logueado=false;
+}
+
+//echo $saludo = isset($_SESION['logueado']) ? "tas dentro" : "tas fuera";
+
+
+
+
+
 ?>

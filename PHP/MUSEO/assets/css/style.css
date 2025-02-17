@@ -58,9 +58,17 @@ header {
 
 nav ul{
    padding-left: 10;
-    list-style: none;
-    display:flex;
-    gap:20px;
+   list-style: none;
+   display:flex;
+   gap:20px;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+}
+
+
+header nav ul li:last-child{
+    margin-left:auto;
 }
 
 ul.obras {
@@ -110,8 +118,9 @@ ul.obras li img {
     scale:1.1;
     transition:.4s;
 
-    mask-image:linear-gradient(black 80%, transparent)}
+    mask-image:linear-gradient(black 80%, transparent);
 }
+
 
 
     ul.obras li .autor{
@@ -321,4 +330,23 @@ input[type="submit"]:hover {
 .aviso a{
     text-decoration: underline;
     font-weight: bold;
+}
+
+
+.login img {
+    width: 23px;
+    border-radius: 50%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    border: solid var(--c1) 3px;
+    box-shadow: 0 3px 8px #2f2f2f;
+}
+
+.login a{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
