@@ -18,7 +18,7 @@
 
 <?php
     if($logueado){
-        echo '<li class="login"><a href="login.php"><img src="assets/img/avatar.png"><span>'.$_SESSION["usuario"].'</span></a></li>';
+        echo '<li class="login"><a href="admin.php"><img src="assets/img/avatar.png"></a></li>';
         }
     else{
         echo '<li><a href="login.php">Login</a></li>';

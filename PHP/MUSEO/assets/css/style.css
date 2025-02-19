@@ -187,6 +187,7 @@ textarea{
 }
 
 /* Boton enviar*/
+.btn,
 input[type="submit"] {
     background: #007bff;
     color: white;
@@ -195,9 +196,15 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
+    display: block;
     font-size: 16px;
     transition: background 0.3s ease;
 }
+a.btn{
+    max-width:190px;
+    margin:10px auto;
+}
+
 
 /* Efecto hover en el boton */
 input[type="submit"]:hover {
@@ -307,7 +314,7 @@ input[type="submit"]:hover {
 
 
 .debug{
-    padding: 20px;
+    padding: 6px;
     border-radius: 20px;
     border: dashed red 2px;
     outline: red 1px solid;
@@ -350,3 +357,9 @@ input[type="submit"]:hover {
     align-content: center;
     flex-direction: column;
 }
+
+.tac{
+    text-align: center;
+    display: block;
+}
+

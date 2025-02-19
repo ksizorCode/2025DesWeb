@@ -1,6 +1,7 @@
 <?php
 
 $debug= 0;
+_session_logueado();
 
 function _debug($message){
     global$debug;
@@ -13,7 +14,9 @@ function _debug($message){
 
 }
 
-_debug('estás en modo desarrollo');
+_debug('👁‍🗨 estás en modo desarrollo');
+
+
   
 
 
@@ -47,19 +50,24 @@ function cargarJSON($archivo){
 
 
 
-
 // INICIO DE SESIÓN -------
+function _session_logueado() {
+    global $logueado; // Usamos la variable global
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+        _debug('sesion_start');
 
-session_start();   // Iniciamos comprobación de sesión
-
-if(isset($_SESSION['logueado'])){
-    echo "<p>✅ Bienvenido; Has iniciado sesión.</p>";
-    $logueado=true;
+    if (!empty($_SESSION['logueado']) && $_SESSION['logueado'] === true) {
+        _debug("<p>✅ Bienvenido; Has iniciado sesión.</p>");
+        $logueado = true; // Modificamos la variable global
+    } else {
+        _debug("<p>⛔ No has iniciado sesión.</p>");
+        $logueado = false; // Modificamos la variable global
+    }
+    _debug("Logueado dentro de la función: " . ($logueado ? '✅' : '⛔'));
 }
-else{
-    echo "<p>⛔ No has iniciado sesión.</p>";
-    $logueado=false;
-}
+_debug("Logueado dentro de la función: " . ($logueado ? '✅' : '⛔'));
 
 //echo $saludo = isset($_SESION['logueado']) ? "tas dentro" : "tas fuera";
 
@@ -67,4 +75,6 @@ else{
 
 
 
+
+_debug("🟦 Logueado: $logueado");  
 ?>

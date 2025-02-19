@@ -1,110 +1,75 @@
-<? require 'bloques/config.php'; ?>
-<? include 'bloques/header.php'; ?>
+<?php
+require_once 'bloques/config.php';
 
+_session_logueado();
 
-<?
-// sesion_start(); ya está abierta en el config.php
-$_SESSION['logueado']=true; // testeo temporal!!!!!!! ⚠⚠⚠⚠
-$_SESSION['usuario']="Richar"; // testeo temporal!!!!!!! ⚠⚠⚠⚠
-
-//Este array contiene los datos de acceso del 
+// Array con datos de usuarios (debería estar en una base de datos)
 $datosUsuario = [
     [
-    'user' => 'Richard',
-    'pass' => 'mate',
-    'mail' => 'richard@rdfitness.com',
-    'role' => 'admin'
+        'user' => 'Richard',
+        'pass' => 'mate',
+        'mail' => 'richard@rdfitness.com',
+        'role' => 'admin'
     ],
     [
-    'user' => 'Daniel',
-    'pass' => 'Canva',
-    'mail' => 'danic@rdfitness.com',
-    'role' => 'usuario'
+        'user' => 'Daniel',
+        'pass' => 'Canva',
+        'mail' => 'danic@rdfitness.com',
+        'role' => 'usuario'
     ]
 ];
 
+include 'bloques/header.php';
 
 
+// Si el usuario ha enviado el formulario
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
+        $usuarioIngresado  = trim($_POST['usuario']);
+        $passwordIngresado = trim($_POST['password']);
 
-//SI EL USUARIO HA RELLENADO EL FORMULARIO DE USUARIO/CONTRASEÑA haces todo esto:
-        //Comprobamos si el formulario ha sido rellenado (via POST)
-        if(isset($_POST['usuario']) && isset($_POST['password'])){
-            //Guardamos los datos introducidos por el usuario en variables
-        $usuarioIngresado  = $_POST['usuario'];
-        $passwordIngresado = $_POST['password'];
+        _debug("Usuario ingresado: $usuarioIngresado <br>");
+        _debug("Password ingresado: $passwordIngresado <br>");
 
-        //Mostramos esos datos en Debug
-        _debug("El usuario es: $usuarioIngresado <br>");  //debuggin / testeo
-        _debug("El password es: $passwordIngresado <br>"); //debuggin / testeo
+        // Comprobar credenciales
+        foreach ($datosUsuario as $usuario) {
+            if ($usuario['user'] === $usuarioIngresado && $usuario['pass'] === $passwordIngresado) {
+                $_SESSION['logueado'] = true;
+                $_SESSION['usuario'] = $usuarioIngresado;
+                $_SESSION['rol'] = $usuario['role'];
 
-            //Comprobación de credenciales
-            foreach($datosUsuario as $valor){
-                if($valor['user']==$usuarioIngresado && $valor['pass']==$passwordIngresado){
-                    $logueado=true;
-                    break; //Salimos de el bucle
-                }
+                _debug("🟢 Usuario autenticado como: $usuarioIngresado");
+
+                // Redirigir a admin.php si está autenticado
+                header("Location: admin.php");
+                exit();
             }
-            // si no es correcta la contraseña mostramos mensaje de error
-            if(!isset($logueado)){
-                echo "<div class='aviso'>Los datos de acceso son erróneos</div>";
-            }
-       
-        //Si el usuario ha introducido correctamente los datos, mostramos un mensaje de bienvenida
         }
 
-
-
-
-
-
-
-
-
-
-
-//COMPROBACIÓN DE SI EL USUARIO ESTÁ LOGUEADO O SE HA LOGUEADO AYER
-
-if(isset($_SESSION['logueado'])){ // Si ya nos habíamos logueado antes...
-    $logueado=true; //igualamos la variable PHP a true
-    echo "🥝 Estás Logueado y login es igual a: $logueado";
-}
-else{       // si no 
-    $logueado=false; // igualamos la variable PHP a false
-    echo "🍅 No estas logueado";
+        // Si no se encontró el usuario
+        echo "<div class='aviso'>⛔ Datos de acceso incorrectos</div>";
+    } else {
+        echo "<div class='aviso'>⛔ Rellena todos los campos</div>";
+    }
 }
 
-// CARGAMOS CONTENIDO EN FUNCIÓN DE SI SE HA LOGUEADO O NO
-if($logueado){
-    //header ('Location: contacto.php');
-    include 'bloques/admin.php';            // si está logueado cargamos admin.php
-    }
-else{               // si no está logueado cargamos el formulario de usuario / contraseña
-    ?>
-        <form action="" method="post" class="form-login">
-            <h1>Acceso al depósito del museo</h1>
-            <label for="usuario">usuario</label>
-            <input type="text" name="usuario" id="usuario">
-    
-            <label for="password">password</label>
-            <input type="password" name="password" id="password">
-    
-            <input type="submit" value="Acceder">
-        </form>
-    <?
-    }
 
-
-
-
-
-
-
-
-
-
-
-
+// Si no está logueado, mostrar formulario
+if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
 ?>
+    <form action="" method="post" class="form-login">
+        <h1>Acceso al depósito del museo</h1>
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario" required>
 
-<? include 'bloques/footer.php'; ?>
-    
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" required>
+
+        <input type="submit" value="Acceder">
+    </form>
+<?php
+}
+
+include 'bloques/footer.php';
+?>
+s
