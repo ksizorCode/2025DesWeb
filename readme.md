@@ -169,6 +169,8 @@ Contenido:
 - [Bugme not](https://bugmenot.com/)
 - [Generadores](https://www.mlgdiseno.es/blog/los-10-mejores-generadores-de-css/)
 
+- [Alumnator](https://codesandbox.io/p/devbox/alumnator-vt85j6)
+
 # 👨‍🏫Pizarra
 ## ScalyDraw
 - [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
