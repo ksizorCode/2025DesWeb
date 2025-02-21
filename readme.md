@@ -169,11 +169,12 @@ Contenido:
 - [Bugme not](https://bugmenot.com/)
 - [Generadores](https://www.mlgdiseno.es/blog/los-10-mejores-generadores-de-css/)
 
-- [Alumnator](https://codesandbox.io/p/devbox/alumnator-vt85j6)
 
 # 👨‍🏫Pizarra
 ## ScalyDraw
 - [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
 - [Pizarra Compartida222](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA)
+
+- [🤖🤖🤖 Alumnator](https://codesandbox.io/p/live/5662f41c-4863-4eba-84f3-791948fd7aa7)
 
   
