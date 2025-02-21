@@ -172,6 +172,6 @@ Contenido:
 # 👨‍🏫Pizarra
 ## ScalyDraw
 - [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
-- [Pizarra Compartida](https://excalidraw.com/#room=031325f27705f5da0a4d,fGySTu2qNCluhul1xqpvzw)
+- [Pizarra Compartida222]([https://excalidraw.com/#room=031325f27705f5da0a4d,fGySTu2qNCluhul1xqpvzw](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA))
 
   
