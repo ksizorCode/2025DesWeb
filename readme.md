@@ -160,9 +160,17 @@ Contenido:
 # 🍕 FIGMA JAM compartido
 - [Ver Esquema en Figma Jam](https://www.figma.com/board/L2MXWrvZijz7BhNK9lWS47/Esquema-JS?node-id=0-1&t=wWra2Wj2pIibcCB3-1)
 
+
+
 # Miscelánea
 
 - [RoadMap](https://roadmap.sh/)
 - [RoadMaps - ideas para proyectos](https://roadmap.sh/projects)
 - [Bugme not](https://bugmenot.com/)
 - [Generadores](https://www.mlgdiseno.es/blog/los-10-mejores-generadores-de-css/)
+
+# 👨‍🏫Pizarra
+## ScalyDraw
+- [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
+
+  
