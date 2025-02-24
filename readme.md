@@ -175,6 +175,6 @@ Contenido:
 - [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
 - [Pizarra Compartida222](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA)
 
-- [🤖🤖🤖 Alumnator](https://codesandbox.io/p/live/5662f41c-4863-4eba-84f3-791948fd7aa7)
+- [🤖🤖🤖 Alumnator - Lunes 24]([https://codesandbox.io/p/live/5662f41c-4863-4eba-84f3-791948fd7aa7](https://codesandbox.io/p/live/52f4314c-9c77-488e-bc7c-93b8aadb6970))
 
   
