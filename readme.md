@@ -1,3 +1,7 @@
+>.[!NOTE]
+> Otra cosa
+
+
 # Respositorio Curso: Desarrollo de Aplicaciones con Tecnologáis Web
 
 
