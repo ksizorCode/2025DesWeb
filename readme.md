@@ -1,12 +1,12 @@
 >[!NOTE]
 > Otra cosa
->>[!TIP]
+>[!TIP]
 > Otra cosa
->>>[!IMPORTANT]
+>[!IMPORTANT]
 > Otra cosa
->>>>[!WARNING]
+>[!WARNING]
 > Otra cosa
->>>>>[!CAUTION]
+>[!CAUTION]
 > Otra cosa
 
 
