@@ -1,5 +1,13 @@
 >[!NOTE]
 > Otra cosa
+>>[!TIP]
+> Otra cosa
+>>>[!IMPORTANT]
+> Otra cosa
+>>>>[!WARNING]
+> Otra cosa
+>>>>>[!CAUTION]
+> Otra cosa
 
 
 # Respositorio Curso: Desarrollo de Aplicaciones con Tecnologáis Web
