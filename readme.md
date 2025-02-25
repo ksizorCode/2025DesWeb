@@ -40,6 +40,7 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 - [picsumphotos](https://picsum.photos/)
 - [Codesandbox](https://codesandbox.io)
 - vscode.dec
+- https://play.tailwindcss.com/
 
 - [JS Bin](https://jsbin.com/)
 - [JSfiddle](https://jsfiddle.net/)
