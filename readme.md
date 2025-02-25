@@ -14,9 +14,13 @@
 > Otra cosa
 
 
-thisIsCamelCase 🐫
-this_is_snake_case 🐍
-this-is-kebap-case 🌯
+
+| Emoji | Convención     | Ejemplo              | Uso frecuente                       |
+|-------|----------------|----------------------|-------------------------------------|
+| 🐫    | **Camel Case** | `thisIsCamelCase`    | JavaScript, Java, C#, etc.          |
+| 🐍    | **Snake Case** | `this_is_snake_case` | Python, variables en algunos DBs    |
+| 🌯    | **Kebab Case** | `this-is-kebab-case` | Nombres de clases CSS, URLs         |
+
 
 
 # Respositorio Curso: Desarrollo de Aplicaciones con Tecnologáis Web
