@@ -1,3 +1,28 @@
+>[!NOTE]
+> Sesión CodeSandBox de hoy: https://codesandbox.io/p/live/833bc701-2bff-4510-9ddd-a1ab41817c7a
+
+>[!TIP]
+> Otra cosa
+
+>[!IMPORTANT]
+> Otra cosa
+
+>[!WARNING]
+> Otra cosa
+
+>[!CAUTION]
+> Otra cosa
+
+
+
+| Emoji | Convención     | Ejemplo              | Uso frecuente                       |
+|-------|----------------|----------------------|-------------------------------------|
+| 🐫    | **Camel Case** | `thisIsCamelCase`    | JavaScript, Java, C#, etc.          |
+| 🐍    | **Snake Case** | `this_is_snake_case` | Python, variables en algunos DBs    |
+| 🌯    | **Kebab Case** | `this-is-kebab-case` | Nombres de clases CSS, URLs         |
+
+
+
 # Respositorio Curso: Desarrollo de Aplicaciones con Tecnologáis Web
 
 
@@ -15,6 +40,7 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 - [picsumphotos](https://picsum.photos/)
 - [Codesandbox](https://codesandbox.io)
 - vscode.dec
+- https://play.tailwindcss.com/
 
 - [JS Bin](https://jsbin.com/)
 - [JSfiddle](https://jsfiddle.net/)
@@ -162,9 +188,21 @@ Contenido:
 # 🍕 FIGMA JAM compartido
 - [Ver Esquema en Figma Jam](https://www.figma.com/board/L2MXWrvZijz7BhNK9lWS47/Esquema-JS?node-id=0-1&t=wWra2Wj2pIibcCB3-1)
 
+
+
 # Miscelánea
 
 - [RoadMap](https://roadmap.sh/)
 - [RoadMaps - ideas para proyectos](https://roadmap.sh/projects)
 - [Bugme not](https://bugmenot.com/)
 - [Generadores](https://www.mlgdiseno.es/blog/los-10-mejores-generadores-de-css/)
+
+
+# 👨‍🏫Pizarra
+## ScalyDraw
+- [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
+- [Pizarra Compartida222](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA)
+
+- [🤖🤖🤖 Alumnator - Lunes 24B]([https://codesandbox.io/p/live/52f4314c-9c77-488e-bc7c-93b8aadb6970](https://codesandbox.io/p/live/b006d70d-83d7-45e2-96c3-6d8ee3eab04d)
+
+  
