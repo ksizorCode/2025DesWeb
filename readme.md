@@ -30,6 +30,8 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 
 #### 🎨CSS
 -[Nuevo CSS](https://www.youtube.com/watch?v=Bfdqyws-Ixw)
+- [Curvas Animación CSS](https://easings.co/)
+- [Curvas Animación CSS 2](http://www.css3beziercurve.net/)
 
 ##### CSS Frameworks - bibliotecas de estilos CSS
 Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no más bien una biblioteca de estilos, ya que son un conjunto de reglas CSS predefinidas para facilitar el desarrollo de interfaces responsivas. Componentes reutilizables como botones, formularios, tarjetas y menús de navegación. Un sistema de grillas que facilita la distribución del contenido. Utilidades CSS para gestionar espaciados, colores, tipografías y más.
