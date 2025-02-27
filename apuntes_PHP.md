@@ -33,7 +33,7 @@ PHP es un lenguaje de programación del lado del servidor diseñado para el desa
 
 ## Variables y Tipos de Datos
 
-| Tipo | Descripción | Ejemplo | Tipado Estricto |
+| Tipo | Descripción | Ejemplo (Tipado devil) | Tipado Estricto |
 |------|------------|---------|----------------|
 | `string` | Texto | `$nombre = "Juan";` | `string $nombre = "Juan";` |
 | `int` | Número entero | `$edad = 25;` | `int $edad = 25;` |
