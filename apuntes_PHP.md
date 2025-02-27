@@ -33,16 +33,14 @@ PHP es un lenguaje de programación del lado del servidor diseñado para el desa
 
 ## Variables y Tipos de Datos
 
-| Tipo | Descripción | Ejemplo |
-|------|------------|---------|
-| `string` | Texto | `$nombre = "Juan";` |
-| `int` | Número entero | `$edad = 25;` |
-| `float` | Número decimal | `$precio = 10.99;` |
-| `bool` | Booleano | `$activo = true;` |
-| `array` | Arreglo | `$colores = ["rojo", "azul"];` |
-| `object` | Objeto | `$persona = new Persona();` |
-
----
+| Tipo | Descripción | Ejemplo | Tipado Estricto |
+|------|------------|---------|----------------|
+| `string` | Texto | `$nombre = "Juan";` | `string $nombre = "Juan";` |
+| `int` | Número entero | `$edad = 25;` | `int $edad = 25;` |
+| `float` | Número decimal | `$precio = 10.99;` | `float $precio = 10.99;` |
+| `bool` | Booleano | `$activo = true;` | `bool $activo = true;` |
+| `array` | Arreglo | `$colores = ["rojo", "azul"];` | `array $colores = ["rojo", "azul"];` |
+| `object` | Objeto | `$persona = new Persona();` | `Persona $persona = new Persona();` |
 
 ## Operadores
 
