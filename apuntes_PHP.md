@@ -150,10 +150,21 @@ echo $_SESSION['usuario'];
 
 ---
 
-## 🚀 Contribuciones
 
-Si quieres contribuir, ¡envía un pull request!
+| Función                | Descripción                                                    | Ejemplo de Uso                                                                                      | Resultado Comentado                                                             |
+|------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| `htmlspecialchars()`   | Convierte caracteres especiales a entidades HTML.             | `echo htmlspecialchars("<a href='test'>Test</a>");`                                                  | Imprime: `&lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;`                         |
+| `strlen()`             | Devuelve la longitud de una cadena.                           | `echo strlen("Hola Mundo");`                                                                         | Imprime: `10` (incluye espacios)                                                 |
+| `strpos()`             | Busca la posición de la primera aparición de una subcadena.     | `echo strpos("Hola Mundo", "Mundo");`                                                                 | Imprime: `5` (posición iniciando en 0)                                           |
+| `date()`               | Formatea una fecha/hora local.                                 | `echo date("Y-m-d");`                                                                                | Imprime la fecha actual en formato `YYYY-MM-DD`                                 |
+| `file_get_contents()`  | Lee un archivo y lo devuelve como una cadena.                  | `echo file_get_contents("ejemplo.txt");`                                                             | Imprime el contenido de "ejemplo.txt" (archivo debe existir)                     |
+| `json_encode()`        | Convierte un valor de PHP en una cadena JSON.                  | `echo json_encode(["nombre" => "Juan", "edad" => 30]);`                                               | Imprime: `{"nombre":"Juan","edad":30}`                                          |
+| `json_decode()`        | Decodifica una cadena JSON a un valor de PHP.                  | `$data = json_decode('{"nombre":"Juan","edad":30}'); echo $data->nombre;`                            | Imprime: `Juan`                                                                 |
+| `trim()`               | Elimina espacios en blanco al inicio y final de una cadena.     | `echo trim("  Hola Mundo  ");`                                                                       | Imprime: `Hola Mundo` (sin espacios en extremos)                                |
+| `explode()`            | Divide una cadena en un array usando un delimitador.           | `$parts = explode(",", "rojo,verde,azul"); print_r($parts);`                                        | Imprime: `Array ( [0] => rojo [1] => verde [2] => azul )`                       |
+| `implode()`            | Une elementos de un array en una cadena usando un delimitador.  | `$str = implode("-", ["2025", "02", "28"]); echo $str;`                                             | Imprime: `2025-02-28`                                                           |
+| `substr()`             | Extrae una parte de una cadena.                                | `echo substr("Hola Mundo", 5, 5);`                                                                    | Imprime: `Mundo`                                                                |
+| `preg_match()`         | Busca coincidencias en una cadena usando expresiones regulares. | `preg_match("/[0-9]+/", "abc123", $matches); print_r($matches);`                                      | Imprime: `Array ( [0] => 123 )`                                                 |
+| `var_dump()`           | Muestra información estructurada sobre una variable.           | `var_dump(["a" => 1, "b" => 2]);`                                                                    | Imprime la estructura del array, por ejemplo: `array(2) { ["a"]=> int(1), ["b"]=> int(2) }` |
+| `str_replace()`        | Reemplaza todas las apariciones de una subcadena por otra.       | `echo str_replace("mundo", "PHP", "Hola mundo");`                                                   | Imprime: `Hola PHP` (la búsqueda es sensible a mayúsculas/minúsculas)             |
 
-## 📜 Licencia
-
-Este proyecto está bajo la licencia MIT.
