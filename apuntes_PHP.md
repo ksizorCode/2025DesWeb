@@ -151,7 +151,7 @@ echo $_SESSION['usuario'];
 
 ---
 ## Funciones Reservadas
-Son funciones que ya están creadas por PHP unicialmente para ahorrar trabajo en ciertas funcionalidades
+Se trata de funciones ya creadas por PHP que simplifican la realización de operaciones frecuentes, ayudando a optimizar el tiempo de desarrollo.
 
 
 | Función                | Descripción                                                    | Ejemplo de Uso                                                                                                     | Resultado Comentado                                                             |
