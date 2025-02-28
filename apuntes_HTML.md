@@ -128,11 +128,3 @@ HTML (HyperText Markup Language) es el lenguaje estándar para la creación de p
 ```
 
 ---
-
-## 🚀 Contribuciones
-
-Si quieres contribuir, ¡envía un pull request!
-
-## 📜 Licencia
-
-Este documento está bajo la licencia MIT.
