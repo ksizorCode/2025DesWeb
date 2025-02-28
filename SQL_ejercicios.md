@@ -131,3 +131,6 @@ SELECT nombre_animal, nombre_especie FROM animales A, especies E WHERE A.id_espe
 
 
 ```
+
+
+by miguel esteban
