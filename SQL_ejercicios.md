@@ -1,10 +1,10 @@
 # Apuntes tablas relacionables
-`
 
-## Crer base de datos
+
+## Crear base de datos
 ```sql
 CREATE DATABASE `ArcaDeNoe`;
-``
+```
 
 ## Creación de Tabla Animales
 ```sql
@@ -15,7 +15,6 @@ CREATE TABLE `animales` (
   `descripcion` text NULL,
   `id_especie` int NULL
 );
-
 ```
 
 ## Creación de Tabla Especies
