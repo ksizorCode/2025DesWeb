@@ -13,6 +13,7 @@ Bienvenido al curso introductorio de PHP. En este repositorio encontrarás ejemp
 7. [Conexión con MySQL](#conexión-con-mysql)
 8. [Programación Orientada a Objetos](#programación-orientada-a-objetos)
 9. [Archivos y Sesiones](#archivos-y-sesiones)
+10. [Funciones Resrvadas](#funciones-reservadas)
 
 ---
 
@@ -149,7 +150,8 @@ echo $_SESSION['usuario'];
 ```
 
 ---
-
+## Funciones Reservadas
+Son funciones que ya están creadas por PHP unicialmente para ahorrar trabajo en ciertas funcionalidades
 
 
 | Función                | Descripción                                                    | Ejemplo de Uso                                                                                                     | Resultado Comentado                                                             |
