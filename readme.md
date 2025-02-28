@@ -1,3 +1,28 @@
+>[!NOTE]
+> Sesión CodeSandBox de hoy: https://codesandbox.io/p/live/833bc701-2bff-4510-9ddd-a1ab41817c7a
+
+>[!TIP]
+> Otra cosa
+
+>[!IMPORTANT]
+> Otra cosa
+
+>[!WARNING]
+> Otra cosa
+
+>[!CAUTION]
+> Otra cosa
+
+
+
+| Emoji | Convención     | Ejemplo              | Uso frecuente                       |
+|-------|----------------|----------------------|-------------------------------------|
+| 🐫    | **Camel Case** | `thisIsCamelCase`    | JavaScript, Java, C#, etc.          |
+| 🐍    | **Snake Case** | `this_is_snake_case` | Python, variables en algunos DBs    |
+| 🌯    | **Kebab Case** | `this-is-kebab-case` | Nombres de clases CSS, URLs         |
+
+
+
 # Respositorio Curso: Desarrollo de Aplicaciones con Tecnologáis Web
 
 
@@ -15,6 +40,7 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 - [picsumphotos](https://picsum.photos/)
 - [Codesandbox](https://codesandbox.io)
 - vscode.dec
+- https://play.tailwindcss.com/
 
 - [JS Bin](https://jsbin.com/)
 - [JSfiddle](https://jsfiddle.net/)
@@ -30,6 +56,8 @@ En este respositorio de Github iremos volcando algunos de los ejercicios y prác
 
 #### 🎨CSS
 -[Nuevo CSS](https://www.youtube.com/watch?v=Bfdqyws-Ixw)
+- [Curvas Animación CSS](https://easings.co/)
+- [Curvas Animación CSS 2](http://www.css3beziercurve.net/)
 
 ##### CSS Frameworks - bibliotecas de estilos CSS
 Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no más bien una biblioteca de estilos, ya que son un conjunto de reglas CSS predefinidas para facilitar el desarrollo de interfaces responsivas. Componentes reutilizables como botones, formularios, tarjetas y menús de navegación. Un sistema de grillas que facilita la distribución del contenido. Utilidades CSS para gestionar espaciados, colores, tipografías y más.
@@ -45,8 +73,19 @@ Aunque lo llamemos CSS Frameworks, realmente no es un framework como tal si no m
 - [Skeleton](http://getskeleton.com/)
 - [Pure.css](https://pure-css.github.io/)
 
+
+- [💍Composiciones con Tailwinds](https://preline.co/index.html)
+- [🍄Plantillas](https://htmlrev.com/)
+
 ##### CSS Recursos Frikis
 - [Dibujo con CSS](https://gra.dient.art/)
+
+#### Genedadores de Layout y Estructuras
+- [Massonry Layaut](https://w3bits.com/tools/masonry-generator/)
+- [Massonry 2](https://masonry.desandro.com/)
+- [Isotope](https://isotope.metafizzy.co/)
+- [Packery](https://packery.metafizzy.co/)
+- [Bricks.js](http://callmecavs.com/bricks.js/)
 
 ## Visual Studio Code (VS Code)
 - [Snippets Generator](https://snippet-generator.app/)
@@ -148,3 +187,22 @@ Contenido:
 
 # 🍕 FIGMA JAM compartido
 - [Ver Esquema en Figma Jam](https://www.figma.com/board/L2MXWrvZijz7BhNK9lWS47/Esquema-JS?node-id=0-1&t=wWra2Wj2pIibcCB3-1)
+
+
+
+# Miscelánea
+
+- [RoadMap](https://roadmap.sh/)
+- [RoadMaps - ideas para proyectos](https://roadmap.sh/projects)
+- [Bugme not](https://bugmenot.com/)
+- [Generadores](https://www.mlgdiseno.es/blog/los-10-mejores-generadores-de-css/)
+
+
+# 👨‍🏫Pizarra
+## ScalyDraw
+- [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
+- [Pizarra Compartida222](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA)
+
+- [🤖🤖🤖 Alumnator - Lunes 24B]([https://codesandbox.io/p/live/52f4314c-9c77-488e-bc7c-93b8aadb6970](https://codesandbox.io/p/live/b006d70d-83d7-45e2-96c3-6d8ee3eab04d)
+
+  

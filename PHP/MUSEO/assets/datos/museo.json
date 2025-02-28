@@ -1,0 +1,85 @@
+{
+    "obras": [
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_%28Ecclesia%27s_Paradise%29.jpg/400px-Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_%28Ecclesia%27s_Paradise%29.jpg",
+            "titulo": "El jardín de las delicias",
+            "autor": "El Bosco",
+            "anio": "1490-1510",
+            "estilo": "Renacimiento nórdico",
+            "tecnica": "Óleo sobre tabla",
+            "descripcion": "Esta obra maestra de El Bosco es una compleja y enigmática representación del Edén, la humanidad y su destino. Compuesta por tres paneles, ilustra el paraíso, la vida terrenal llena de placeres y el infierno. Su simbolismo y detalles minuciosos han fascinado a los espectadores durante siglos."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/commons/9/99/Las_Meninas_01.jpg",
+            "titulo": "Las meninas",
+            "autor": "Diego Velázquez",
+            "anio": "1656",
+            "estilo": "Barroco",
+            "tecnica": "Óleo sobre lienzo",
+            "descripcion": "Considerada una de las pinturas más influyentes de la historia del arte, 'Las meninas' de Velázquez juega con la perspectiva y la luz. Representa a la infanta Margarita rodeada de su séquito, con el propio Velázquez pintándose a sí mismo en la escena."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/1200px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg",
+            "titulo": "El 3 de mayo en Madrid",
+            "autor": "Francisco de Goya",
+            "anio": "1814",
+            "estilo": "Romanticismo",
+            "tecnica": "Óleo sobre lienzo",
+            "descripcion": "Esta impactante obra de Goya retrata la brutal ejecución de los españoles por las tropas napoleónicas. Con un uso dramático de la luz y el color, el cuadro enfatiza la tragedia de la guerra y la lucha del pueblo por su libertad."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/72/Museo_Sorolla_-_00834_-_Paseo_a_orillas_del_mar.jpg",
+            "titulo": "Paseo a orillas del mar",
+            "autor": "Joaquín Sorolla",
+            "anio": "1909",
+            "estilo": "Impresionismo",
+            "tecnica": "Óleo sobre lienzo",
+            "descripcion": "Una de las pinturas más emblemáticas de Sorolla, en la que captura la luz del Mediterráneo con pinceladas sueltas y vibrantes. Representa a su esposa y su hija paseando por la playa de Valencia, transmitiendo una sensación de calma y frescura."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Michelangelo_Caravaggio_060.jpg",
+            "titulo": "Santa Catalina de Alejandría",
+            "autor": "Caravaggio",
+            "anio": "1598-1599",
+            "estilo": "Barroco",
+            "tecnica": "Óleo sobre lienzo",
+            "descripcion": "Caravaggio presenta a Santa Catalina con una mirada melancólica y un juego de luces dramático. La obra refleja su característico tenebrismo, con contrastes intensos de luz y sombra que otorgan una gran profundidad y realismo a la escena."
+        },
+        {
+            "img": "https://content3.cdnprado.net/imagenes/Documentos/imgsem/d3/d3d8/d3d82b0b-9bf2-4082-ab04-66ed53196ccc/6ae08086-cafc-4cfe-b8d8-c3849c4136db.jpg",
+            "titulo": "El triunfo de la muerte",
+            "autor": "Pieter Brueghel el Viejo",
+            "anio": "1562",
+            "estilo": "Renacimiento nórdico",
+            "tecnica": "Óleo sobre tabla",
+            "descripcion": "Brueghel retrata un mundo apocalíptico dominado por la muerte. En esta composición caótica y sombría, esqueletos invaden la tierra, arrasando con todo a su paso. Es una crítica al destino inevitable de la humanidad y la fragilidad de la vida."
+        },
+        {
+            "titulo": "Los amantes",
+            "autor": "René Magritte",
+            "anio": "1925",
+            "estilo": "Surrealismo",
+            "tecnica": "Óleo",
+            "img": "https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL2FydHdvcmtcL2ltYWdlRmlsZVwvYW1hbnRlcy1tYWdyaXR0ZS5qcGciLCJyZXNpemUsMTUwMHxmb3JtYXQsd2VicCJdfQ.BWBk7_pypQln4P-gjIgGU3KkvSotIWiDFaONoHZ1v94.webp",
+            "descripcion": "En esta intrigante pintura de Magritte, dos figuras se besan con los rostros cubiertos por tela. La imagen evoca una sensación de misterio y separación, característica del surrealismo. La obra plantea preguntas sobre la identidad y la barrera entre los seres humanos."
+        },
+        {
+            "titulo": "El grito",
+            "autor": "Edvard Munch",
+            "anio": "1893",
+            "estilo": "Expresionismo",
+            "tecnica": "Óleo sobre lienzo",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png/375px-The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png",
+            "descripcion": "Una de las pinturas más icónicas del arte moderno, 'El grito' expresa angustia y desesperación. Munch utiliza colores vibrantes y líneas ondulantes para transmitir la sensación de ansiedad existencial en un paisaje casi apocalíptico."
+        },
+        {
+            "titulo": "La Calavera",
+            "autor": "Vincent Van Gogh",
+            "anio": "1885",
+            "estilo": "Impresionismo",
+            "tecnica": "Óleo sobre lienzo",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/8/87/Vincent_van_Gogh_-_Head_of_a_skeleton_with_a_burning_cigarette_-_Google_Art_Project.jpg",
+            "descripcion": "Esta pintura, también llamada 'Calavera con cigarro', es una obra poco convencional de Van Gogh. Se interpreta como una sátira o un comentario sobre la fragilidad de la vida, reflejando su estilo audaz con pinceladas gruesas y colores contrastantes."
+        }
+    ]
+}

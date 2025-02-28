@@ -55,6 +55,9 @@ $datos = [
 
 ];
 
+/* FUNCIONES */
+
+// Función constructora de Menús
 function constructorMenu(){
     global $menu;
 
@@ -75,4 +78,15 @@ function constructorMenu(){
     }
     echo "</ul></nav>";
 
+}
+
+
+//Convertir formato teléfono a numero limpio +34 666 555 888 -> 3466655588
+// formatNumTel('+34 666 555 777');
+function formatNumTel($numero) {
+    // Eliminar espacios y el signo +
+    $numeroFormateado = str_replace([' ', '+'], '', $numero);
+    
+    // Añadir el prefijo "tel:"
+    return $numeroFormateado;
 }

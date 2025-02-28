@@ -41,7 +41,7 @@ ul.galeria li a:hover {
 }
 
 /* Colores según el tipo */
-.nombreArchivo { 
+.archivo { 
     background: lightgreen; 
 }
 
@@ -79,27 +79,27 @@ else {
 
     $arrayDirectorio = array_diff($arrayDirectorio, $arrayNoQuiero); // Filtra elementos
 
-    foreach ($arrayDirectorio as $nombreArchivo) {
+    foreach ($arrayDirectorio as $archivo) {
         $clase = '';
         
-        if ($nombreArchivo == 'index.php' || $nombreArchivo == 'index.html') {
+        if ($archivo == 'index.php' || $archivo == 'index.html') {
             $clase = "destacar ";
         }
-        if ($nombreArchivo == 'style.css') {
+        if ($archivo == 'style.css') {
             $clase = "estilo ";
         }
         
-        $rutaCompleta = $directorio . $nombreArchivo;
+        $rutaCompleta = $directorio . $archivo;
         if (is_file($rutaCompleta)) {
             $icono = "📄";
-            $clase .= "nombreArchivo";
+            $clase .= "archivo";
             $link = $rutaCompleta;
         } else {
             $icono = "📂";
             $clase .= "carpeta";
-            $link = "index.php?dir=" . urlencode($rutaCompleta);
+            $link = "index.php?dir=" . urlencode($archivo);
         }
-        echo "<li><a href='$link' class='$clase'>$icono $nombreArchivo</a></li>";
+        echo "<li><a href='$link' class='$clase'>$icono $archivo</a></li>";
     }
 }
 
