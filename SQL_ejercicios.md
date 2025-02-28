@@ -1,12 +1,15 @@
 # Apuntes tablas relacionables
 
 
-## Crear base de datos
+## 1. Crear Base de Datos
 ```sql
 CREATE DATABASE `ArcaDeNoe`;
 ```
 
-## Creación de Tabla Animales
+## 2. Creación de las Tabla
+
+### 2.1 Creación de la Tabla Animales
+
 ```sql
 CREATE TABLE `animales` (
   `id_animal` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -17,7 +20,7 @@ CREATE TABLE `animales` (
 );
 ```
 
-## Creación de Tabla Especies
+### 2.2 Creación de la Tabla Especies
 
 ```sql
 CREATE TABLE `especies` (
@@ -27,7 +30,9 @@ CREATE TABLE `especies` (
 );
 ```
 
-## Insertamos datos con los que jugar en Animales
+## 3. Inserción de datos en Tablas
+
+### 3.1 Inserción de datos en la Tabla Animales
 
 ```sql
 INSERT INTO `animales` (`nombre_animal`, `foto_animal`, `descripcion`, `id_especie`)
@@ -39,6 +44,12 @@ VALUES ('elefante', 'ele.jpg', 'bichu grandón con trompa', 1),
 ('pez espada', 'espada.jpg', 'el pez que hace esgrima', 3),
 ('rinoceronte', 'rino.jpg', 'cuidado con el cuerno', 1);
 ```
+|id_especie	|nombre_especie	|icono|
+|-----------|---------------|-----|
+|1	|paquidermo	|paquidermo.jpg|
+|2	|felino	|icono_gato.jpg|
+|3	|pez	|iconoPez.jpg|
+|4	|canino	|icono-perro.jpg|
 
 si quieres puedes insertar más datos volviendo a añadir esto:
 ```sql
@@ -53,18 +64,11 @@ VALUES ('camello', 'cammel.jpg', 'aguante mucho sin beber', 5),
 ('jirafa','jiraf.jpg','animal con el cuello muy alto',5),
 ('vacas','cow.jpg','tienen varios estómagos',8),
 ('oveja','oveja.jpg','tienen mucha lana',9);```
+```
 
+Tras haber insertado estos elementos acabaríamos teniendo los viejos y los nuevos:
 
-## insertamos datos en Especies
-
-|id_especie	|nombre_especie	|icono|
-|-----------|---------------|-----|
-|1	|paquidermo	|paquidermo.jpg|
-|2	|felino	|icono_gato.jpg|
-|3	|pez	|iconoPez.jpg|
-|4	|canino	|icono-perro.jpg|
-
-
+### 3.2 Inserción de datos en la Tabla Especies
 ```sql
 INSERT INTO `especie` (`nombre_especie`, `icono`)
 VALUES ('paquidermo', 'i_paquidermo.jpg'),
@@ -98,6 +102,7 @@ SELECT nombre_animal, descripcion, nombre_especie FROM animales A, especies B WH
 ```
 
 
+# 4. Consultas
 
 # Jugando con las consultas
 Estos son algunos ejemplos de consultas con las que podemos hacer pruebas para entender el funcionamiento de las consultas SQL:
