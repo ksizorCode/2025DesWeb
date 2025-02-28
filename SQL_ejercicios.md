@@ -1,5 +1,10 @@
 # Apuntes tablas relacionables
+`
 
+## Crer base de datos
+```sql
+CREATE DATABASE `ArcaDeNoe`;
+``
 
 ## Creación de Tabla Animales
 ```sql
