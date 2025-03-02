@@ -1,94 +1,115 @@
-# 📌 Funciones habituales de WordPress
 
-📋 Funciones básicas de WordPress
+# 📌 Apuntes de Programación en WordPress
 
-📌 Obtener información del sitio
+## Índice
+- [Funciones Básicas de WordPress](#funciones-basicas-de-wordpress)
+- [Funciones para Trabajar con Entradas (Posts)](#funciones-para-trabajar-con-entradas-posts)
+- [Funciones para Trabajar con Páginas](#funciones-para-trabajar-con-paginas)
+- [Funciones para Menús](#funciones-para-menus)
+- [Funciones para Trabajar con Usuarios](#funciones-para-trabajar-con-usuarios)
+- [Funciones para Cargar Archivos y Scripts](#funciones-para-cargar-archivos-y-scripts)
+- [Funciones para Trabajar con la Base de Datos](#funciones-para-trabajar-con-la-base-de-datos)
+- [Funciones de Seguridad en WordPress](#funciones-de-seguridad-en-wordpress)
+- [Qué es un Nonce en WordPress](#que-es-un-nonce-en-wordpress)
 
+---
 
+## 📋 Funciones Básicas de WordPress
+
+### 📌 Obtener Información del Sitio
 ```php
 get_bloginfo( $show );
 ```
 
 | Función                          | Descripción                                        | Ejemplo                                      |
-|----------------------------------|----------------------------------------------------|----------------------------------------------|
-| get_bloginfo('name')             | Obtiene el nombre del sitio.                       | echo get_bloginfo('name');                   |
-| get_bloginfo('description')      | Obtiene la descripción del sitio.                  | echo get_bloginfo('description');            |
-| get_bloginfo('url')              | Obtiene la URL del sitio.                          | echo get_bloginfo('url');                    |
-| get_bloginfo('language')         | Obtiene el lenguaje del sitio.                     | echo get_bloginfo('language');               |
-| get_bloginfo('charset')          | Obtiene la codificación de caracteres (ej. UTF-8).   | echo get_bloginfo('charset');                |
-| get_bloginfo('version')          | Obtiene la versión de WordPress instalada.         | echo get_bloginfo('version');                |
+|---------------------------------|----------------------------------------------------|----------------------------------------------|
+| `get_bloginfo('name')`           | Obtiene el nombre del sitio.                       | `echo get_bloginfo('name');`                  |
+| `get_bloginfo('description')`    | Obtiene la descripción del sitio.                  | `echo get_bloginfo('description');`           |
+| `get_bloginfo('url')`            | Obtiene la URL del sitio.                          | `echo get_bloginfo('url');`                   |
+| `get_bloginfo('language')`       | Obtiene el lenguaje del sitio.                     | `echo get_bloginfo('language');`              |
+| `get_bloginfo('charset')`        | Obtiene la codificación de caracteres (UTF-8).      | `echo get_bloginfo('charset');`               |
+| `get_bloginfo('version')`        | Obtiene la versión de WordPress instalada.         | `echo get_bloginfo('version');`               |
 
+---
 
+## 📌 Funciones para Trabajar con Entradas (Posts)
 
-## Funciones para trabajar con entradas (posts)
-
-### 📌 Obtener información de una entrada
-
+### 📌 Obtener Información de una Entrada
 ```php
 get_the_title( $post_id );
 ```
 
-| Función                        | Descripción                                                            | Ejemplo                                                                                                                                                  |
-|--------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| get_the_title()                | Obtiene el título de la entrada actual.                                | echo get_the_title();                                                                                                                                    |
-| get_permalink()                | Obtiene la URL de la entrada actual.                                   | echo get_permalink();                                                                                                                                    |
-| get_the_content()              | Obtiene el contenido de la entrada actual.                             | echo get_the_content();                                                                                                                                  |
-| get_the_post_thumbnail()       | Obtiene la imagen destacada (thumbnail) de la entrada.                 | echo get_the_post_thumbnail();                                                                                                                           |
-| has_post_thumbnail()           | Comprueba si la entrada tiene una imagen destacada.                    | if ( has_post_thumbnail() ) { echo 'Tiene imagen destacada'; }                                                                                           |
-| get_the_category()             | Obtiene las categorías asignadas a la entrada.                         | $categories = get_the_category(); foreach($categories as $cat) { echo $cat->name . ' '; }                                                                 |
-| get_the_tags()                 | Obtiene las etiquetas asignadas a la entrada.                          | $tags = get_the_tags(); if($tags) { foreach($tags as $tag) { echo $tag->name . ' '; } }                                                                     |
-| get_the_terms()                | Obtiene los términos de una taxonomía específica para la entrada.       | $terms = get_the_terms( $post->ID, 'taxonomy' ); if($terms) { foreach($terms as $term) { echo $term->name . ' '; } }                                         |
+| Función                        | Descripción                                                            | Ejemplo                                |
+|--------------------------------|------------------------------------------------------------------------|---------------------------------------|
+| `get_the_title()`               | Obtiene el título de la entrada actual.                                | `echo get_the_title();`                |
+| `get_permalink()`               | Obtiene la URL de la entrada actual.                                   | `echo get_permalink();`                |
+| `get_the_content()`             | Obtiene el contenido de la entrada actual.                             | `echo get_the_content();`              |
+| `get_the_post_thumbnail()`      | Obtiene la imagen destacada de la entrada.                             | `echo get_the_post_thumbnail();`       |
+| `has_post_thumbnail()`          | Comprueba si la entrada tiene una imagen destacada.                    | `if (has_post_thumbnail()) { echo 'Tiene imagen destacada'; }` |
+| `get_the_author()`              | Obtiene el nombre del autor.                                           | `echo get_the_author();`               |
+| `get_the_category()`            | Obtiene las categorías asignadas a la entrada.                         | `$categories = get_the_category(); foreach($categories as $cat) { echo $cat->name . ' '; }` |
+| `get_the_tags()`                | Obtiene las etiquetas asignadas a la entrada.                          | `$tags = get_the_tags(); foreach($tags as $tag) { echo $tag->name . ' '; }` |
+| `get_the_terms()`               | Obtiene los términos de una taxonomía específica para la entrada.       | `$terms = get_the_terms($post->ID, 'taxonomy'); foreach($terms as $term) { echo $term->name . ' '; }` |
 
-Función,Descripción,Ejemplo
-get_the_author(),Obtiene el nombre del autor.,echo get_the_author();
+---
 
+## 📌 Funciones para Trabajar con Páginas
+| Función          | Descripción                     | Ejemplo                                  |
+|------------------|---------------------------------|------------------------------------------|
+| `wp_list_pages()`| Muestra una lista de páginas.   | `wp_list_pages(['title_li' => '']);`     |
+| `get_page_by_path()` | Obtiene una página por su slug. | `$page = get_page_by_path('contacto'); echo $page->post_title;` |
 
+---
 
-## 📌 Consultar entradas
+## 📌 Funciones para Menús
+| Función          | Descripción                     | Ejemplo                                  |
+|------------------|---------------------------------|------------------------------------------|
+| `wp_nav_menu()`  | Muestra un menú de WordPress.   | `wp_nav_menu(['theme_location' => 'main-menu']);` |
 
+---
+
+## 📌 Funciones para Trabajar con Usuarios
+| Función                | Descripción                            | Ejemplo                                      |
+|------------------------|----------------------------------------|----------------------------------------------|
+| `wp_get_current_user()`| Obtiene los datos del usuario logueado. | `$user = wp_get_current_user(); echo $user->user_login;` |
+| `get_user_by()`        | Obtiene un usuario por un campo específico. | `$user = get_user_by('email', 'admin@example.com'); echo $user->ID;` |
+
+---
+
+## 📌 Funciones para Cargar Archivos y Scripts
+| Función              | Descripción                            | Ejemplo                                      |
+|----------------------|----------------------------------------|----------------------------------------------|
+| `wp_enqueue_script()`| Carga un script en el sitio.           | `wp_enqueue_script('mi-script', get_template_directory_uri().'/js/mi-script.js', [], '1.0', true);` |
+| `wp_enqueue_style()` | Carga un archivo CSS en el sitio.      | `wp_enqueue_style('mi-estilo', get_stylesheet_uri());` |
+
+---
+
+## 📌 Funciones para Trabajar con la Base de Datos
+| Función                | Descripción                            | Ejemplo                                      |
+|------------------------|----------------------------------------|----------------------------------------------|
+| `$wpdb->get_results()` | Obtiene datos de la base de datos.     | `$resultados = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_status = 'publish'");` |
+| `$wpdb->insert()`      | Inserta datos en la base de datos.     | `$wpdb->insert($wpdb->posts, ['post_title' => 'Nuevo Post', 'post_status' => 'draft']);` |
+
+---
+
+## 📌 Qué es un Nonce en WordPress
+
+Un **nonce** (*Number Once*) es un token de seguridad que se utiliza para validar la autenticidad de las solicitudes en WordPress. Su objetivo es proteger formularios y acciones específicas contra ataques CSRF (*Cross-Site Request Forgery*).
+
+### Ejemplo de Uso de Nonce
 ```php
-WP_Query( $args );
+// Generar un nonce en un formulario
+function mi_formulario() {
+    echo '<form method="post" action="">';
+    wp_nonce_field('guardar_datos', 'mi_nonce');
+    echo '<input type="submit" value="Enviar">';
+    echo '</form>';
+}
+
+// Verificar el nonce al procesar el formulario
+if (isset($_POST['mi_nonce']) && wp_verify_nonce($_POST['mi_nonce'], 'guardar_datos')) {
+    echo 'Nonce verificado correctamente.';
+} else {
+    echo 'Error: Nonce no válido.';
+}
 ```
-
-Realiza consultas personalizadas a la base de datos.
-
-Función,Descripción,Ejemplo
-WP_Query($args),Consulta entradas personalizadas.,$query = new WP_Query(['post_type' => 'post', 'posts_per_page' => 5]);
-
-
-
-
-
-
-
-📌 Funciones para trabajar con páginas
-
-Función,Descripción,Ejemplo
-wp_list_pages(),Muestra una lista de páginas.,wp_list_pages(['title_li' => '']);
-
-📌 Funciones para menús
-
-Función,Descripción,Ejemplo
-wp_nav_menu(),Muestra un menú de WordPress.,wp_nav_menu(['theme_location' => 'main-menu']);
-
-📌 Funciones para trabajar con usuarios
-
-Función,Descripción,Ejemplo
-wp_get_current_user(),Obtiene los datos del usuario logueado.,$user = wp_get_current_user(); echo $user->user_login;
-
-📌 Funciones para cargar archivos y scripts
-
-Función,Descripción,Ejemplo
-wp_enqueue_script(),Carga un script en el sitio.,wp_enqueue_script('mi-script', get_template_directory_uri().'/js/mi-script.js', [], '1.0', true);
-
-📌 Funciones para trabajar con la base de datos
-
-
-Función,Descripción,Ejemplo
-$wpdb->get_results(),Obtiene datos de la base de datos.,$resultados = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_status = 'publish'");
-
-
-
-
-
-
