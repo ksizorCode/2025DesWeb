@@ -67,7 +67,7 @@ if ( have_posts() ) {
 }
 ```
 
-## Funciones para la Creación de plantillas
+## Funciones para la Creación de Themes y Plantillas
 
 | Función        | Descripción                                 | Ejemplo        |
 |----------------|---------------------------------------------|----------------|
@@ -78,6 +78,31 @@ if ( have_posts() ) {
 | `wp_footer()   | Agrega elementos antes del cierre de <body>.| wp_footer();   |
 
 ---
+
+### 📌 Creación de una Página 404 Personalizada
+
+Si deseas personalizar la página de error 404 de tu sitio en WordPress, puedes crear un archivo `404.php` en tu tema y usar las siguientes funciones:
+```php
+<?php get_header(); ?>
+
+<div class="container">
+    <h1>¡Oops! Página no encontrada 😕</h1>
+    <p>Lo sentimos, pero la página que buscas no existe. Puedes volver a la <a href="<?php echo home_url(); ?>">página de inicio</a> o usar la búsqueda.</p>
+    <?php get_search_form(); ?>
+</div>
+
+<?php get_footer(); ?>
+```
+### 📌 Crear un Shortcode para Mostrar un Mensaje Personalizado
+
+Puedes crear un shortcode en WordPress para mostrar un mensaje especial en cualquier parte de tu sitio:
+```php
+function mensaje_personalizado() {
+    return '<p>📌 Este es un mensaje dinámico generado con un shortcode.</p>';
+}
+add_shortcode('mensaje', 'mensaje_personalizado');
+```
+
 
 ## 📌 Funciones para Trabajar con Páginas
 | Función          | Descripción                     | Ejemplo                                  |
