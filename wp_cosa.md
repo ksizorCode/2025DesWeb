@@ -51,6 +51,32 @@ get_the_title( $post_id );
 | `get_the_tags()`                | Obtiene las etiquetas asignadas a la entrada.                          | `$tags = get_the_tags(); foreach($tags as $tag) { echo $tag->name . ' '; }` |
 | `get_the_terms()`               | Obtiene los términos de una taxonomía específica para la entrada.       | `$terms = get_the_terms($post->ID, 'taxonomy'); foreach($terms as $term) { echo $term->name . ' '; }` |
 
+Ten en cuenta que en muchos casos esto se utilizará dentro de un bucle
+
+### 📌 Bucles en WordPress
+🔄 Bucle Principal (The Loop)
+```php
+if ( have_posts() ) {
+    while ( have_posts() ) {
+        the_post();
+        echo '<h2>' . get_the_title() . '</h2>';
+        the_content();
+    }
+} else {
+    echo 'No hay entradas disponibles.';
+}
+```
+
+## Funciones para la Creación de plantillas
+
+| Función        | Descripción                                 | Ejemplo        |
+|----------------|---------------------------------------------|----------------|
+| `get_header()` | Carga el encabezado de la plantilla.        | get_header();  |
+| `get_footer()` | Carga el pie de página de la plantilla.     | get_footer();  |
+| `get_sidebar()`| Carga la barra lateral.                     | get_sidebar(); |
+| `wp_head()`    | Agrega elementos en <head>.                 | wp_head();     |
+| `wp_footer()   | Agrega elementos antes del cierre de <body>.| wp_footer();   |
+
 ---
 
 ## 📌 Funciones para Trabajar con Páginas
