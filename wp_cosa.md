@@ -40,16 +40,17 @@ get_the_title( $post_id );
 ```
 
 | Función                        | Descripción                                                            | Ejemplo                                |
-|--------------------------------|------------------------------------------------------------------------|---------------------------------------|
-| `get_the_title()`               | Obtiene el título de la entrada actual.                                | `echo get_the_title();`                |
-| `get_permalink()`               | Obtiene la URL de la entrada actual.                                   | `echo get_permalink();`                |
-| `get_the_content()`             | Obtiene el contenido de la entrada actual.                             | `echo get_the_content();`              |
-| `get_the_post_thumbnail()`      | Obtiene la imagen destacada de la entrada.                             | `echo get_the_post_thumbnail();`       |
+|--------------------------------|------------------------------------------------------------------------|----------------------------------------|
+| `get_the_title()`               | Obtiene el título de la entrada actual.                                | `echo get_the_title();`               |
+| `get_permalink()`               | Obtiene la URL de la entrada actual.                                   | `echo get_permalink();`               |
+| `get_the_content()`             | Obtiene el contenido de la entrada actual.                             | `echo get_the_content();`             |
+| `get_the_post_thumbnail()`      | Obtiene la imagen destacada de la entrada.                             | `echo get_the_post_thumbnail();`      |
 | `has_post_thumbnail()`          | Comprueba si la entrada tiene una imagen destacada.                    | `if (has_post_thumbnail()) { echo 'Tiene imagen destacada'; }` |
-| `get_the_author()`              | Obtiene el nombre del autor.                                           | `echo get_the_author();`               |
+| `get_the_author()`              | Obtiene el nombre del autor.                                           | `echo get_the_author();`              |
 | `get_the_category()`            | Obtiene las categorías asignadas a la entrada.                         | `$categories = get_the_category(); foreach($categories as $cat) { echo $cat->name . ' '; }` |
 | `get_the_tags()`                | Obtiene las etiquetas asignadas a la entrada.                          | `$tags = get_the_tags(); foreach($tags as $tag) { echo $tag->name . ' '; }` |
-| `get_the_terms()`               | Obtiene los términos de una taxonomía específica para la entrada.       | `$terms = get_the_terms($post->ID, 'taxonomy'); foreach($terms as $term) { echo $term->name . ' '; }` |
+| `get_the_terms()`               | Obtiene los términos de una taxonomía específica para la entrada.      | `$terms = get_the_terms($post->ID, 'taxonomy'); foreach($terms as $term) { echo $term->name . ' '; }` |
+| `home_url()`                    | Añade la URL de la página de inicio                                    | `home_url()`                          | 
 
 Ten en cuenta que en muchos casos esto se utilizará dentro de un bucle
 
@@ -76,6 +77,7 @@ if ( have_posts() ) {
 | `get_sidebar()`| Carga la barra lateral.                     | get_sidebar(); |
 | `wp_head()`    | Agrega elementos en <head>.                 | wp_head();     |
 | `wp_footer()   | Agrega elementos antes del cierre de <body>.| wp_footer();   |
+| ` get_search_form()` | Agrega campo del buscador | get_search_form();|
 
 ---
 
