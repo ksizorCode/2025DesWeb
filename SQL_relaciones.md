@@ -19,7 +19,7 @@ Una clave foránea es un campo en una tabla que se refiere a una clave primaria 
 Ejemplo: Si tienes una tabla de Pedidos que guarda información de los pedidos realizados por los usuarios, la tabla de Pedidos tendrá una columna con el ID de usuario que hace el pedido. Ese campo es una clave foránea, ya que hace referencia al ID de usuario de la tabla de Usuarios.
 
 |PedidoID	|Fecha	|UsuarioID (FK)|
-|-|-|
+|-|-|-|
 |101	|2025-03-01|	1|
 |102|	2025-03-02	|2|
 
