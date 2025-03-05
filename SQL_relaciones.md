@@ -1,4 +1,4 @@
-# relalaciones en bases de datos
+# 💍Relaciones entre tablas de bases de datos
 
 ## 1.Claves primarias (Primary Key)
 Una clave primaria es un campo o conjunto de campos en una tabla que identifica de forma única cada fila de esa tabla. Es como una etiqueta única para cada registro. No puede haber dos registros con el mismo valor en la clave primaria, y nunca puede ser nula. Una matricula, DNI o id es un ejemplo de esto en el mundo real.
