@@ -63,10 +63,50 @@ VALUES ('camello', 'cammel.jpg', 'aguante mucho sin beber', 5),
 ('burro', 'burro.jpg', 'un animal muy listo', 7),
 ('jirafa','jiraf.jpg','animal con el cuello muy alto',5),
 ('vacas','cow.jpg','tienen varios estómagos',8),
-('oveja','oveja.jpg','tienen mucha lana',9);```
+('oveja','oveja.jpg','tienen mucha lana',9);
 ```
 
-Tras haber insertado estos elementos acabaríamos teniendo los viejos y los nuevos:
+Tras haber insertado estos elementos esta sería la estructura con lo anterior y actual actualizado (si se ha actualizado tanto la tabla Animales como la tabla Especies):
+
+#### Tabla Animales
+
+| ID | Nombre del Animal | Foto | Descripción | ID Especie |
+|----|------------------|------|-------------|------------|
+| 1  | elefante        | ele.jpg | bichu grandón con trompa | 1 |
+| 2  | león            | leon.jpg | el rey de la selva | 2 |
+| 3  | tiburón         | tiburon.jpg | el malo de nemo | 3 |
+| 4  | perro          | rex.jpg | el mejor amigo del hombre | 4 |
+| 5  | gato           | tirso.jpg | el peor amigo del hombre | 2 |
+| 6  | pez espada     | espada.jpg | el pez que hace esgrima | 3 |
+| 7  | rinoceronte    | rino.jpg | cuidado con el cuerno | 1 |
+| 8  | camello        | cammel.jpg | aguante mucho sin beber | 5 |
+| 9  | salmón         | salmon.jpg | ta muy bueno ahumado | 3 |
+| 10 | bonito         | bonito.jpg | es un pez que no es feo | 3 |
+| 11 | sardina        | sardina.jpg | pez azul | 3 |
+| 12 | trucha         | trucha.jpg | surcan los mares y los rios | 3 |
+| 13 | cucaracha      | cucaracha.jpg | sobrevive apocalipsis nucleares | 6 |
+| 14 | burro         | burro.jpg | un animal muy listo | 7 |
+| 15 | jirafa        | jiraf.jpg | animal con el cuello muy alto | 5 |
+| 16 | vacas         | cow.jpg | tienen varios estómagos | 8 |
+| 17 | oveja         | oveja.jpg | tienen mucha lana | 9 |
+
+#### Tabla Especies
+
+| ID Especie | Nombre de la Especie | Icono |
+|-----------|--------------------|------|
+| 1 | paquidermo | paquidermo.jpg |
+| 2 | felino | icono_gato.jpg |
+| 3 | pez | iconoPez.jpg |
+| 4 | canino | icono-perro.jpg |
+| 5 | ungulado | icono_camel.jpg |
+| 6 | insecto | icono_insecto.jpg |
+| 7 | equino | icono_equino.jpg |
+| 8 | bovino | icono_bovino.jpg |
+| 9 | ovino | icono_ovino.jpg |
+
+
+
+
 
 ### 3.2 Inserción de datos en la Tabla Especies
 ```sql
@@ -85,20 +125,23 @@ VALUES
 ('insecto', 'icono_bug.jpg'),
 ('equino', 'icono_caballo.png'),
 ('bovino', 'icono_vaca.png'),
+<<<<<<< HEAD
 ('ovino', 'ico_ovino.svg')```
+=======
+('ovino', 'ico_ovino.svg');
+```
+>>>>>>> 9b900f4e0d32ac3ec27b6dd8d4e5187b623512b6
 
 # Relacionamos las Dos Tablas:
 
 ```sql
 SELECT nombre_animal, descripcion, nombre_especie FROM animales, especies WHERE animales.id_especie = especies.id_especie
-
 ```
 
 
 Versión simplificada:
 ```sql
 SELECT nombre_animal, descripcion, nombre_especie FROM animales A, especies B WHERE A.id_especie = B.id_especie
-
 ```
 
 
@@ -137,7 +180,10 @@ SELECT nombre_animal, nombre_especie FROM animales, especies WHERE animales.id_e
 
 SELECT nombre_animal, nombre_especie FROM animales A, especies E WHERE A.id_especie=E.id_especie ORDER BY nombre_especie, nombre_animal ASC
 
+<<<<<<< HEAD
 SELECT animales.nombre_animal, especies.nombre_especie FROM animales, especies WHERE animales.id_especie = especies.id_especie
+=======
+>>>>>>> 9b900f4e0d32ac3ec27b6dd8d4e5187b623512b6
 
 ```
 
