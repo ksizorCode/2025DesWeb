@@ -68,9 +68,10 @@ Una relación 1 a 1 significa que un registro de una tabla está relacionado con
 Ejemplo: Supón que tienes una tabla de Usuarios y una tabla de Detalles de Usuario, donde cada usuario tiene solo un conjunto de detalles únicos.
 
 |Usuarios|Detalles de Usuario|ID (PK)|	Nombre	ID| Detalle (PK)|
-----------	--------	-----------------
-1	Ana	1
-2	Luis	2
+|--------|-------------------|-------|------------|-------------|
+| 1	     |Ana                |	1
+| 2      |Luis 	             | 2
+
 En este caso, UsuarioID en la tabla Detalles de Usuario es una clave foránea que se refiere a la clave primaria ID en la tabla Usuarios.
 Cada usuario tiene solo un detalle asociado, y cada detalle pertenece a solo un usuario. Es una relación 1 a 1.
 2. Relación 1 a Muchos (One to Many)
@@ -78,7 +79,7 @@ Una relación 1 a muchos significa que un registro de una tabla puede estar rela
 
 Ejemplo: En una base de datos de Usuarios y Pedidos, un usuario puede tener muchos pedidos. Sin embargo, cada pedido pertenece a un solo usuario.
 
-Usuarios		Pedidos
+|Usuarios		|Pedidos|
 ID (PK)	Nombre	PedidoID (PK)
 ----------	--------	---------------
 1	Ana	101
