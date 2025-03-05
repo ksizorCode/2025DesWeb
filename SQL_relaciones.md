@@ -1,32 +1,39 @@
-1. Claves primarias (Primary Key)
-Una clave primaria es un campo o conjunto de campos en una tabla que identifica de forma única cada fila de esa tabla. Es como una etiqueta única para cada registro. No puede haber dos registros con el mismo valor en la clave primaria, y nunca puede ser nula.
+# relalaciones en bases de datos
+
+## 1.Claves primarias (Primary Key)
+Una clave primaria es un campo o conjunto de campos en una tabla que identifica de forma única cada fila de esa tabla. Es como una etiqueta única para cada registro. No puede haber dos registros con el mismo valor en la clave primaria, y nunca puede ser nula. Una matricula, DNI o id es un ejemplo de esto en el mundo real.
 
 Ejemplo: Si tienes una tabla de Usuarios, la clave primaria podría ser el ID de usuario, ya que cada usuario tiene un ID único.
 
-ID (PK)	Nombre	Edad
-1	Ana	30
-2	Luis	25
-3	Marta	40
+| ID (PK) | 	Nombre	| Edad |
+|---------|-------------|------|
+|1	|Ana	|30|
+|2	|Luis	|25|
+|3	|Marta	|40|
+
 Aquí, la columna ID es la clave primaria, ya que identifica de forma única a cada usuario.
 
-2. Claves foráneas (Foreign Key)
+##2. Claves foráneas (Foreign Key)
 Una clave foránea es un campo en una tabla que se refiere a una clave primaria de otra tabla. Establece una relación entre dos tablas, ayudando a vincular los datos. La clave foránea asegura que los datos entre las tablas estén relacionados de manera consistente.
 
 Ejemplo: Si tienes una tabla de Pedidos que guarda información de los pedidos realizados por los usuarios, la tabla de Pedidos tendrá una columna con el ID de usuario que hace el pedido. Ese campo es una clave foránea, ya que hace referencia al ID de usuario de la tabla de Usuarios.
 
-PedidoID	Fecha	UsuarioID (FK)
-101	2025-03-01	1
-102	2025-03-02	2
+|PedidoID	|Fecha	|UsuarioID (FK)|
+|-|-|
+|101	|2025-03-01|	1|
+|102|	2025-03-02	|2|
+
 En este caso, UsuarioID es una clave foránea que se refiere a ID en la tabla de Usuarios.
 
-3. Normalización
+## 3. Normalización
 La normalización es el proceso de organizar las tablas en una base de datos para reducir la duplicación de datos y evitar problemas de inconsistencia. El objetivo es dividir la información en varias tablas relacionadas de forma que se pueda almacenar de manera más eficiente y coherente.
 
 Por ejemplo, si tienes una tabla de Pedidos con la siguiente información:
 
-PedidoID	Fecha	UsuarioID	Nombre Usuario	Dirección Usuario
-101	2025-03-01	1	Ana	Calle 123
-102	2025-03-02	2	Luis	Calle 456
+| PedidoID	| Fecha	| UsuarioID	|Nombre Usuario|	Dirección Usuario |
+|101	|2025-03-01 |	1	|Ana	Calle 123 |
+|102	|2025-03-02	| 2	| Luis	Calle 456 |
+
 Puedes ver que los datos del Usuario se repiten, lo que no es eficiente. La normalización sugiere dividir esos datos en dos tablas:
 
 Usuarios (contiene la información del usuario)
