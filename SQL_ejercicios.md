@@ -70,7 +70,7 @@ Tras haber insertado estos elementos acabaríamos teniendo los viejos y los nuev
 
 ### 3.2 Inserción de datos en la Tabla Especies
 ```sql
-INSERT INTO `especie` (`nombre_especie`, `icono`)
+INSERT INTO `especies` (`nombre_especie`, `icono`)
 VALUES ('paquidermo', 'i_paquidermo.jpg'),
 ('felino', 'icono_gato.jpg'),
 ('pez', 'iconoPez.jpg'),
@@ -85,7 +85,7 @@ VALUES
 ('insecto', 'icono_bug.jpg'),
 ('equino', 'icono_caballo.png'),
 ('bovino', 'icono_vaca.png'),
-('ovino', 'ico_ovino.svg'```
+('ovino', 'ico_ovino.svg')```
 
 # Relacionamos las Dos Tablas:
 
@@ -137,7 +137,7 @@ SELECT nombre_animal, nombre_especie FROM animales, especies WHERE animales.id_e
 
 SELECT nombre_animal, nombre_especie FROM animales A, especies E WHERE A.id_especie=E.id_especie ORDER BY nombre_especie, nombre_animal ASC
 
-
+SELECT animales.nombre_animal, especies.nombre_especie FROM animales, especies WHERE animales.id_especie = especies.id_especie
 
 ```
 
