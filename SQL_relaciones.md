@@ -19,7 +19,7 @@ Una clave foránea es un campo en una tabla que se refiere a una clave primaria 
 Ejemplo: Si tienes una tabla de Pedidos que guarda información de los pedidos realizados por los usuarios, la tabla de Pedidos tendrá una columna con el ID de usuario que hace el pedido. Ese campo es una clave foránea, ya que hace referencia al ID de usuario de la tabla de Usuarios.
 
 |PedidoID	|Fecha	|UsuarioID (FK)|
-|-|-|-|
+|-----------|-------|------------|
 |101	|2025-03-01|	1|
 |102|	2025-03-02	|2|
 
@@ -39,16 +39,15 @@ Puedes ver que los datos del Usuario se repiten, lo que no es eficiente. La norm
 
 Usuarios (contiene la información del usuario)
 Pedidos (contiene la información del pedido, con una referencia al usuario)
-Usuarios
-ID
------
-1
-2
-Pedidos
-PedidoID
-----------
-101
-102
+
+| Usuarios | ID |
+|--|--|
+| 1| 2|
+
+|Pedidos|PedidoID|
+|-|-|
+|101|102|
+
 De esta manera, evitamos la redundancia y logramos que si un usuario cambia su dirección, solo tengamos que hacerlo una vez en la tabla de Usuarios.
 
 En resumen:
@@ -68,8 +67,7 @@ Una relación 1 a 1 significa que un registro de una tabla está relacionado con
 
 Ejemplo: Supón que tienes una tabla de Usuarios y una tabla de Detalles de Usuario, donde cada usuario tiene solo un conjunto de detalles únicos.
 
-Usuarios		Detalles de Usuario
-ID (PK)	Nombre	ID Detalle (PK)
+|Usuarios|Detalles de Usuario|ID (PK)|	Nombre	ID| Detalle (PK)|
 ----------	--------	-----------------
 1	Ana	1
 2	Luis	2
