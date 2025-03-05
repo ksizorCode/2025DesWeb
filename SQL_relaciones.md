@@ -30,10 +30,10 @@ La normalización es el proceso de organizar las tablas en una base de datos par
 
 Por ejemplo, si tienes una tabla de Pedidos con la siguiente información:
 
-| PedidoID	| Fecha	| UsuarioID	|Nombre Usuario|	Dirección Usuario |
-|---|--|--|--|--|--|
-|101	|2025-03-01 |	1	|Ana	Calle 123 |
-|102	|2025-03-02	| 2	| Luis	Calle 456 |
+| PedidoID	| Fecha	| UsuarioID	|Nombre Usuario|Dirección Usuario|
+|-----------|-------|----------|----------------|----------------|
+|101	|2025-03-01 |	1	|Ana | Calle 123 |
+|102	|2025-03-02	| 2	| Luis | Calle 456 |
 
 Puedes ver que los datos del Usuario se repiten, lo que no es eficiente. La normalización sugiere dividir esos datos en dos tablas:
 
