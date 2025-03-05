@@ -13,7 +13,7 @@ Ejemplo: Si tienes una tabla de Usuarios, la clave primaria podría ser el ID de
 
 Aquí, la columna ID es la clave primaria, ya que identifica de forma única a cada usuario.
 
-##2. Claves foráneas (Foreign Key)
+## 2. Claves foráneas (Foreign Key)
 Una clave foránea es un campo en una tabla que se refiere a una clave primaria de otra tabla. Establece una relación entre dos tablas, ayudando a vincular los datos. La clave foránea asegura que los datos entre las tablas estén relacionados de manera consistente.
 
 Ejemplo: Si tienes una tabla de Pedidos que guarda información de los pedidos realizados por los usuarios, la tabla de Pedidos tendrá una columna con el ID de usuario que hace el pedido. Ese campo es una clave foránea, ya que hace referencia al ID de usuario de la tabla de Usuarios.
