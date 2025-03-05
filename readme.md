@@ -2,7 +2,7 @@
 > Sesión CodeSandBox de hoy: https://codesandbox.io/p/live/833bc701-2bff-4510-9ddd-a1ab41817c7a
 
 >[!TIP]
-> Otra cosa
+> Fotos Arca de noe: https://drive.google.com/drive/folders/1-C5gvOxGJuDI6mcX5acXvMyHehk-VpjA?usp=drive_link
 
 >[!IMPORTANT]
 > Otra cosa
