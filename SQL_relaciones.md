@@ -1,29 +1,93 @@
-# 💍 Relaciones entre tablas de bases de datos
+# ** 💍Relaciones entre Tablas de Bases de Datos**
 
-## 1. Claves primarias (Primary Key)
-Una clave primaria es un campo o conjunto de campos en una tabla que identifica de forma única cada fila de esa tabla. Es como una etiqueta única para cada registro. No puede haber dos registros con el mismo valor en la clave primaria, y nunca puede ser nula. Una matricula, DNI o id es un ejemplo de esto en el mundo real.
+Este documento cubre conceptos fundamentales en el diseño de bases de datos, tales como **claves primarias**, **claves foráneas** y **normalización**, además de describir los distintos tipos de relaciones entre tablas. A continuación, se presenta un resumen con ejemplos y esquemas para facilitar el aprendizaje.
+
+---
+
+## **1. Claves Primarias (Primary Key)**
+Una **clave primaria** es un campo o conjunto de campos en una tabla que **identifica de forma única cada fila** de esa tabla. Algunas características importantes son:
+- **Única**: No puede haber dos registros con el mismo valor.
+- **No nula**: Cada registro debe tener un valor en la clave primaria.
+- **Ejemplos en el mundo real**: Matrícula, DNI o ID.
 
 Ejemplo: Si tienes una tabla de Usuarios, la clave primaria podría ser el ID de usuario, ya que cada usuario tiene un ID único.
 
-| ID (PK) | 	Nombre	| Edad |
-|---------|-----------|------|
-| 1	      |Ana	      | 30 |
-| 2	      |Luis     	| 25 |
-| 3     	|Marta     	| 40 |
+### **Ejemplo: Tabla de Usuarios**
+| **ID (PK)** | **Nombre** | **Edad** |
+|-------------|------------|----------|
+| 1           | Ana        | 30       |
+| 2           | Luis       | 25       |
+| 3           | Marta      | 40       |
 
-Aquí, la columna ID es la clave primaria, ya que identifica de forma única a cada usuario.
+*En este ejemplo, la columna **ID** es la clave primaria, ya que identifica de forma única a cada usuario.*
 
-## 2. Claves foráneas (Foreign Key)
-Una clave foránea es un campo en una tabla que se refiere a una clave primaria de otra tabla. Establece una relación entre dos tablas, ayudando a vincular los datos. La clave foránea asegura que los datos entre las tablas estén relacionados de manera consistente.
+---
+
+## **2. Claves Foráneas (Foreign Key)**
+Una **clave foránea** es un campo en una tabla que se refiere a una **clave primaria** en otra tabla.
+Esto **establece una relación** entre ambas tablas y asegura la integridad de los datos.
+
+La clave foránea asegura que los datos entre las tablas estén relacionados de manera consistente.
 
 _**Ejemplo:** Si tienes una tabla de Pedidos que guarda información de los pedidos realizados por los usuarios, la tabla de Pedidos  tendrá una columna con el ID de usuario que hace el pedido. Ese campo es una clave foránea, ya que hace referencia al ID de usuario de la tabla de Usuarios._
 
-|PedidoID	|Fecha	|UsuarioID (FK)|
-|-----------|-------|------------:|
-|101	|2025-03-01|	1|
-|102|	2025-03-02	|2|
 
-En este caso, UsuarioID es una clave foránea que se refiere a ID en la tabla de Usuarios.
+
+### **Ejemplo: Tabla de Pedidos**
+| **PedidoID** | **Fecha**   | **UsuarioID (FK)** |
+|--------------|-------------|--------------------|
+| 101          | 2025-03-01  | 1                  |
+| 102          | 2025-03-02  | 2                  |
+
+*Aquí, **UsuarioID** es una clave foránea que se refiere a la clave primaria **ID** en la tabla de Usuarios.*
+
+---
+
+## **3. Normalización**
+La **normalización** es el proceso de organizar las tablas de una base de datos para **reducir la duplicación de datos** y evitar inconsistencias. El objetivo es dividir la información en tablas relacionadas que permitan:
+- **Eficiencia** en el almacenamiento.
+- **Coherencia** en la actualización de datos.
+
+### **Ejemplo:**
+Si se tiene una tabla de Pedidos que repite información del usuario:
+| **PedidoID** | **Fecha**   | **UsuarioID** | **Nombre Usuario** | **Dirección Usuario** |
+|--------------|-------------|---------------|--------------------|-----------------------|
+| 101          | 2025-03-01  | 1             | Ana                | Calle 123             |
+| 102          | 2025-03-02  | 2             | Luis               | Calle 456             |
+
+La normalización sugiere **dividir** esta información en dos tablas:
+- **Usuarios**: Contiene la información única del usuario.
+- **Pedidos**: Contiene la información del pedido y una referencia al usuario.
+
+---
+
+## **4. Tipos de Relaciones entre Tablas**
+
+### **4.1 Relación 1 a 1 (One to One)**
+Cada registro en la primera tabla está relacionado con **exactamente un registro** en la segunda tabla y viceversa.  
+**Ejemplo: Usuarios y Detalles de Usuario**
+
+| **Usuarios** |          | **Detalles de Usuario** |
+|--------------|----------|-------------------------|
+| **ID (PK)**  | Nombre   | **DetalleID (PK)**      |
+| 1            | Ana      | 1                       |
+| 2            | Luis     | 2                       |
+
+> **Nota:** La columna en la tabla *Detalles de Usuario* actúa como clave foránea referenciando la clave primaria de *Usuarios*.
+
+#### **Mermaid Diagram – Relación 1 a 1**
+```mermaid
+erDiagram
+    USUARIOS {
+      int ID PK "Identificador único"
+      string Nombre
+    }
+    DETALLES_USUARIO {
+      int DetalleID PK "Identificador único"
+      string Info
+    }
+    USUARIOS ||--|| DETALLES_USUARIO : "tiene"
+```
 
 ## 3. Normalización
 La normalización es el proceso de organizar las tablas en una base de datos para reducir la duplicación de datos y evitar problemas de inconsistencia. El objetivo es dividir la información en varias tablas relacionadas de forma que se pueda almacenar de manera más eficiente y coherente.
