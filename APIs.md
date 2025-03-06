@@ -133,3 +133,219 @@ Pros:
 - Compatible con pruebas automatizadas.
 Contras:
 - Necesita instalación con Composer.
+
+
+
+# APIs gratuitas y fáciles de usar para pruebas y desarrollo con PHP.
+He incluido APIs de datos generales, tiempo, películas y cultura geek.
+
+| Categoría	        | API	            |                                     Descripción	| URL de Documentación         |
+|-------------------|-------------------|---------------------------------------------------|------------------------------|
+|Datos de prueba	|JSONPlaceholder	|API falsa con posts, comentarios y usuarios de ejemplo.	|jsonplaceholder.typicode.com|
+|Datos de prueba	|RandomUser	        |Genera perfiles de usuario aleatorios.	|randomuser.me|
+|Tiempo/Clima	    |OpenWeatherMap	    |Datos meteorológicos y previsión del tiempo.	|openweathermap.org/api|
+|Tiempo/Clima	    |WeatherAPI	        |API sencilla para obtener datos del clima.	|weatherapi.com|
+|Películas y Series	|The Movie Database (TMDB)	|Información de películas, series y actores.	|developer.themoviedb.org|
+|Películas y Series	|OMDB API	        |Alternativa a TMDB, basada en datos de IMDb.	|omdbapi.com|
+|Mundo Friki	    |PokéAPI	        |Información sobre todos los Pokémon.	|pokeapi.co|
+|Mundo Friki	    |Rick and Morty     |API	Datos sobre personajes, episodios y ubicaciones de la serie.	|rickandmortyapi.com|
+|Mundo Friki	    |Star Wars API (SWAPI)	|Información de películas, personajes, naves y más del universo Star Wars.	|swapi.dev|
+|Mundo Friki	    |DnD 5e API	|Datos sobre Dungeons & Dragons 5ª edición.	|dnd5eapi.co|
+|Datos Aleatorios	|Bored API	|Ideas para actividades cuando estás aburrido.	|www.boredapi.com|
+|Datos Aleatorios	|Numbers API	|Datos curiosos sobre números.	|numbersapi.com|
+|Datos Aleatorios	|Cat Facts	|Datos aleatorios sobre gatos.	|catfact.ninja|
+
+## Ejemplo de uso en PHP con la API de clima (WeatherAPI)
+```php
+
+<?php
+$apiKey = "TU_API_KEY"; // Necesitas registrarte en weatherapi.com para obtener una clave
+$city = "Gijón";
+$url = "http://api.weatherapi.com/v1/current.json?key=$apiKey&q=$city";
+
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+echo "Ciudad: " . $data['location']['name'] . "<br>";
+echo "Temperatura: " . $data['current']['temp_c'] . "°C<br>";
+echo "Condición: " . $data['current']['condition']['text'];
+?>
+```
+Si necesitas más ejemplos con alguna API en concreto, dime y te preparo el código en PHP.
+
+Tú dijiste:
+Dame más ejemplos
+ChatGPT Plus
+Aquí tienes más ejemplos de uso de APIs en PHP utilizando distintas categorías.
+
+1. Obtener información de una película con OMDB API
+Esta API permite buscar información de películas a partir de su título o ID de IMDb.
+
+Código PHP
+```php
+<?php
+$apiKey = "TU_API_KEY"; // Regístrate en https://www.omdbapi.com/
+$title = "Inception";
+$url = "http://www.omdbapi.com/?t=" . urlencode($title) . "&apikey=$apiKey";
+
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+if ($data["Response"] == "True") {
+    echo "<h2>{$data['Title']} ({$data['Year']})</h2>";
+    echo "<p>Director: {$data['Director']}</p>";
+    echo "<p>Género: {$data['Genre']}</p>";
+    echo "<img src='{$data['Poster']}' alt='Poster'>";
+} else {
+    echo "Película no encontrada.";
+}
+?>
+```
+
+Salida esperada
+```makefile
+Título: Inception (2010)
+Director: Christopher Nolan
+Género: Acción, Ciencia Ficción
+(Imagen del póster)
+```
+
+## 2. Obtener personajes de Rick & Morty con la API de Rick and Morty
+Esta API devuelve información sobre personajes, episodios y ubicaciones de la serie.
+
+```php
+<?php
+$url = "https://rickandmortyapi.com/api/character/?status=alive";
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+foreach ($data['results'] as $character) {
+    echo "<h3>{$character['name']}</h3>";
+    echo "<p>Especie: {$character['species']} - Estado: {$character['status']}</p>";
+    echo "<img src='{$character['image']}' alt='{$character['name']}' width='100'><hr>";
+}
+?>
+```
+
+Salida esperada
+```python-repl
+
+Rick Sanchez - Humano - Vivo
+(Imagen)
+Morty Smith - Humano - Vivo
+(Imagen)
+...
+3. Obtener un Pokémon con la PokéAPI
+La PokéAPI permite consultar información sobre cualquier Pokémon.
+```
+
+```php
+<?php
+$pokemon = "pikachu";
+$url = "https://pokeapi.co/api/v2/pokemon/$pokemon";
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+echo "<h2>{$data['name']}</h2>";
+echo "<img src='{$data['sprites']['front_default']}' alt='{$data['name']}'>";
+echo "<p>Altura: " . ($data['height'] / 10) . " m</p>";
+echo "<p>Peso: " . ($data['weight'] / 10) . " kg</p>";
+?>
+```
+
+```makefile
+Nombre: Pikachu
+(Imagen)
+Altura: 0.4 m
+Peso: 6 kg
+4. Obtener datos de Star Wars con SWAPI
+La API de Star Wars permite consultar información de personajes, naves, planetas, etc.
+```
+
+
+```php
+<?php
+$character_id = 1; // Luke Skywalker
+$url = "https://swapi.dev/api/people/$character_id/";
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+echo "<h2>{$data['name']}</h2>";
+echo "<p>Altura: {$data['height']} cm</p>";
+echo "<p>Peso: {$data['mass']} kg</p>";
+echo "<p>Color de cabello: {$data['hair_color']}</p>";
+?>
+```
+
+Salida esperada
+```yaml
+
+Luke Skywalker
+Altura: 172 cm
+Peso: 77 kg
+Color de cabello: Rubio
+```
+
+
+## 5. Obtener datos meteorológicos con OpenWeatherMap
+OpenWeatherMap ofrece información en tiempo real del clima en cualquier ciudad.
+
+```php
+<?php
+$apiKey = "TU_API_KEY"; // Regístrate en https://openweathermap.org/
+$city = "Madrid";
+$url = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey&units=metric";
+
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+echo "<h2>Clima en {$data['name']}</h2>";
+echo "<p>Temperatura: {$data['main']['temp']}°C</p>";
+echo "<p>Humedad: {$data['main']['humidity']}%</p>";
+echo "<p>Condición: {$data['weather'][0]['description']}</p>";
+?>
+```
+
+Salida esperada
+```makefile
+Clima en Madrid
+Temperatura: 22°C
+Humedad: 50%
+Condición: cielo despejado
+```
+
+## 6. Obtener datos curiosos sobre números con NumbersAPI
+NumbersAPI devuelve datos aleatorios sobre cualquier número.
+
+```php
+<?php
+$number = 42;
+$url = "http://numbersapi.com/$number";
+$response = file_get_contents($url);
+
+echo "<p>$response</p>";
+?>
+```
+
+Salida esperada
+```css
+42 es el significado de la vida, el universo y todo lo demás según la "Guía del autoestopista galáctico".
+```
+
+## 7. Obtener actividades aleatorias con BoredAPI
+Esta API sugiere cosas para hacer cuando estás aburrido.
+
+```php
+<?php
+$url = "https://www.boredapi.com/api/activity";
+$response = file_get_contents($url);
+$data = json_decode($response, true);
+
+echo "<p>Actividad sugerida: {$data['activity']}</p>";
+?>
+```
+Salida esperada
+```less
+Actividad sugerida: Aprende a tocar un nuevo instrumento musical.
+```
+
