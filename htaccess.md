@@ -41,7 +41,7 @@ Proyecto/
 ├── apartado-contacto-de-nuestra-empresa.php
 ├── index.php
 └── productos.php
-├── assets/
+└── assets/
     └── apartados/
         └── serv550.php
 ```
