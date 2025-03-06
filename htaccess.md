@@ -61,14 +61,14 @@ RewriteRule ^contacto$  apartado-contacto-de-nuestra-empresa.php [L]
 Las rutas a los enlaces de navegación por lo tanto apuntarán a las nuevas URLs limpias:
 
 ```html
-       <nav>
-            <ul>
-                <li><a href="inicio">Inicio</a></li>
-                <li><a href="productos">Productos</a></li>
-                <li><a href="servicios">Servicios</a></li>
-                <li><a href="contacto">Contacto</a></li>
-                <li><a href="/acceso/clientes/premium">Acceso</a></li>
-            </ul>
+<nav>
+    <ul>
+    <li><a href="inicio">Inicio</a></li>
+    <li><a href="productos">Productos</a></li>
+    <li><a href="servicios">Servicios</a></li>
+    <li><a href="contacto">Contacto</a></li>
+    <li><a href="/acceso/clientes/premium">Acceso</a></li>
+    </ul>
 </nav>
 ```
 
