@@ -26,13 +26,13 @@ Contras:
 - No permite cabeceras personalizadas.
 - No es seguro para APIs que requieren autenticación.
 
-##Ejemplo 2: Consumir una API con cURL (Método recomendado para mayor control)
+## Ejemplo 2: Consumir una API con cURL (Método recomendado para mayor control)
 Usamos cURL para hacer peticiones más avanzadas.
 
 ```php
 
 <?php
-$url = "https://jsonplaceholder.typicode.com/posts/1";
+$url = "http://jsonplaceholder.typicode.com/posts/1";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -58,7 +58,7 @@ En este caso, pasamos parámetros en la URL.
 
 ```php
 <?php
-$base_url = "https://jsonplaceholder.typicode.com/posts";
+$base_url = "https//jsonplaceholder.typicode.com/posts";
 $params = http_build_query(["userId" => 1]); 
 $url = "$base_url?$params";  
 
