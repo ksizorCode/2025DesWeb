@@ -56,6 +56,13 @@ direccion, telefono fijo, móvil, gps, etc (con constantes)
 ### Aviso Legal (con constantes)
 
 
+### Prototupado
+- wireframe
+- Layout
+- Euristica
+- Figma
+- Diagrama de flujo
+
 
 #### HTML
 - [ ] Posicionamiento SEO básico y Accesibilidad:
@@ -75,6 +82,7 @@ direccion, telefono fijo, móvil, gps, etc (con constantes)
   - [ ] Estructura clara jerarquizando la importancia de los elementos (lo más importante, más grande, llamativo o destacado)
   - [ ] Google Fonts - uso de una tipografía no habitual
   - [ ] FontAwesome - o uso de un sistema de iconos 
+- [ ] variables css con colores principales, fuentes, maxwidth, etc
 
 #### JAVASCRIPT
   - [ ] Uso de JS para algún tipo de interactivo. Ejemplos:
