@@ -10,7 +10,7 @@ Este método es el más sencillo, pero no permite muchas configuraciones avanzad
 
 ```php
 <?php
-$url = "https://jsonplaceholder.typicode.com/posts/1"; // API de prueba
+$url = "http://jsonplaceholder.typicode.com/posts/1"; // API de prueba
 $response = file_get_contents($url);
 $data = json_decode($response, true);
 
