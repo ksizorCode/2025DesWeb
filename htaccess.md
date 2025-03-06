@@ -1,6 +1,6 @@
 # .htaccess
 ## ¿Qué es .htaccess?
-El archivo  `.htacces` es un archivo configuración utilizado por los servidores **Apache**.
+El archivo  `.htaccess` es un archivo configuración utilizado por los servidores **Apache**.
 Entre sus usos se encuentran:
 
 - Redireccionamientos: Como el ejemplo para el error 404.
