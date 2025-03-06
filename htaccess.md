@@ -19,8 +19,27 @@ RewriteEngine On
 ErrorDocument 404 /error.php
 ```
 
+## Redirección a URL limpia
+En ciertas ocuasiones nos podemos encontrar con rutas de URLs con extensiones de archivos o estructuras poco amigables de cara al posicionamiento SEO.
+En esos casos podemos reconvertir cosas tipo:
+Tenemos esta url un poco fea:
+- https://miweb.com/productos/playeros-rojos.php
+- https://miweb.com/productos/864545.php
+- https://miweb.com/productos?procuto=playero-34554
+- 
+Podemos reconvertirlo a una estrucuta como estas:
+- https://miweb.com/productos/deporte/tenis/playeros/adidas/running-air-4200
+- https://miweb.com/productos/playeros-rojos
 
+```htaccess
+#redirección
+RewriteEngine On
+RewriteRule ^inicio$ index.php [L]
+RewriteRule ^productos$ productos.php [L]
+RewriteRule ^servicos$  inc/bloques/otracosa/ser45887.php [L]
+RewriteRule ^contacto$  contacto.php [L]
 
+```
 
 ------
 
