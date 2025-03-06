@@ -1,9 +1,18 @@
 # .htaccess
-El `.htacces` es un archivo que funciona en los servidores **Apache** y se utiliza para modificar rutas.
+## ¿Qué es .htaccess?
+El archivo  `.htacces` es un archivo configuración utilizado por los servidores **Apache**.
+Entre sus usos se encuentran:
 
-Por ejemplo en el caso de querer que cualquier dirección incorrecta en nuestra web lance el archivo 404 se utilizará el siguiente código:
+- Redireccionamientos: Como el ejemplo para el error 404.
+- Reescritura de URLs: Para generar rutas más amigables y optimizadas para el posicionamiento web (SEO).
+- Control de acceso: Bloqueo de IPs, autenticación, entre otros.
+- Configuración de caché: Mejorando la velocidad de carga del sitio.
+
+
 
 ## Error 404
+En el caso de querer que cualquier dirección incorrecta en nuestra web lance el archivo 404 se utilizará el siguiente código:
+
 ```htaccess
 # Redireccionar al archivo que se mostrará en caso de error 404
 RewriteEngine On
@@ -18,14 +27,6 @@ ErrorDocument 404 /error.php
 CHAT GPT
 ----
 
-
-¿Qué es el archivo .htaccess?
-El archivo .htaccess es un archivo de configuración utilizado por el servidor Apache. Permite modificar la configuración del servidor de forma local (en el directorio donde se coloca y sus subdirectorios), sin necesidad de acceder a los archivos de configuración global. Entre sus usos se encuentran:
-
-Redireccionamientos: Como el ejemplo para el error 404.
-Reescritura de URLs: Para generar rutas más amigables y optimizadas para el posicionamiento web (SEO).
-Control de acceso: Bloqueo de IPs, autenticación, entre otros.
-Configuración de caché: Mejorando la velocidad de carga del sitio.
 Ejemplos de uso para generar URLs limpias
 Ejemplo 1: Redirección de URLs con parámetros a URLs amigables
 Supongamos que tenemos una URL tradicional con parámetros, por ejemplo:
@@ -33,6 +34,7 @@ Supongamos que tenemos una URL tradicional con parámetros, por ejemplo:
 
 Podemos reescribirla a una URL amigable, como:
 /producto/123
+
 
 El siguiente código se encarga de traducir la URL amigable a la consulta real del archivo PHP:
 
@@ -79,9 +81,8 @@ Eliminar www (redirección sin www)	N/A	N/A	htaccess<br>RewriteEngine On<br>Rewr
 Diagrama Mermaid: Flujo de Reescritura y Redirección
 A continuación, se muestra un diagrama que ilustra el flujo básico de cómo funciona la reescritura de URLs con .htaccess:
 
-mermaid
-Copiar
-Editar
+```mermaid
+
 flowchart TD
     A[Usuario solicita URL amigable]
     B[.htaccess analiza la URL]
@@ -96,6 +97,8 @@ flowchart TD
     D --> E
     E --> F
     C -- No --> F
+
+```    
 Explicación del diagrama:
 
 El usuario solicita una URL amigable.
