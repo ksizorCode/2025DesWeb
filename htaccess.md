@@ -19,7 +19,7 @@ RewriteEngine On
 ErrorDocument 404 /error.php
 ```
 
-## Redirección a URL limpia
+## Reescritura a URL limpia
 En ciertas ocuasiones nos podemos encontrar con rutas de URLs con extensiones de archivos o estructuras poco amigables de cara al posicionamiento SEO.
 En esos casos podemos reconvertir cosas tipo:
 Tenemos esta url un poco fea:
@@ -40,6 +40,17 @@ RewriteRule ^servicos$  inc/bloques/otracosa/ser45887.php [L]
 RewriteRule ^contacto$  contacto.php [L]
 
 ```
+
+
+## Control de Acceso
+Podemos bloquear el acceso a un apartado (carpeta o subdirectorio) de nuestra web con usuario y contraseña.
+
+```htaccess
+
+
+
+```
+
 
 ------
 
