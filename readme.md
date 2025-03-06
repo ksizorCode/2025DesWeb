@@ -11,7 +11,15 @@
 > Otra cosa
 
 >[!CAUTION]
-> Otra cosa
+> Herramientas para dibujar Diagramas de Bases de datos:
+>https://dbdiagram.io/d
+>https://drawsql.app/
+>https://excalidraw.com/
+>https://erdlab.io/#home
+>https://www.figma.com/es-es/figjam/
+>https://azimutt.app/45f571a6-d9b8-4752-8a13-93ac0d2b7984/c00d0c45-8db2-46b7-9b51-eba661640c3c?token=9a59ccbb-7a58-4c88-9dfc-692de6177be9
+>https://app.quickdatabasediagrams.com/#/
+>https://www.mysql.com/products/workbench/
 
 
 
