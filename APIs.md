@@ -215,16 +215,32 @@ Esta API devuelve información sobre personajes, episodios y ubicaciones de la s
 
 ```php
 <?php
-$url = "https://rickandmortyapi.com/api/character/?status=alive";
-$response = file_get_contents($url);
+$url = "https://rickandmortyapi.com/api/character/?status=alive"; // Cambia a HTTPS
+
+//Desactivar el SSL si da problemas
+/*
+$context = stream_context_create([
+    "ssl" => [
+        "verify_peer" => false,
+        "verify_peer_name" => false
+    ]
+]);
+*/
+
+$response = file_get_contents($url, false, $context);
 $data = json_decode($response, true);
 
-foreach ($data['results'] as $character) {
-    echo "<h3>{$character['name']}</h3>";
-    echo "<p>Especie: {$character['species']} - Estado: {$character['status']}</p>";
-    echo "<img src='{$character['image']}' alt='{$character['name']}' width='100'><hr>";
+if ($data && isset($data['results'])) {
+    foreach ($data['results'] as $character) {
+        echo "<h3>{$character['name']}</h3>";
+        echo "<p>Especie: {$character['species']} - Estado: {$character['status']}</p>";
+        echo "<img src='{$character['image']}' alt='{$character['name']}' width='100'><hr>";
+    }
+} else {
+    echo "Error al obtener los datos.";
 }
 ?>
+
 ```
 
 Salida esperada
