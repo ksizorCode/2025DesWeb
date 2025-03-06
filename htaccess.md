@@ -40,7 +40,9 @@ Proyecto/
 ├── .htaccess
 ├── apartado-contacto-de-nuestra-empresa.php
 ├── index.php
-└── productos.php
+├── productos.php
+├── s.php
+├── login.php
 └── assets/
     └── apartados/
         └── serv550.php
@@ -51,6 +53,8 @@ Proyecto/
 RewriteEngine On
 RewriteRule ^inicio$ index.php [L]
 RewriteRule ^productos$ productos.php [L]
+RewriteRule ^servicios$ s.php [L]
+RewriteRule ^/acceso/clientes/premium$ login.php [L]
 RewriteRule ^servicios$  assets/apartados/serv550.php [L]
 RewriteRule ^contacto$  apartado-contacto-de-nuestra-empresa.php [L]
 ```
