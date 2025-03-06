@@ -74,11 +74,6 @@ Cada registro en la primera tabla está relacionado con **exactamente un registr
 | 2            | Luis     | 2                       |
 
 
-|Lunes|Martes|Miercoles|
-|----:|:----:|--------:|
-|Desayuno| Desayuno| Desayuno|
-|5|4|3|
-
 > **Nota:** La columna en la tabla *Detalles de Usuario* actúa como clave foránea referenciando la clave primaria de *Usuarios*.
 
 #### **Mermaid Diagram – Relación 1 a 1**
