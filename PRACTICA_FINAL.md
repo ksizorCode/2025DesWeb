@@ -54,3 +54,65 @@ direccion, telefono fijo, móvil, gps, etc (con constantes)
   - iframe con google maps / Open Maps / Bing Maps
 
 ### Aviso Legal (con constantes)
+
+
+
+#### HTML
+- [ ] Posicionamiento SEO básico y Accesibilidad:
+  - [ ] Correcta estructura de etiquetas a nivel semántico:
+    - [ ] nav, main, header, footer, aside, section, etc...
+  - [ ] Correcta gerarquía: h1, h2, h3, h4
+  - [ ] title, meta etiquetas
+  - [ ] textos alternativos en imágenes
+  - [ ] peso reducido de la página
+  
+#### CSS     
+  - [ ] Responsive, multiformato, multidispositivo
+  - [ ] Utilizar colores que contrasten y sea legible (accesibilidad)
+  - [ ] Hover. Los elementos interactivos han de notarse que lo son.
+  - [ ] Alguna animación y/o transición
+  - [ ] Flex y/o Grid
+  - [ ] Estructura clara jerarquizando la importancia de los elementos (lo más importante, más grande, llamativo o destacado)
+  - [ ] Google Fonts - uso de una tipografía no habitual
+  - [ ] FontAwesome - o uso de un sistema de iconos 
+
+#### JAVASCRIPT
+  - [ ] Uso de JS para algún tipo de interactivo. Ejemplos:
+      - Pase de diapositivas
+      - Sanitización en JS de un formulario antes de que el usuario envie los datos
+      - Cambio de vista de la información: tabla, lista, retícula, cartas
+      - Algun juego con aleatorio
+      - etc...
+
+#### Otros   
+- [ ] Estructura de carpetas lo más limpia y estructurada posible
+  - [ ] Archivos con nombres coherentes y unificados con el mismo criterio de nomenclaturas
+- [ ] URL limpias (.htaccess)
+- [ ] Error 404 (.htaccess)
+
+### PHP
+- [ ] Uso de Includes o Requieres para bloques de código reutilizables
+- [ ] Uso de Funciones reutilizables en un archivo que se cargará en todos los apartados
+- [ ] Estructura de Modelo Vista Controlador MVC (en la medida de lo posible)
+- [ ] Código bien estructurado y con comentarios explicado (no hace falta que expliques cosas obvias de forma exagerada)
+- [ ] Sanitización en PHP al recibir los datos.
+
+#### SESIONES
+- [ ] Control de sesiones de usuarios
+
+#### LOCAL STOGAGE
+- [ ] Almacenar algún valor en Local storage. (por ejemplo que elementos han sido marcados como favoritos o que vista se dejó marcada la última vez: lista, retícula o fichas.)
+
+### COOKIES
+- [ ] Un ejemplo de uso de Cookies (por ejemplo un aviso de Cookies)
+
+#### Base de Datos
+- [ ] Dibujo y planificación de la base de datos a desarrollar
+- [ ] Acceso a Base de Datos
+- [ ] Desarrollo de un CRUD en PHP
+
+#### PWA - Progresive Web Aplication
+- [ ] manifest.json
+- [ ] OpenGraph y otras llamadas a las metaetiquetas
+- [ ] Favicones y iconos d ela app
+
