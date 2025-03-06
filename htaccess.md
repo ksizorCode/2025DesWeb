@@ -45,7 +45,7 @@ Proyecto/
     └── apartados/
         └── serv550.php
 ```
-
+`.htaccess`
 ```htaccess
 #redirección
 RewriteEngine On
