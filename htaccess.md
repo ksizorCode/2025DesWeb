@@ -34,7 +34,7 @@ Podemos reconvertirlo a una estrucuta como estas:
 Veamos su uso.
 Siendo la estructura de carpetas la siguiente, haremos el código que figura continuación para generar unas URLs amigables o limpias de cara al posicionamiento:
 
-
+```
 Proyecto/
 │  
 ├── .htaccess
@@ -44,7 +44,7 @@ Proyecto/
 ├── assets/
     └── apartados/
         └── serv550.php
-
+```
 
 ```htaccess
 #redirección
