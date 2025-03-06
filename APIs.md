@@ -290,7 +290,7 @@ echo "<p>Peso: " . ($data['weight'] / 10) . " kg</p>";
 ---
 
 - Nombre: Pikachu
-![pikachu](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png)# Welcome to StackEdit!
+![pikachu](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png)
 - Altura: 0.4 m
 - Peso: 6 kg
 
