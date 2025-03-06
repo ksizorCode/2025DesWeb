@@ -259,8 +259,26 @@ La PokéAPI permite consultar información sobre cualquier Pokémon.
 <?php
 $pokemon = "pikachu";
 $url = "https://pokeapi.co/api/v2/pokemon/$pokemon";
-$response = file_get_contents($url);
+
+// Desactivar verificación SSL
+$context = stream_context_create([
+    "ssl" => [
+        "verify_peer" => false,
+        "verify_peer_name" => false
+    ]
+]);
+
+$response = file_get_contents($url, false, $context);
+
+if ($response === false) {
+    die("Error al obtener los datos de la API.");
+}
+
 $data = json_decode($response, true);
+
+if (!$data) {
+    die("No se pudo decodificar la respuesta JSON.");
+}
 
 echo "<h2>{$data['name']}</h2>";
 echo "<img src='{$data['sprites']['front_default']}' alt='{$data['name']}'>";
