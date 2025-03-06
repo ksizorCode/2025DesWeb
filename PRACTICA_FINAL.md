@@ -1,5 +1,8 @@
 # Practica Final
-Desarrolla una aplicación con las herramientas vistas en clase_
+Desarrolla una aplicación que resuelva unnproblema. utilzia para ello las herramientas vistas en clase.
+
+- Define queva a hacer tu aplicación y que problema va a sersolver.
+- ¿Cuál es su pyblico objetivo?
 
 - HTML como estructura de etiquetado
 - CSS para los estilos
@@ -31,8 +34,6 @@ No tienen porqué llamarse así ( esto es el concepto de lo que debería aparece
 
 - Datos de uso habitual: como CONSTANTES.
   **Ejemplo:** Titulo de la App, titulo corto, direccion de la empresa, telefono fijo, móvil, gps, etc..
-
-
 
 
 ### Inicio
@@ -123,4 +124,10 @@ direccion, telefono fijo, móvil, gps, etc (con constantes)
 - [ ] manifest.json
 - [ ] OpenGraph y otras llamadas a las metaetiquetas
 - [ ] Favicones y iconos d ela app
+
+#### GITHUB
+Para el almacenamiento del proceso.
+
+#### APIs
+finalmente, puedes lizar  APIs externas
 
