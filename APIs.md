@@ -289,14 +289,15 @@ echo "<p>Peso: " . ($data['weight'] / 10) . " kg</p>";
 
 ---
 
-Nombre: Pikachu
+- Nombre: Pikachu
 ![pikachu](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png)# Welcome to StackEdit!
-Altura: 0.4 m
-Peso: 6 kg
-4. Obtener datos de Star Wars con SWAPI
-La API de Star Wars permite consultar información de personajes, naves, planetas, etc.
+- Altura: 0.4 m
+- Peso: 6 kg
 
 ---
+
+## 4. Obtener datos de Star Wars con SWAPI
+La API de Star Wars permite consultar información de personajes, naves, planetas, etc.
 
 
 ```php
