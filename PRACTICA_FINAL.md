@@ -23,13 +23,34 @@ Desarrolla una aplicación con las herramientas vistas en clase_
   - etc... (indica qué herramientas has usado en el proceso y para qué)
 
 
-recoger datos principales en unico luger:
-direccion, telefono fijo, móvil, gps, etc
+-------
 
-- contacto: (bebe de constantes)
- - numero telefono clicable 
- - envio de WhatsApp 
- - envio formulario de contscto via email
+## Apartados
+Como mínimo la App / Web deberá contar con los siguientes apartados y contenidos técnicos y funcionales:
+No tienen porqué llamarse así ( esto es el concepto de lo que debería aparecer en cada apartado)
+
+- Datos de uso habitual: como CONSTANTES.
+  **Ejemplo:** Titulo de la App, titulo corto, direccion de la empresa, telefono fijo, móvil, gps, etc..
 
 
-- aviso legal (con constantes)
+
+
+### Inicio
+
+### Apartado 1
+
+### Apartado 2
+
+
+### Contacto
+Recoger datos principales en unico luger:
+direccion, telefono fijo, móvil, gps, etc (con constantes)
+
+- contacto: 
+ - numero telefono con `href="tel:985XXXXXXXXXX"`
+ - envio de WhatsApp
+ - envio de Email con `href="mailto:direccion@correo.es"`
+ - envio formulario de contacto via email `PHP mail()`
+  - iframe con google maps / Open Maps / Bing Maps
+
+### Aviso Legal (con constantes)
