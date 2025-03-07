@@ -24,8 +24,8 @@ También aprovecharemos para implementar un Error 404 personalizado.
 ---
 
 ## 🍼 Primeros pasos
-1. Crea un nuevo servidor en `Local` (para que no interfiera con otros desarrollos)
-2. Activa **Apache** (.htaccess sólo funciona en apache)
+1. Crea un nuevo servidor en `Local` (para que no interfiera con otros desarrollos. Y como siempre borramos todo el contenidod e public)
+2. Activa **Apache** en lugar de Nginx y dale a Aplicar (.htaccess sólo funciona en apache)
 
 ## 🏗️ Estructura de mi Web App
 
