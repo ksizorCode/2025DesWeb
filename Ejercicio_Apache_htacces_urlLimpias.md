@@ -7,7 +7,7 @@
 
 Orden de archivos y carpetas con las que vamos a contar:
 
-    - **index.php**
+  - **index.php**
         - include a header
         - listado de productos (conexión base de datos y bucle)
         - include footer
@@ -36,6 +36,8 @@ Orden de archivos y carpetas con las que vamos a contar:
      
     La estructura de carpetas será la siguiente:
 
+
+  
 ```
     /mi-web/
     │── index.php             # Página principal (incluye header, listado de productos y footer)
