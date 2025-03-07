@@ -14,7 +14,7 @@ También aprovecharemos para implementar un Error 404 personalizado.
 
 ## 📝 Proceso de Trabajo e Indice de contenidos
 
-0. [🍼 Primeros pasos](#primeros-pasos)
+0. [🍼 Primeros pasos](##primeros-pasos)
 1. [Construcción de la Estructura de la Web / App](#Estructura-de-mi-Web-App)
 )
 2. [Programación de Elementos básicos]
@@ -22,7 +22,7 @@ También aprovecharemos para implementar un Error 404 personalizado.
 4. [Apache y .htaccess]
 ---
 
-## 🍼 Primeros pasos
+## Primeros pasos
 1. Crea un nuevo servidor en `Local` (para que no interfiera con otros desarrollos. Y como siempre borramos todo el contenidod e public)
 2. Activa **Apache** en lugar de Nginx y dale a Aplicar (.htaccess sólo funciona en apache)
 
