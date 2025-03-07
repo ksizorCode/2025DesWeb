@@ -12,14 +12,38 @@ mi-web.com/productos/nombre-del-producto
 
 También aprovecharemos para implementar un Error 404 personalizado.
 
-## 📝 Proceso de Trabajo
+## 📝 Proceso de Trabajo e Indice de contenidos
 
-0. [🍼 Primeros pasos](##🍼-Primeros-pasos)
-1. [Construcción de la Estructura de la Web / App](#Estructura-de-mi-Web-App)
-)
-2. [Programación de Elementos básicos]
-3. [Base de Datos: Creación y conexión con la web]
-4. [Apache y .htaccess]
+1. [Introducción](#introducción)
+   - Objetivo del proyecto: Catálogo de productos con URLs amigables.
+   - Manejo de errores: Página 404 personalizada.
+2. [Proceso de Trabajo](#proceso-de-trabajo)
+   - Primeros pasos: Configuración del servidor local y activación de Apache.
+   - Construcción de la estructura de la web/app.
+   - Programación de elementos básicos.
+   - Conexión con la base de datos.
+   - Configuración de Apache y .htaccess.
+3. [Estructura de la Web/App](#estructura-de-la-webapp)
+   - Listado de archivos y carpetas.
+   - Organización de directorios (includes, assets, etc.).
+4. [Bloques Reutilizables](#bloques-reutilizables)
+   - `_config.php`: Configuración, constantes y funciones.
+   - `_header.php`: Encabezado y navegación.
+   - `_footer.php`: Pie de página y cierre del HTML.
+5. [Apartados de la Web](#apartados-de-la-web)
+   - `index.php`: Página principal con listado de productos.
+   - `contacto.php`: Información de contacto.
+   - `ficha.php`: Detalle individual del producto.
+6. [Estilos CSS](#estilos-css)
+   - `style.css`: Definición de estilos y variables CSS.
+7. [Conexión con la Base de Datos](#conexión-con-la-base-de-datos)
+   - Conexión a la base de datos y ejecución de consultas.
+   - Listado de productos y detalle individual.
+8. [Configuración de Apache (.htaccess)](#configuración-de-apache-htaccess)
+   - Redirección de errores 404 a `error.php`.
+   - Reglas para URLs amigables:
+     - Páginas principales (e.g., `/inicio`, `/contacto`).
+     - Producto individual (e.g., `/producto/nombre-del-producto`).
 
 ---
 
