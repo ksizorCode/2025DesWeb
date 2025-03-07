@@ -37,7 +37,7 @@ Orden de archivos y carpetas con las que vamos a trabajar:
 | `_config.php`   | PHP (configuración)  | `/icnludes/`   | - Se carga en todos los apartados.<br>- Contiene constantes con datos habituales.<br>- Funciones reutilizables. |
 | `ficha.php`     | PHP (apartado)       | `/`            | - Muestra información del producto individual. |
 | `contacto.php`  | PHP (apartado)       | `/`            | - Muestra información de contacto de la empresa. |
-| `error.php`     |  PHP (apartado)      | `/`            | - Contenido de la página 404 con redirección a la web de inicio. |
+| ``     |  PHP (apartado)      | `/`            | - Contenido de la página 404 con redirección a la web de inicio. |
 | `style.css`     | CSS                  | `/assets/css/` | - Define los estilos de la web. |
 | `.htaccess`     | Configuración Apache | `/`            | - Define el archivo que se mostrará en caso de error 404.<br>- Reglas de URL limpias (ejemplo: `index.php` → `/inicio`, `contacto.php` → `/contacto`).<br>- Convierte `ficha.php?slug=nombre-producto` en `/producto/nombre-producto`. |
 
@@ -53,7 +53,7 @@ La estructura de carpetas será la siguiente:
     │── 📄 index.php          # Página principal (incluye header, listado de productos y footer)
     │── 📄 contacto.php        # Página de contacto
     │── 📄 ficha.php           # Página de producto individual (muestra detalles según slug)
-    │── 📄 error.php           # Página 404 con redirección
+    │── 📄            # Página 404 con redirección
     │── 📄 style.css             # Estilo CSS de mi web
     │── 📄 .htaccess             # Reglas de URL amigables y manejo de errores
     │
@@ -175,7 +175,6 @@ C/ Corrida 55 Gijón Asturias
 ```php
 <? const TITULO ='Error 404 - Página no encontrada'?>
 <?php require 'includes/_config.php' ?>
-
 <?php include 'includes/_header.php' ?>
 
 <!-- Aquí irá el contenido para Error 404->
@@ -228,7 +227,69 @@ header, main, footer{
 
 
 ---
-## 🧮 Conexión con la Base de Datos
+## 🧮 Base de Datos: Creación y Conexión
+
+### Creación de la Base de Datos
+Vamos a crear la base de datos `Catálogo` con una tabla `Productos` que almacene entre otras cosas un campo **slug** que defina la URL limpia que utilizaremos. Más adelante este slug será el elemento identificativo para que muestre el contenido a partir de ese slug.
+
+#### Estructura de la tabla Productos
+
+| Nombre        | Tipo          | Settings                      | References                    | Note                           |
+|-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
+| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
+| **nombre** | VARCHAR(255) | not null  |  | |
+| **descripcion** | TEXT(65535) | not null  |  | |
+| **foto** | VARCHAR(255) | not null  |  | |
+| **precio** | NUMERIC | not null  |  | |
+| **slug** | VARCHAR(255) | not null  |  | | 
+
+
+#### Database Diagram
+
+```mermaid
+erDiagram
+	productos {
+		INTEGER id
+		VARCHAR(255) nombre
+		TEXT(65535) descripcion
+		VARCHAR(255) foto
+		NUMERIC precio
+		VARCHAR(255) slug
+	}
+```
+
+#### Código SQL
+
+```sql
+-- Crear la base de datos Catalogo (si no existe)
+CREATE DATABASE IF NOT EXISTS Catalogo;
+
+-- Seleccionar la base de datos Catalogo
+USE Catalogo;
+
+-- Crear la tabla productos
+CREATE TABLE IF NOT EXISTS productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    foto VARCHAR(255),
+    precio DECIMAL(10,2) NOT NULL,
+    slug VARCHAR(255) NOT NULL
+);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## Conexión de la Base de Datos con el PHP
 
 Vamos a actualizar los contenidos para que se conecten con la base de datos:
 Volvemos al `index.php`:
