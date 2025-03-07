@@ -61,9 +61,9 @@
 Elementos reutilizables escructuras o bloques de código HTML.
 Como el header, footer, aside, etc:
 - **`_config.php`** contendrá todas las fucniones, cosntantes y elementos retuilizables. Se cargará desde todos los apartados
-- **`__header.php`** contiene la apertura del HTML y la cabecera de la web y se carga en todos los apartados.
-- **`__footer.php`** contiene el footer y el cierre del HTML y también se carga en todos los apartados.
-- **`__asside.php`** (no existen este caso) pero podría ser la columna lateral de un apartado blog (por ejemplo).
+- **`_header.php`** contiene la apertura del HTML y la cabecera de la web y se carga en todos los apartados.
+- **`_footer.php`** contiene el footer y el cierre del HTML y también se carga en todos los apartados.
+- **`_asside.php`** (no existen este caso) pero podría ser la columna lateral de un apartado blog (por ejemplo).
 
 ## `_config.php`
 Constantes y funciones que se podrían necesitar y estarán disponibles en todos los apartados.
@@ -72,7 +72,6 @@ Constantes y funciones que se podrían necesitar y estarán disponibles en todos
 const URL='https://mi-web.local';       // URL principal del proyecto
 const TITULOWEB='Mi web de Productos';  // Nombre del proyecto
 const LANG='es';                        // Idioma del proyecto
-
 ?>
 
 ```
