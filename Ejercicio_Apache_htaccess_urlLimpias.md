@@ -60,8 +60,8 @@ La estructura de carpetas será la siguiente:
     │
     ├── /📂includes/          # Carpeta para elementos reutilizables
     │   ├── 📄  _config.php       # Fragmentos de código necesarios para todos los apartados
-    │   ├── 📄 _header.php       # Encabezado y menú de navegación
-    │   ├── _📄 footer.php       # Pie de página y cierre de HTML
+    │   ├── 📄  _header.php       # Encabezado y menú de navegación
+    │   ├── 📄 _footer.php       # Pie de página y cierre de HTML
     │
     ├── /📂assets/            # Archivos estáticos
         ├── /📂css/             # Estilos CSS
