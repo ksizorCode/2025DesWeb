@@ -277,6 +277,23 @@ CREATE TABLE IF NOT EXISTS productos (
     precio DECIMAL(10,2) NOT NULL,
     slug VARCHAR(255) NOT NULL
 );
+
+-- Insertar datos de ejemplo
+INSERT INTO productos (nombre, descripcion, foto, precio, slug)
+VALUES
+('Nevera Americana', 'Descripción de la Nevera Americana, ideal para grandes familias.', 'nevera-americana.jpg', 999.99, 'nevera-americana'),
+('Lavadora Front-load', 'Lavadora con tecnología front-load para mayor eficiencia.', 'lavadora-frontload.jpg', 699.50, 'lavadora-front-load'),
+('Televisor LED 50"', 'Televisor LED de 50 pulgadas con alta definición y smart TV.', 'televisor-led50.jpg', 549.00, 'televisor-led-50'),
+('Microondas Digital', 'Microondas digital con múltiples funciones y fácil de usar.', 'microondas-digital.jpg', 150.00, 'microondas-digital'),
+('Aspiradora sin bolsa', 'Aspiradora sin bolsa para una limpieza eficiente en el hogar.', 'aspiradora-sin-bolsa.jpg', 129.99, 'aspiradora-sin-bolsa'),
+('Cafetera Espresso', 'Cafetera espresso para preparar el café perfecto en casa.', 'cafetera-espresso.jpg', 299.99, 'cafetera-espresso'),
+('Horno Eléctrico', 'Horno eléctrico con múltiples funciones y distribución uniforme del calor.', 'horno-electrico.jpg', 350.00, 'horno-electrico'),
+('Secadora de Ropa', 'Secadora de ropa con tecnología avanzada para un secado rápido.', 'secadora-de-ropa.jpg', 450.00, 'secadora-de-ropa'),
+('Plancha de Vapor', 'Plancha de vapor de alta potencia para eliminar arrugas eficazmente.', 'plancha-de-vapor.jpg', 75.50, 'plancha-de-vapor'),
+('Batería de Cocina', 'Juego de batería de cocina completa para todas tus recetas.', 'bateria-de-cocina.jpg', 220.00, 'bateria-de-cocina');
+
+
+
 ```
 
 
