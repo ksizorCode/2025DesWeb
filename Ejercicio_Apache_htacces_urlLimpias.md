@@ -21,9 +21,9 @@
 ## _header.php
 Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
-<? TITULOWEB='Mi web de Productos'?>
+<? const TITULOWEB='Mi web de Productos'?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
