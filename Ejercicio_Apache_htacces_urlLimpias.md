@@ -11,25 +11,25 @@ Orden de archivos y carpetas con las que vamos a contar:
         - include a header
         - listado de productos (conexión base de datos y bucle)
         - include footer
-    - **_header.php**
+  - **_header.php**
         - elementos de apertura del HTML
         - elementos del navegación de la cabecera
-      - **_footer.php**
+  - **_footer.php**
         - elementos del footer
         - elementos de cierre del HTML
-      - **_config.php**
+  - **_config.php**
         - este archivo también se cargará en todos los apartados ya que contiene los elementos que utilizaremos habitualmente tales como: 
         - constantes con los datos habituales
         - funciones reutilizables
-    - **ficha.php**
+  - **ficha.php**
         - muestra información del producto individual
-    - **contacto.php**
+  - **contacto.php**
         - muestra información de contacto de la empresa
-    - **error.php**
+  - **error.php**
         - contenido del 404 con redirección a la web de inicio
-    - **style.css**
+  - **style.css**
         - ordenes para el estilo de la web
-    - **.htaccess**
+  - **.htaccess**
         - Dirección de archivo que mostrar en caso de error 404
         - URL limpias para que apartados del tipo: index.php y contacto.php sean Inicio e Contacto
         - URLs limpias para convertir la petición GET ficha.php?slug=nombre-producto a producto/nombre-producto
