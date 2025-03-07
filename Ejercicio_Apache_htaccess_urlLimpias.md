@@ -420,20 +420,19 @@ if (mysqli_num_rows($resultado) > 0) {
 }
 
 
-
 ?>
 
 
 
 
 
-<? const TITULO ='Inicio'?>
+<? const TITULO = $titulo?>
 <?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
-
+<?php echo $miHTML; ?>
 
 <!-- Footer y cierre-->
 <?php include '_footer.php' ?>
