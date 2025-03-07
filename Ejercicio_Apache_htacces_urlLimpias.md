@@ -26,23 +26,23 @@ La estructura de carpetas será la siguiente:
 
   
 ```
-    /mi-web/
-    │── index.php             # Página principal (incluye header, listado de productos y footer)
-    │── contacto.php          # Página de contacto
-    │── ficha.php             # Página de producto individual (muestra detalles según slug)
-    │── error.php             # Página 404 con redirección
-    │── style.css             # Estilo CSS de mi web
-    │── .htaccess             # Reglas de URL amigables y manejo de errores
+    /📂mi-web/
+    │── 📄 index.php          # Página principal (incluye header, listado de productos y footer)
+    │── 📄 contacto.php        # Página de contacto
+    │── 📄 ficha.php           # Página de producto individual (muestra detalles según slug)
+    │── 📄 error.php           # Página 404 con redirección
+    │── 📄 style.css             # Estilo CSS de mi web
+    │── 📄 .htaccess             # Reglas de URL amigables y manejo de errores
     │
-    ├── /includes/            # Carpeta para elementos reutilizables
-    │   ├── _config.php       # Fragmentos de código necesarios para todos los apartados
-    │   ├── _header.php       # Encabezado y menú de navegación
-    │   ├── _footer.php       # Pie de página y cierre de HTML
+    ├── /📂includes/          # Carpeta para elementos reutilizables
+    │   ├── 📄  _config.php       # Fragmentos de código necesarios para todos los apartados
+    │   ├── 📄 _header.php       # Encabezado y menú de navegación
+    │   ├── _📄 footer.php       # Pie de página y cierre de HTML
     │
-    ├── /assets/              # Archivos estáticos
-        ├── /css/             # Estilos CSS
-        ├── /js/              # Scripts JavaScript
-        ├── /img/             # Imágenes del sitio
+    ├── /📂assets/            # Archivos estáticos
+        ├── /📂css/             # Estilos CSS
+        ├── /📂js/              # Scripts JavaScript
+        ├── /📂img/             # Imágenes del sitio
 ```
     
 ---
@@ -70,7 +70,7 @@ const LANG='es';                        // Idioma del proyecto
 
 #### `_header.php`
 Programación para el bloque de la cabecera reutilizado en todos los apartados
-```php
+```html
 <!DOCTYPE html>
 <html lang="<?=LANG?>">
 <head>
@@ -95,7 +95,7 @@ Programación para el bloque de la cabecera reutilizado en todos los apartados
 
 #### `_footer.php`
 Programación para el bloque pie reutilizado en todos los apartado:
-```php
+```html
 </main>
 <footer>
     <p>&Copy; Copyright <?=date('Y')?> <?=TITULOWEB?></p>
