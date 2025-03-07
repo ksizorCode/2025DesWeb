@@ -6,6 +6,7 @@
 ## 🏗️ Estructura de mi Web App
 
 Orden de archivos y carpetas con las que vamos a contar:
+
     - **index.php**
         - include a header
         - listado de productos (conexión base de datos y bucle)
@@ -33,7 +34,6 @@ Orden de archivos y carpetas con las que vamos a contar:
         - URL limpias para que apartados del tipo: index.php y contacto.php sean Inicio e Contacto
         - URLs limpias para convertir la petición GET ficha.php?slug=nombre-producto a producto/nombre-producto
      
-
     La estructura de carpetas será la siguiente:
 
 ```
