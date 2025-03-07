@@ -21,6 +21,7 @@
 ## _header.php
 Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
+<? TITULOWEB='Mi web de Productos'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,4 +54,15 @@ Programación para el bloque pie reutilizado en todos los apartado:
 </footer>
 </body>
 </html>
+```
+
+
+## index.php
+```php
+<? const TITULO ='Inicio'?
+<?php include '_header.php' ?>
+
+
+
+<?php include '_footer.php' ?>
 ```
