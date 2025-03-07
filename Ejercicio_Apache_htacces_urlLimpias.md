@@ -224,11 +224,10 @@ RewriteRule ^contacto$ contacto.php [L]
 
 # Redirigir URLs limpias a ficha.php con el slug
 RewriteRule ^productos/([^/]+)/?$ ficha.php?slug=$1 [L,QSA]
-
-
-
-# RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\
-
+# Apartir de ahora la dirección para un producto por ejemplo nevera-americana será:
+# miweb.com/producto/nevera-americana
+# pero internamente estará apuntando de forma oculta a:
+# miweb.com/ficha.php?slug=nevera-americana
 
 
 
