@@ -4,6 +4,8 @@
 2. Activa **Apache** (.htaccess sólo funciona en apache)
 
 ## 🏗️ Estructura de mi Web App
+
+Orden de archivos y carpetas con las que vamos a contar:
     - **index.php**
         - include a header
         - listado de productos (conexión base de datos y bucle)
