@@ -27,6 +27,7 @@
 
     La estructura de carpetas será la siguiente:
 
+```
     /mi-web/
     │── index.php             # Página principal (incluye header, listado de productos y footer)
     │── contacto.php          # Página de contacto
@@ -42,11 +43,8 @@
         ├── /css/             # Estilos CSS
         ├── /js/              # Scripts JavaScript
         ├── /img/             # Imágenes del sitio
+```
     
-    
-
-
-
 ---
 #Programación:
 
@@ -244,21 +242,18 @@ Creamos el arhivo `.htaccess`. Recuerda que tienes que activar Apache para que e
 
 ```apache
 
-# Redirección a web de error 404
 RewriteEngine On
+
+# 1️⃣ Redirigir errores 404 a error.php
 ErrorDocument 404 /error.php
 
-
-
-#Redirección a URLs limpias
+# 2️⃣ URLs amigables para páginas principales
 RewriteRule ^inicio$ index.php [L]
 RewriteRule ^contacto$ contacto.php [L]
 
+# 3️⃣ URL limpia para productos: /producto/nombre-producto
+RewriteRule ^producto/([^/]+)/?$ ficha.php?slug=$1 [L,QSA]
 
-# Limpiar URL de producto que llega por parámetro GET
-
-# Redirigir URLs limpias a ficha.php con el slug
-RewriteRule ^productos/([^/]+)/?$ ficha.php?slug=$1 [L,QSA]
 # Apartir de ahora la dirección para un producto por ejemplo nevera-americana será:
 # miweb.com/producto/nevera-americana
 # pero internamente estará apuntando de forma oculta a:
