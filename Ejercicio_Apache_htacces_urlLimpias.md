@@ -14,8 +14,8 @@ También aprobecharemos para implementar un Error 404 personalizado.
 
 ## 📝 Proceso de Trabajo
 
-0. [Primeros pasos](#🍼Primeros pasos)
-1. [Construcción de la Estructura de la Web / App](#🏗️Estructura de mi Web App
+0. [Primeros pasos](#Primeros pasos)
+1. [Construcción de la Estructura de la Web / App](#Estructura de mi Web App
 )
 2. [Programación de Elementos básicos]
 3. [Base de Datos: Creación y conexión con la web]
