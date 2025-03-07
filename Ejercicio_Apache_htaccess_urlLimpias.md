@@ -340,7 +340,7 @@ function consulta($sql, $devolver=false){
   		die("Conexión fallida: " . mysqli_connect_error());
 	}
 $result = mysqli_query($conn, $sql);
-if(devolver){
+if($devolver){
   return $result;
 }
 
@@ -385,7 +385,7 @@ if (mysqli_num_rows($resultado) > 0) {
 </ul>
 
 <!-- Footer y cierre-->
-<?php include '_footer.php' ?>
+<?php include 'includes/_footer.php' ?>
 
 ```
 
