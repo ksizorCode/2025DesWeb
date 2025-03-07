@@ -171,6 +171,20 @@ C/ Corrida 55 Gijón Asturias
 <?php include 'includes/_footer.php' ?>
 ```
 
+#### `error.php`
+```php
+<? const TITULO ='Error 404 - Página no encontrada'?>
+<?php require 'includes/_config.php' ?>
+
+<?php include 'includes/_header.php' ?>
+
+<!-- Aquí irá el contenido para Error 404->
+<h2>Lo sentimos pero no hemos podido encontrar el apartado</h2>
+<a href="<?=URL?>/inicio">Volver a Inicio</a>
+
+<?php include 'includes/_footer.php' ?>
+```
+
 
 
 #### `style.css`
