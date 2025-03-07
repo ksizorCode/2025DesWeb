@@ -2,7 +2,8 @@
 
 1. Crea un nuevo servidor en `Local` (para que no interfiera con otros desarrollos)
 2. Activa **Apache** (.htaccess sólo funciona en apache)
-3. Crea una estructura básica de web sin complicarte mucho:
+
+## 🏗️ Estructura de mi Web App
     - **index.php**
         - include a header
         - listado de productos (conexión base de datos y bucle)
@@ -55,7 +56,6 @@
     
 ---
 # 🖥️ Programación:
-
 
 ## 🔌 BLOQUES 
 Elementos reutilizables escructuras o bloques de código HTML.
@@ -114,7 +114,7 @@ Programación para el bloque pie reutilizado en todos los apartado:
 ```
 
 
-## 🏗️ APARTADOS
+## 📑 APARTADOS
 Serían cada una de las secciones de la página web
 
 #### `index.php`
