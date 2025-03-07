@@ -83,6 +83,7 @@ Como el header, footer, aside, etc:
 Constantes y funciones que se podrían necesitar y estarán disponibles en todos los apartados.
 ```php
 <?
+// Datos de la web:
 const URL='https://mi-web.local';       // URL principal del proyecto
 const TITULOWEB='Mi web de Productos';  // Nombre del proyecto
 const LANG='es';                        // Idioma del proyecto
@@ -281,18 +282,65 @@ CREATE TABLE IF NOT EXISTS productos (
 
 
 
-
-
-
-
-
-
-
-
 ## Conexión de la Base de Datos con el PHP
 
-Vamos a actualizar los contenidos para que se conecten con la base de datos:
+Vamos a actualizar los contenidos para que se conecten con la base de datos.
+La conexión con la base de datos se hará al menos en dos lugares de nuestra web: desde `index.php` y desde `ficha.php`.
+Esto ya hace que nos compense guardar los datos de conexión en un único lugar en vez de repetir fragmentos de código con las contraseñas de acceso.
+
+Almacenaremos pues los datos de conecion en config.php:
+
+
+
+#### includes/_config.php
+```php
+
+//DATOS REUTILIZABLES
+// Datos de la web:
+const URL='https://mi-web.local';       // URL principal del proyecto
+const TITULOWEB='Mi web de Productos';  // Nombre del proyecto
+const LANG='es';   
+
+//Datos Acceso a Servidor
+const HOST = 'localhost';	// url del servidor donde está la bd mysql
+const USER = 'root';		// nombre de usuario de la bd
+const PASS = 'root';		// contraseña de la bd
+const DBNA = 'catalogo';	// nombre de la bd
+
+
+
+//FUNCIONES
+
+// Ejemplo de Uso:
+// $sql = "SELECT * FROM productos"; //almacenamos la consulta en una variable
+// $resultado = consulta($sql);      // almacenamos el resultado que devuelve en la variable resultado y le pasamos la consulta
+
+function consulta($sql, $devolver=false){
+	// Crear Coneción
+		$conn = mysqli_connect(HOST, USER, PASS, DBNA);
+	// Verificar Conexión 
+		if (!$conn) {
+  		die("Conexión fallida: " . mysqli_connect_error());
+	}
+$result = mysqli_query($conn, $sql);
+if(devolver){
+  return $result;
+}
+
+//Cerrar conexión
+mysqli_close($conn);
+}
+
+?>
+
+
+```
+
+
+
+
 Volvemos al `index.php`:
+
 #### index.php
 ```php
 <? const TITULO ='Inicio'?>
@@ -300,37 +348,24 @@ Volvemos al `index.php`:
 <?php include 'includes/_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
+<h2>Listado de Productos</h2>
+<ul class="galeria">
 
+<?php
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "tienda";
+$sql = "SELECT * FROM productos"; //almacenamos la consulta en la variable $sql
+$resultado = consulta($sql);  	  //lanzamos a la consulta y almacenamos su resultado en $resultado
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM productos";
-$result = mysqli_query($conn, $sql);
-
-echo '<ul>';
-
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($resultado) > 0) {
   // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "<li><a href='{$row['slug']}'>{$row["nombre"]}"</a></li>";
+  while($dato = mysqli_fetch_assoc($result)) {
+    echo "<li><a href='{$dato['slug']}'>{$dato["nombre"]}"</a></li>";
   }
 } else {
-  echo "0 results";
+  echo "0 resultados";
 }
-echo '</ul>';
-
-mysqli_close($conn);
 ?>
+</ul>
 
 <!-- Footer y cierre-->
 <?php include '_footer.php' ?>
