@@ -1,5 +1,28 @@
 # ✂️ URLs Lipias con Apache + HTACCESS + Base de Datos
 
+Vamos a crear una pequeña web / app para un catálogo de productos de una tienda o similar.
+El objetivo de este ejercicio es lograr el uso de URLs amigables o limpias que eviten cosas del tipo:
+mi-web.com/contacto.php
+mi-web.com/ficha.php?id=5
+mi-web.com/ficha.php?slug=nombre-del-producto
+
+Y lo sustituyan por algo tipo:
+mi-web.com/contacto
+mi-web.com/productos/nombre-del-producto
+
+También aprobecharemos para implementar un Error 404 personalizado.
+
+## 📝 Proceso de Trabajo
+
+0. Primeros pasos
+1. Construcción de la Estructura de la Web / App
+2. Programación de Elementos básicos
+3. Base de Datos: Creación y conexión con la web
+4. Apache y .htaccess
+
+---
+
+## 🍼 Primeros pasos
 1. Crea un nuevo servidor en `Local` (para que no interfiera con otros desarrollos)
 2. Activa **Apache** (.htaccess sólo funciona en apache)
 
@@ -162,19 +185,15 @@ Estilo css que tendrán todos los apartados;
 
 body{
     font-family: var(--ff);
-
     max-width: 960px;
     margin: 10px auto;
-
     padding: 20px;
-
     background-color: var(--c1);
 }
 
 header nav{
     list-style: none;
     padding-left: 0;
-
     display: flex;
     gap:10px
 }
@@ -182,7 +201,6 @@ header nav{
 a{
     text-decoration: none;
     color:var(--c1);
-    
 }
 
 header, main, footer{
@@ -192,8 +210,6 @@ header, main, footer{
     margin:0 0 20px 0;
 }
 ```
-
-
 
 
 
