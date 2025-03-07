@@ -17,8 +17,14 @@
 
 
 
+## BLOQUES 
+Elementos reutilizables escructuras o bloques de código HTML.
+Como el header, footer, aside, etc:
+- El _header.php contiene la apertura del HTML y la cabecera de la web y se carga en todos los apartados.
+- El _footer.php contiene el footer y el cierre del HTML y también se carga en todos los apartados.
+- El _asside.php (no existen este caso) pero podría ser la columna lateral de un apartado blog (por ejemplo).
 
-## _header.php
+### `_header.php`
 Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
 <? const TITULOWEB='Mi web de Productos'?>
@@ -41,11 +47,11 @@ Programación para el bloque de la cabecera reutilizado en todos los apartados
 </header>
 
 <main>
-    <h1><?=TITULO?>
+    <h1><?=TITULO?></h1>
 ```
 
 
-## _footer.php
+## `_footer.php`
 Programación para el bloque pie reutilizado en todos los apartado:
 ```php
 </main>
@@ -57,12 +63,15 @@ Programación para el bloque pie reutilizado en todos los apartado:
 ```
 
 
-## index.php
+##  APARTADOS
+Serían cada una de las secciones de la página web
+
+### `index.php`
 ```php
 <? const TITULO ='Inicio'?
 <?php include '_header.php' ?>
 
-
+<!-- Aquí el contenido del apartado -->
 
 <?php include '_footer.php' ?>
 ```
