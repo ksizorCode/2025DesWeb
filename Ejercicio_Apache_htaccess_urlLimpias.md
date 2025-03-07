@@ -376,7 +376,7 @@ $resultado = consulta($sql);  	  //lanzamos a la consulta y almacenamos su resul
 if (mysqli_num_rows($resultado) > 0) {
   // output data of each row
   while($dato = mysqli_fetch_assoc($result)) {
-    echo "<li><a href='{$dato['slug']}'>{$dato["nombre"]}"</a></li>";
+    echo "<li><a href='{$dato['slug']}'>{$dato['nombre']}</a></li>";
   }
 } else {
   echo "0 resultados";
