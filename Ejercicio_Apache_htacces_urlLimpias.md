@@ -46,3 +46,11 @@ Programación para el bloque de la cabecera reutilizado en todos los apartados
 
 ## _footer.php
 Programación para el bloque pie reutilizado en todos los apartado:
+```php
+</main>
+<footer>
+    <p>&Copy; Copyright <?=date('Y')?> <?=TITULOWEB?></p>
+</footer>
+</body>
+</html>
+```
