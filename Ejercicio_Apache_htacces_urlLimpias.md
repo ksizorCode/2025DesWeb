@@ -68,7 +68,7 @@ Serían cada una de las secciones de la página web
 
 ### `index.php`
 ```php
-<? const TITULO ='Inicio'?
+<? const TITULO ='Inicio'?>
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
@@ -78,7 +78,7 @@ Serían cada una de las secciones de la página web
 
 ### `contacto.php`
 ```php
-<? const TITULO ='Contacto'?
+<? const TITULO ='Contacto'?>
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido de contacto-->
