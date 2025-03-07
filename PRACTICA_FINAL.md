@@ -128,6 +128,9 @@ direccion, telefono fijo, móvil, gps, etc (con constantes)
 #### GITHUB
 Para el almacenamiento del proceso.
 
+### SEO Avanzado
+- [ ] sitemap.xml (desde generador)
+
 #### APIs
 finalmente, puedes lizar  APIs externas
 
