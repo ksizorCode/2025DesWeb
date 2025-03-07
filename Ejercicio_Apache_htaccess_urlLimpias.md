@@ -376,6 +376,7 @@ $resultado = consulta($sql);  	  //lanzamos a la consulta y almacenamos su resul
 if (mysqli_num_rows($resultado) > 0) {
   // output data of each row
   while($dato = mysqli_fetch_assoc($result)) {
+    //echo "<li><a href='ficha.php?slug={$dato['slug']}'>{$dato['nombre']}</a></li>";
     echo "<li><a href='{$dato['slug']}'>{$dato['nombre']}</a></li>";
   }
 } else {
@@ -393,6 +394,39 @@ if (mysqli_num_rows($resultado) > 0) {
 Actualizamos la programación en ficha para que nos muestre los datos de cada producto:
 ```php
 
+<?php
+$titulo='';
+
+//Capturamos el GET slug
+if(isset($_GET['slug'])){
+$slug=$_GET['slug'];
+}
+
+//Consultamos en la DB que nos muestre el elemento que tengan ese slug
+
+$sql='SELECT * FROM productos WHERE slug="$slug"';
+$resultado = consulta($sql,1);
+
+if (mysqli_num_rows($resultado) > 0) {
+  // output data of each row
+  while($dato = mysqli_fetch_assoc($result)) {
+	$titulo=$dato['nombre'];
+	$miHTML="<h1>{$dato['nombre']}</h1>
+		 <img src='{$dato['descripcion']}'>
+		 <p>{$dato['precio']}</p>";
+  }
+} else {
+  $miHTML ="No se han encontrado resultados";
+}
+
+
+
+?>
+
+
+
+
+
 <? const TITULO ='Inicio'?>
 <?php require '_config.php' ?>
 
@@ -400,37 +434,6 @@ Actualizamos la programación en ficha para que nos muestre los datos de cada pr
 
 <!-- Aquí el contenido del apartado -->
 
-//Capturar GET con valor slug para meter en la consulta
-
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "tienda";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM productos";
-$result = mysqli_query($conn, $sql);
-
-echo '<ul>';
-
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "<li><a href='{$row['slug']}'>{$row["nombre"]}"</a></li>";
-  }
-} else {
-  echo "0 results";
-}
-echo '</ul>';
-
-mysqli_close($conn);
-?>
 
 <!-- Footer y cierre-->
 <?php include '_footer.php' ?>
