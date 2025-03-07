@@ -75,3 +75,18 @@ Serían cada una de las secciones de la página web
 
 <?php include '_footer.php' ?>
 ```
+
+### `contacto.php`
+```php
+<? const TITULO ='Contacto'?
+<?php include '_header.php' ?>
+
+<!-- Aquí el contenido de contacto-->
+<h2>Ver a conocernos</h2>
+<address>
+C/ Corrida 55 Gijón Asturias
+</address>
+<a href="tel:985555555">985555555</a>
+
+<?php include '_footer.php' ?>
+```
