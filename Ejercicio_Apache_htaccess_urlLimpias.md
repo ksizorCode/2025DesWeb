@@ -226,7 +226,7 @@ Volvemos al `index.php`:
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
-<?php
+
 <? const TITULO ='Ficha Producto'?>
 <?php include '_header.php' ?>
 
