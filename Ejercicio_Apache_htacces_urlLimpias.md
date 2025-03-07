@@ -54,10 +54,10 @@
 ```
     
 ---
-#Programación:
+# 🖥️ Programación:
 
 
-## BLOQUES 
+## 🔌 BLOQUES 
 Elementos reutilizables escructuras o bloques de código HTML.
 Como el header, footer, aside, etc:
 - El _config.php contendrá todas las fucniones, cosntantes y elementos retuilizables. Se cargará desde todos los apartados
@@ -115,7 +115,7 @@ Programación para el bloque pie reutilizado en todos los apartado:
 ```
 
 
-##  APARTADOS
+## 🏗️ APARTADOS
 Serían cada una de las secciones de la página web
 
 ### `index.php`
@@ -157,7 +157,6 @@ C/ Corrida 55 Gijón Asturias
 
 <?php include '_footer.php' ?>
 ```
-
 
 
 
@@ -208,9 +207,8 @@ header, main, footer{
 
 
 
-
 ---
-## Conexión con la Base de Datos
+## 🧮 Conexión con la Base de Datos
 
 Vamos a actualizar los contenidos para que se conecten con la base de datos:
 Volvemos al `index.php`:
@@ -320,7 +318,7 @@ mysqli_close($conn);
 ---
 
 
-## .htaccess
+## 🛰️ .htaccess
 Creamos el arhivo `.htaccess`. Recuerda que tienes que activar Apache para que esto funcine.
 
 ```apache
