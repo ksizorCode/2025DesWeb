@@ -235,14 +235,14 @@ Vamos a crear la base de datos `Catálogo` con una tabla `Productos` que almacen
 
 #### Estructura de la tabla Productos
 
-| Nombre        | Tipo          | Settings                      | References                    | Note                           |
-|-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
-| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
-| **nombre** | VARCHAR(255) | not null  |  | |
-| **descripcion** | TEXT(65535) | not null  |  | |
-| **foto** | VARCHAR(255) | not null  |  | |
-| **precio** | NUMERIC | not null  |  | |
-| **slug** | VARCHAR(255) | not null  |  | | 
+| Nombre        | Tipo          | Settings                    |
+|-------------|---------------|-------------------------------|
+| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |
+| **nombre** | VARCHAR(255) | not null  | 
+| **descripcion** | TEXT(65535) | not null |
+| **foto** | VARCHAR(255) | not null  |  
+| **precio** | NUMERIC | not null  |  
+| **slug** | VARCHAR(255) | not null  | 
 
 
 #### Database Diagram
@@ -435,15 +435,11 @@ mysqli_close($conn);
 <!-- Footer y cierre-->
 <?php include '_footer.php' ?>
 
-
-
 ```
 
 
 
-
 ---
-
 
 ## 🛰️ .htaccess
 Creamos el arhivo `.htaccess`. Recuerda que tienes que activar Apache para que esto funcine.
