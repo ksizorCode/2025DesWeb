@@ -14,11 +14,12 @@ También aprobecharemos para implementar un Error 404 personalizado.
 
 ## 📝 Proceso de Trabajo
 
-0. Primeros pasos
-1. Construcción de la Estructura de la Web / App
-2. Programación de Elementos básicos
-3. Base de Datos: Creación y conexión con la web
-4. Apache y .htaccess
+0. [Primeros pasos](#🍼Primeros pasos)
+1. [Construcción de la Estructura de la Web / App](#🏗️Estructura de mi Web App
+)
+2. [Programación de Elementos básicos]
+3. [Base de Datos: Creación y conexión con la web]
+4. [Apache y .htaccess]
 
 ---
 
