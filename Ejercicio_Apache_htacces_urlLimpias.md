@@ -91,21 +91,39 @@ C/ Corrida 55 Gijón Asturias
 <?php include '_footer.php' ?>
 ```
 
+### `ficha.php`
+```php
+<? const TITULO ='Ficha de producto'?>
+<?php include '_header.php' ?>
+
+<!-- Aquí irá el contenido de la ficha de producto-->
+
+<?php include '_footer.php' ?>
+```
+
+
 ---
 ## Conexión con la Base de Datos
 
+Vamos a actualizar los contenidos para que se conecten con la base de datos:
 Volvemos al `index.php`:
-
+#### index.php
 ```php
 <? const TITULO ='Inicio'?>
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
 <?php
+<? const TITULO ='Ficha Producto'?>
+<?php include '_header.php' ?>
+
+<!-- Aquí el contenido del apartado -->
+
+
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "myDB";
+$dbname = "tienda";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -114,17 +132,20 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$sql = "SELECT * FROM productos";
 $result = mysqli_query($conn, $sql);
+
+echo '<ul>';
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    echo "<li><a href='{$row['slug']}'>{$row["nombre"]}"</a></li>";
   }
 } else {
   echo "0 results";
 }
+echo '</ul>';
 
 mysqli_close($conn);
 ?>
@@ -133,4 +154,84 @@ mysqli_close($conn);
 <?php include '_footer.php' ?>
 
 ```
+
+#### ficha.php
+Actualizamos la programación en ficha para que nos muestre los datos de cada producto:
+```php
+
+//Capturar GET con valor slug para meter en la consulta
+
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "tienda";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM productos";
+$result = mysqli_query($conn, $sql);
+
+echo '<ul>';
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "<li><a href='{$row['slug']}'>{$row["nombre"]}"</a></li>";
+  }
+} else {
+  echo "0 results";
+}
+echo '</ul>';
+
+mysqli_close($conn);
+?>
+
+<!-- Footer y cierre-->
+<?php include '_footer.php' ?>
+
+
+
+```
+
+
+
+
+---
+
+
+## .htaccess
+Creamos el arhivo `.htaccess`. Recuerda que tienes que activar Apache para que esto funcine.
+
+```apache
+
+# Redirección a web de error 404
+RewriteEngine On
+ErrorDocument 404 /error.php
+
+
+
+#Redirección a URLs limpias
+RewriteRule ^inicio$ index.php [L]
+RewriteRule ^contacto$ contacto.php [L]
+
+
+# Limpiar URL de producto que llega por parámetro GET
+
+# Redirigir URLs limpias a ficha.php con el slug
+RewriteRule ^productos/([^/]+)/?$ ficha.php?slug=$1 [L,QSA]
+
+
+
+# RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\
+
+
+
+
+
+
 
