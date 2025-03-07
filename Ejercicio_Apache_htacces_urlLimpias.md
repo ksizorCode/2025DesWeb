@@ -6,11 +6,46 @@
     - **index.php**
         - include a header
         - listado de productos (conexión base de datos y bucle)
+        - include footer
     - **_header.php**
         - elementos de apertura del HTML
         - elementos del navegación de la cabecera
+      - **_footer.php**
+        - elementos del footer
+        - elementos de cierre del HTML
     - **ficha.php**
         - muestra información del producto individual
+    - **contacto.php**
+        - muestra información de contacto de la empresa
+    - **error.php**
+        - contenido del 404 con redirección a la web de inicio
+    - **.htaccess**
+        - Dirección de archivo que mostrar en caso de error 404
+        - URL limpias para que apartados del tipo: index.php y contacto.php sean Inicio e Contacto
+        - URLs limpias para convertir la petición GET ficha.php?slug=nombre-producto a producto/nombre-producto
+     
+
+    La estructura de carpetas será la siguiente:
+
+    /mi-web/
+    │── index.php             # Página principal (incluye header, listado de productos y footer)
+    │── contacto.php          # Página de contacto
+    │── ficha.php             # Página de producto individual (muestra detalles según slug)
+    │── error.php             # Página 404 con redirección
+    │── .htaccess             # Reglas de URL amigables y manejo de errores
+    │
+    ├── /includes/            # Carpeta para elementos reutilizables
+    │   ├── _header.php       # Encabezado y menú de navegación
+    │   ├── _footer.php       # Pie de página y cierre de HTML
+    │
+    ├── /assets/              # Archivos estáticos
+        ├── /css/             # Estilos CSS
+        ├── /js/              # Scripts JavaScript
+        ├── /img/             # Imágenes del sitio
+    
+    
+
+
 
 ---
 #Programación:
