@@ -14,7 +14,7 @@ También aprovecharemos para implementar un Error 404 personalizado.
 
 ## 📝 Proceso de Trabajo e Indice de contenidos
 
-0. [🍼 Primeros pasos](##🍼-Primeros-pasos)
+0. [🍼 Primeros pasos](#primeros-pasos)
 1. [Construcción de la Estructura de la Web / App](#Estructura-de-mi-Web-App)
 )
 2. [Programación de Elementos básicos]
