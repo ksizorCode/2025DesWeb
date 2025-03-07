@@ -10,7 +10,7 @@ Y lo sustituyan por algo tipo:
 mi-web.com/contacto
 mi-web.com/productos/nombre-del-producto
 
-También aprobecharemos para implementar un Error 404 personalizado.
+También aprovecharemos para implementar un Error 404 personalizado.
 
 ## 📝 Proceso de Trabajo
 
