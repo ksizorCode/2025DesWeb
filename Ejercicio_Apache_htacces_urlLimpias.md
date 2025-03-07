@@ -57,13 +57,26 @@
 #Programación:
 
 
-
 ## BLOQUES 
 Elementos reutilizables escructuras o bloques de código HTML.
 Como el header, footer, aside, etc:
+- El _config.php contendrá todas las fucniones, cosntantes y elementos retuilizables. Se cargará desde todos los apartados
 - El _header.php contiene la apertura del HTML y la cabecera de la web y se carga en todos los apartados.
 - El _footer.php contiene el footer y el cierre del HTML y también se carga en todos los apartados.
 - El _asside.php (no existen este caso) pero podría ser la columna lateral de un apartado blog (por ejemplo).
+
+## `_config.php`
+Constantes y funciones que se podrían necesitar y estarán disponibles en todos los apartados.
+```php
+<?
+const URL='https://mi-web.local';       // URL principal del proyecto
+const TITULOWEB='Mi web de Productos';  // Nombre del proyecto
+const LANG='es';                        // Idioma del proyecto
+
+?>
+
+```
+
 
 ### `_header.php`
 Programación para el bloque de la cabecera reutilizado en todos los apartados
@@ -89,7 +102,6 @@ Programación para el bloque de la cabecera reutilizado en todos los apartados
 <main>
     <h1><?=TITULO?></h1>
 ```
-
 
 ## `_footer.php`
 Programación para el bloque pie reutilizado en todos los apartado:
