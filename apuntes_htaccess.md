@@ -54,7 +54,29 @@ RewriteRule ^old-folder/(.*)$ /new-folder/$1 [R=301,L]
 ```
 Esto redirige cualquier cosa dentro de old-folder/ a la misma ruta dentro de new-folder/.
 
+## Redirigir todo el tráfico HTTP a HTTPS
+Si tienes un sitio web con SSL y quieres redirigir todo el tráfico HTTP a HTTPS:
 
+```apache
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+```
+Este código asegura que todas las solicitudes HTTP sean redirigidas a HTTPS de manera permanente.
+
+## Reescritura de URL para URLs amigables
+Para hacer URLs más amigables (por ejemplo, de index.php?id=123 a producto/123), puedes usar:
+
+```apache
+
+RewriteEngine On
+RewriteRule ^producto/([0-9]+)$ index.php?id=$1 [L]
+```
+
+Esto permite que la URL producto/123 sea interpretada por index.php?id=123.
+
+
+----
 
 
 ## Reescritura a URL limpia
@@ -117,75 +139,43 @@ Podemos bloquear el acceso a un apartado (carpeta o subdirectorio) de nuestra we
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-5. Reescritura de URL para URLs amigables
-Para hacer URLs más amigables (por ejemplo, de index.php?id=123 a producto/123), puedes usar:
-
-apache
-Copiar
-Editar
-RewriteEngine On
-RewriteRule ^producto/([0-9]+)$ index.php?id=$1 [L]
-Esto permite que la URL producto/123 sea interpretada por index.php?id=123.
-
-6. Redirigir todo el tráfico HTTP a HTTPS
-Si tienes un sitio web con SSL y quieres redirigir todo el tráfico HTTP a HTTPS:
-
-apache
-Copiar
-Editar
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-Este código asegura que todas las solicitudes HTTP sean redirigidas a HTTPS de manera permanente.
-
-7. Evitar el acceso a archivos sensibles
+## Evitar el acceso a archivos sensibles
 Puedes evitar que se accedan a archivos como .env, .git o cualquier otro archivo sensible:
 
-apache
-Copiar
-Editar
+```apache
 <FilesMatch "^\.">
     Order Allow,Deny
     Deny from all
 </FilesMatch>
+```
 Este código bloquea el acceso a cualquier archivo que empiece con un punto (por ejemplo, .git, .env).
 
-8. Bloquear acceso por IP
+
+## Bloquear acceso por IP
 Si quieres bloquear ciertas direcciones IP de acceder a tu sitio, puedes hacerlo así:
 
-apache
-Copiar
-Editar
+
+```apache
 <RequireAll>
     Require all granted
     Require not ip 192.168.1.100
     Require not ip 203.0.113.0/24
 </RequireAll>
+```
 Este bloque impide el acceso a las IPs especificadas.
 
-9. Autenticación Básica
+## Autenticación Básica
 Si quieres proteger un directorio con contraseña, puedes usar la autenticación básica:
 
-apache
-Copiar
-Editar
+```apache
+
 <Directory "/ruta/al/directorio">
     AuthType Basic
     AuthName "Área restringida"
     AuthUserFile /ruta/a/.htpasswd
     Require valid-user
 </Directory>
+```
 Luego, debes crear un archivo .htpasswd que contenga el nombre de usuario y la contraseña codificada.
 
 
