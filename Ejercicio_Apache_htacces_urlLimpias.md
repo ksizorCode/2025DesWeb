@@ -13,6 +13,10 @@
       - **_footer.php**
         - elementos del footer
         - elementos de cierre del HTML
+      - **_config.php**
+        - este archivo también se cargará en todos los apartados ya que contiene los elementos que utilizaremos habitualmente tales como: 
+        - constantes con los datos habituales
+        - funciones reutilizables
     - **ficha.php**
         - muestra información del producto individual
     - **contacto.php**
@@ -36,6 +40,7 @@
     │── .htaccess             # Reglas de URL amigables y manejo de errores
     │
     ├── /includes/            # Carpeta para elementos reutilizables
+    │   ├── _config.php       # Fragmentos de código necesarios para todos los apartados
     │   ├── _header.php       # Encabezado y menú de navegación
     │   ├── _footer.php       # Pie de página y cierre de HTML
     │
@@ -60,9 +65,8 @@ Como el header, footer, aside, etc:
 ### `_header.php`
 Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
-<? const TITULOWEB='Mi web de Productos'?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?=LANG?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +106,7 @@ Serían cada una de las secciones de la página web
 ### `index.php`
 ```php
 <? const TITULO ='Inicio'?>
+<?php requiere '_config.php' ?>
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
@@ -112,6 +117,8 @@ Serían cada una de las secciones de la página web
 ### `contacto.php`
 ```php
 <? const TITULO ='Contacto'?>
+<?php requiere '_config.php' ?>
+
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido de contacto-->
@@ -127,6 +134,8 @@ C/ Corrida 55 Gijón Asturias
 ### `ficha.php`
 ```php
 <? const TITULO ='Ficha de producto'?>
+<?php requiere '_config.php' ?>
+
 <?php include '_header.php' ?>
 
 <!-- Aquí irá el contenido de la ficha de producto-->
@@ -143,6 +152,8 @@ Volvemos al `index.php`:
 #### index.php
 ```php
 <? const TITULO ='Inicio'?>
+<?php requiere '_config.php' ?>
+
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
@@ -191,6 +202,13 @@ mysqli_close($conn);
 #### ficha.php
 Actualizamos la programación en ficha para que nos muestre los datos de cada producto:
 ```php
+
+<? const TITULO ='Inicio'?>
+<?php requiere '_config.php' ?>
+
+<?php include '_header.php' ?>
+
+<!-- Aquí el contenido del apartado -->
 
 //Capturar GET con valor slug para meter en la consulta
 
