@@ -6,17 +6,18 @@
 ## 🏗️ Estructura de mi Web App
 
 Orden de archivos y carpetas con las que vamos a trabajar:
-| **Archivo**      | **Qué hará** |
-|------------------|-------------|
-| `index.php`     | - Incluye `_header.php` y `_footer.php`.<br>- Listado de productos (conexión a la base de datos y bucle). |
-| `_header.php`   | - Elementos de apertura del HTML.<br>- Navegación de la cabecera. |
-| `_footer.php`   | - Elementos del footer.<br>- Cierre del HTML. |
-| `_config.php`   | - Se carga en todos los apartados.<br>- Contiene constantes con datos habituales.<br>- Funciones reutilizables. |
-| `ficha.php`     | - Muestra información del producto individual. |
-| `contacto.php`  | - Muestra información de contacto de la empresa. |
-| `error.php`     | - Contenido de la página 404 con redirección a la web de inicio. |
-| `style.css`     | - Define los estilos de la web. |
-| `.htaccess`     | - Define el archivo que se mostrará en caso de error 404.<br>- Reglas de URL limpias (ejemplo: `index.php` → `/inicio`, `contacto.php` → `/contacto`).<br>- Convierte `ficha.php?slug=nombre-producto` en `/producto/nombre-producto`. |
+| **Archivo**     | **Tipo de Archivo**  | **Directorio** | **Qué hará**                                                                                                |
+|-----------------|----------------------|----------------|-------------------------------------------------------------------------------------------------------------|
+| `index.php`     | PHP (apartado)       | `/`            | - Incluye `_header.php` y `_footer.php`.<br>- Listado de productos (conexión a la base de datos y bucle). |
+| `_header.php`   | PHP (parcial)        | `/includes/`   | - Elementos de apertura del HTML.<br>- Navegación de la cabecera. |
+| `_footer.php`   | PHP (parcial)        | `/includes/`   | - Elementos del footer.<br>- Cierre del HTML. |
+| `_config.php`   | PHP (configuración)  | `/icnludes/`   | - Se carga en todos los apartados.<br>- Contiene constantes con datos habituales.<br>- Funciones reutilizables. |
+| `ficha.php`     | PHP (apartado)       | `/`            | - Muestra información del producto individual. |
+| `contacto.php`  | PHP (apartado)       | `/`            | - Muestra información de contacto de la empresa. |
+| `error.php`     |  PHP (apartado)      | `/`            | - Contenido de la página 404 con redirección a la web de inicio. |
+| `style.css`     | CSS                  | `/assets/css/` | - Define los estilos de la web. |
+| `.htaccess`     | Configuración Apache | `/`            | - Define el archivo que se mostrará en caso de error 404.<br>- Reglas de URL limpias (ejemplo: `index.php` → `/inicio`, `contacto.php` → `/contacto`).<br>- Convierte `ficha.php?slug=nombre-producto` en `/producto/nombre-producto`. |
+
 
 
      
