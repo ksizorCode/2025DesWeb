@@ -134,20 +134,20 @@ Serían cada una de las secciones de la página web
 #### `index.php`
 ```php
 <? const TITULO ='Inicio'?>
-<?php require '_config.php' ?>
-<?php include '_header.php' ?>
+<?php require 'includes/_config.php' ?>
+<?php include 'includes/_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
 
-<?php include '_footer.php' ?>
+<?php include 'includes/_footer.php' ?>
 ```
 
 #### `contacto.php`
 ```php
 <? const TITULO ='Contacto'?>
-<?php require '_config.php' ?>
+<?php require 'includes/_config.php' ?>
 
-<?php include '_header.php' ?>
+<?php include 'includes/_header.php' ?>
 
 <!-- Aquí el contenido de contacto-->
 <h2>Ver a conocernos</h2>
@@ -156,19 +156,19 @@ C/ Corrida 55 Gijón Asturias
 </address>
 <a href="tel:985555555">985555555</a>
 
-<?php include '_footer.php' ?>
+<?php include 'includes/_footer.php' ?>
 ```
 
 #### `ficha.php`
 ```php
 <? const TITULO ='Ficha de producto'?>
-<?php require '_config.php' ?>
+<?php require 'includes/_config.php' ?>
 
-<?php include '_header.php' ?>
+<?php include 'includes/_header.php' ?>
 
 <!-- Aquí irá el contenido de la ficha de producto-->
 
-<?php include '_footer.php' ?>
+<?php include 'includes/_footer.php' ?>
 ```
 
 
@@ -221,14 +221,8 @@ Volvemos al `index.php`:
 #### index.php
 ```php
 <? const TITULO ='Inicio'?>
-<?php require '_config.php' ?>
-
-<?php include '_header.php' ?>
-
-<!-- Aquí el contenido del apartado -->
-
-<? const TITULO ='Ficha Producto'?>
-<?php include '_header.php' ?>
+<?php require 'includes/_config.php' ?>
+<?php include 'includes/_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
 
