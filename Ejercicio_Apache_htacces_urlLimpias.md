@@ -1,4 +1,4 @@
-# ✂ URLs Lipias con Apache + HTACCESS + Base de Datos
+# ✂️ URLs Lipias con Apache + HTACCESS + Base de Datos
 
 1. Crea un nuevo servidor en Local (para que no interfiera con otros desarrollos)
 2. Activa Apache (.htaccess sólo funciona en apache)
