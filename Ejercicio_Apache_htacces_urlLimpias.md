@@ -23,6 +23,8 @@
         - muestra información de contacto de la empresa
     - **error.php**
         - contenido del 404 con redirección a la web de inicio
+    - **style.css**
+        - ordenes para el estilo de la web
     - **.htaccess**
         - Dirección de archivo que mostrar en caso de error 404
         - URL limpias para que apartados del tipo: index.php y contacto.php sean Inicio e Contacto
@@ -37,6 +39,7 @@
     │── contacto.php          # Página de contacto
     │── ficha.php             # Página de producto individual (muestra detalles según slug)
     │── error.php             # Página 404 con redirección
+    │── style.css             # Estilo CSS de mi web
     │── .htaccess             # Reglas de URL amigables y manejo de errores
     │
     ├── /includes/            # Carpeta para elementos reutilizables
@@ -142,6 +145,56 @@ C/ Corrida 55 Gijón Asturias
 
 <?php include '_footer.php' ?>
 ```
+
+
+
+
+### `style.css`
+Estilo css que tendrán todos los apartados;
+
+```css
+:root{
+    --c1:coral;
+    --c2:lightblue;
+    --ff:sans-serif;
+}
+
+body{
+    font-family: var(--ff);
+
+    max-width: 960px;
+    margin: 10px auto;
+
+    padding: 20px;
+
+    background-color: var(--c1);
+}
+
+header nav{
+    list-style: none;
+    padding-left: 0;
+
+    display: flex;
+    gap:10px
+}
+
+a{
+    text-decoration: none;
+    color:var(--c1);
+    
+}
+
+header, main, footer{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    margin:0 0 20px 0;
+}
+```
+
+
+
+
 
 
 ---
