@@ -419,14 +419,9 @@ if (mysqli_num_rows($resultado) > 0) {
   $miHTML ="No se han encontrado resultados";
 }
 
-
 ?>
 
-
-
-
-
-<? const TITULO = $titulo?>
+<? define(TITULO = $titulo);?>
 <?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
@@ -438,7 +433,6 @@ if (mysqli_num_rows($resultado) > 0) {
 <?php include '_footer.php' ?>
 
 ```
-
 
 
 ---
