@@ -65,7 +65,7 @@ Como el header, footer, aside, etc:
 - **`_footer.php`** contiene el footer y el cierre del HTML y también se carga en todos los apartados.
 - **`_asside.php`** (no existen este caso) pero podría ser la columna lateral de un apartado blog (por ejemplo).
 
-## `_config.php`
+#### `_config.php`
 Constantes y funciones que se podrían necesitar y estarán disponibles en todos los apartados.
 ```php
 <?
@@ -77,7 +77,7 @@ const LANG='es';                        // Idioma del proyecto
 ```
 
 
-### `_header.php`
+#### `_header.php`
 Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
 <!DOCTYPE html>
@@ -102,7 +102,7 @@ Programación para el bloque de la cabecera reutilizado en todos los apartados
     <h1><?=TITULO?></h1>
 ```
 
-## `_footer.php`
+#### `_footer.php`
 Programación para el bloque pie reutilizado en todos los apartado:
 ```php
 </main>
@@ -117,7 +117,7 @@ Programación para el bloque pie reutilizado en todos los apartado:
 ## 🏗️ APARTADOS
 Serían cada una de las secciones de la página web
 
-### `index.php`
+#### `index.php`
 ```php
 <? const TITULO ='Inicio'?>
 <?php requiere '_config.php' ?>
@@ -128,7 +128,7 @@ Serían cada una de las secciones de la página web
 <?php include '_footer.php' ?>
 ```
 
-### `contacto.php`
+#### `contacto.php`
 ```php
 <? const TITULO ='Contacto'?>
 <?php requiere '_config.php' ?>
@@ -145,7 +145,7 @@ C/ Corrida 55 Gijón Asturias
 <?php include '_footer.php' ?>
 ```
 
-### `ficha.php`
+#### `ficha.php`
 ```php
 <? const TITULO ='Ficha de producto'?>
 <?php requiere '_config.php' ?>
@@ -159,7 +159,7 @@ C/ Corrida 55 Gijón Asturias
 
 
 
-### `style.css`
+#### `style.css`
 Estilo css que tendrán todos los apartados;
 
 ```css
