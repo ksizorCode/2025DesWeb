@@ -12,10 +12,14 @@
     - **ficha.php**
         - muestra información del producto individual
 
+---
 #Programación:
 
-## index.php
 
+
+
+## _header.php
+Programación para el bloque de la cabecera reutilizado en todos los apartados
 ```php
 <!DOCTYPE html>
 <html lang="en">
@@ -38,3 +42,7 @@
 <main>
     <h1><?=TITULO?>
 ```
+
+
+## _footer.php
+Programación para el bloque pie reutilizado en todos los apartado:
