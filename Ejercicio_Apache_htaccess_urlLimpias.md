@@ -134,7 +134,7 @@ Serían cada una de las secciones de la página web
 #### `index.php`
 ```php
 <? const TITULO ='Inicio'?>
-<?php requiere '_config.php' ?>
+<?php require '_config.php' ?>
 <?php include '_header.php' ?>
 
 <!-- Aquí el contenido del apartado -->
@@ -145,7 +145,7 @@ Serían cada una de las secciones de la página web
 #### `contacto.php`
 ```php
 <? const TITULO ='Contacto'?>
-<?php requiere '_config.php' ?>
+<?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
 
@@ -162,7 +162,7 @@ C/ Corrida 55 Gijón Asturias
 #### `ficha.php`
 ```php
 <? const TITULO ='Ficha de producto'?>
-<?php requiere '_config.php' ?>
+<?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
 
@@ -221,7 +221,7 @@ Volvemos al `index.php`:
 #### index.php
 ```php
 <? const TITULO ='Inicio'?>
-<?php requiere '_config.php' ?>
+<?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
 
@@ -273,7 +273,7 @@ Actualizamos la programación en ficha para que nos muestre los datos de cada pr
 ```php
 
 <? const TITULO ='Inicio'?>
-<?php requiere '_config.php' ?>
+<?php require '_config.php' ?>
 
 <?php include '_header.php' ?>
 
