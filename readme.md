@@ -5,7 +5,7 @@
 > Fotos Arca de noe: https://drive.google.com/drive/folders/1-C5gvOxGJuDI6mcX5acXvMyHehk-VpjA?usp=drive_link
 
 >[!IMPORTANT]
-> Otra cosa
+> Enace a Figma: https://www.figma.com/board/IJkWysWf8HBJrBOZ5UGrHl/Base-de-Datos?node-id=0-1&t=DlUKij1bNTnxlyv4-1
 
 >[!WARNING]
 > Ui - https://uiverse.io/
