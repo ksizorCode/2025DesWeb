@@ -7,14 +7,14 @@
 
 Aplica una rotación de 13 caracteres alfabéticos. Es reversible sin clave.
 
-'''php
+```php
 $texto = "Hola, mundo!";
 $cifrado = str_rot13($texto);
 $descifrado = str_rot13($cifrado);
 
 echo "Cifrado: $cifrado\n"; 
 echo "Descifrado: $descifrado\n";
-'''
+```
 
 ✔️ Ventaja: No requiere clave.
 ❌ Desventaja: Fácilmente reversible sin seguridad real.
@@ -23,7 +23,7 @@ echo "Descifrado: $descifrado\n";
 
 ### 2. base64
 
-'''php
+```php
 $texto = "Hola, mundo!";
 $cifrado = base64_encode($texto);
 $descifrado = base64_decode($cifrado);
@@ -31,7 +31,7 @@ $descifrado = base64_decode($cifrado);
 echo "Texto original: $texto\n";
 echo "Cifrado: $cifrado\n";
 echo "Descifrado: $descifrado\n";
-'''
+```
 
 base64_encode($texto): Convierte el texto en una representación en base64.
 	•	base64_decode($cifrado): Revierte el proceso y devuelve el texto original.
@@ -48,37 +48,73 @@ Si necesitas más seguridad, podrías combinarlo con una clave XOR o AES.
 
 ---
 
-### 3. Cifrado AES con openssl_encrypt
-
-Este método usa AES-256-CBC, uno de los más seguros.
+### 3. Cifrado XOR 
 
 
-'''php
-function cifrarAES($texto, $clave) {
-    $iv = openssl_random_pseudo_bytes(16);
-    $cifrado = openssl_encrypt($texto, 'aes-256-cbc', $clave, 0, $iv);
-    return base64_encode($iv . $cifrado);
-}
+### 4. Cifrado AES
 
-function descifrarAES($cifrado, $clave) {
-    $cifrado = base64_decode($cifrado);
-    $iv = substr($cifrado, 0, 16);
-    $cifrado = substr($cifrado, 16);
-    return openssl_decrypt($cifrado, 'aes-256-cbc', $clave, 0, $iv);
-}
 
-$texto = "Hola, mundo!";
-$clave = "clave_secreta_segura_32bytes";
-$cifrado = cifrarAES($texto, $clave);
-$descifrado = descifrarAES($cifrado, $clave);
+### 5. Cifrado con Clave
+### 6. Cifrado AER-256-CBC
 
-echo "Cifrado: $cifrado\n";
-echo "Descifrado: $descifrado\n";
-'''
 
-✔️ Ventaja: Alta seguridad, ideal para datos sensibles.
-❌ Desventaja: Requiere una clave segura de 32 bytes.
+## Generar enlaces GET a:
 
+
+
+### Whatsapp con número
+### Whatsap con mensaje 
+### Whatsapp con número y mensaje
+
+
+### Share
+Enlaces a compartir web y publicar en redes estilo Share This Page.
+- facebook
+- twitter / X
+- mendar como mensaje
+- mandar por otras redes
+- mandar como email
+- imprimir
+
+
+
+
+## Mapas
+
+A partir de coordenadas de Longitud y Latitud
+A partir de dirección (calle, número, ciudad y/o Código postal)
+## Mostrar en Open Maps
+
+## Mostrar en Google Maps
+
+## Mostrar en Apple Maps
+
+
+## Conversión a slug 
+
+
+## Calendario
+
+A partir de fecha de inicio, fin y título del evento (entre otras cosas)
+
+## Generar archivo iCal
+
+## Generar enlace a Google Calendar
+
+## JSON
+
+### Encriptiar JSON
+
+### Desencriptar JSON
+
+
+
+## Otras funciones útiles reutilizables para el día a día
+
+
+
+##
+Todo list 
 
 
 
