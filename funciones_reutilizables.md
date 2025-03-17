@@ -998,6 +998,18 @@ echo eliminar_acentos("Murciélago áéíóú ÀÈÌÒÙ ñÑ çÇ") . "<br>"; /
 ```
 
 
+### Generar identificadores únicos seguros
+```php
+function generar_id_unico($longitud = 16) {
+    $bytes = random_bytes($longitud);
+    return bin2hex($bytes);
+}
+
+echo "ID único (32 caracteres): " . generar_id_unico() . "<br>";
+echo "ID único corto (16 caracteres): " . generar_id_unico(8) . "<br>";
+echo "ID único largo (64 caracteres): " . generar_id_unico(32) . "<br>";
+```
+
 ### Calcular la distancia entre coordenadas GPS
 ```php
 function calcular_distancia_gps($lat1, $lon1, $lat2, $lon2, $unidad = 'km') {
