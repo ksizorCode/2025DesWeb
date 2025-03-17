@@ -852,8 +852,193 @@ foreach ($documentos as $doc) {
 ```
 
 
+### Calcular edad apartir de fecha de nacimiento
+```php
+function calcular_edad($fecha_nacimiento) {
+    $nacimiento = new DateTime($fecha_nacimiento);
+    $hoy = new DateTime();
+    $diferencia = $nacimiento->diff($hoy);
+    
+    return $diferencia->y;
+}
+
+echo "Edad: " . calcular_edad('1990-05-15') . " años<br>";
+```
 
 
+### Acortar texto con puntos suspensivos
+
+```php
+function acortar_texto($texto, $longitud_maxima = 100, $preservar_palabras = true) {
+    if (strlen($texto) <= $longitud_maxima) {
+        return $texto;
+    }
+    
+    if ($preservar_palabras) {
+        // Cortar hasta el límite máximo
+        $texto_cortado = substr($texto, 0, $longitud_maxima);
+        // Encontrar la última posición de un espacio
+        $ultima_pos_espacio = strrpos($texto_cortado, ' ');
+        
+        if ($ultima_pos_espacio !== false) {
+            // Cortar hasta la última palabra completa
+            $texto_cortado = substr($texto_cortado, 0, $ultima_pos_espacio);
+        }
+        
+        return $texto_cortado . '...';
+    } else {
+        return substr($texto, 0, $longitud_maxima) . '...';
+    }
+}
+
+$texto_largo = "Este es un ejemplo de un texto muy largo que necesitamos acortar para mostrar en un resumen o en una lista de resultados donde el espacio es limitado.";
+echo acortar_texto($texto_largo, 50) . "<br>";
+
+```
+
+
+### Generar código QR
+
+```php
+function generar_codigo_qr($datos, $tamaño = 200) {
+    // Se necesita tener instalada la librería GD
+    $datos_codificados = urlencode($datos);
+    return "https://chart.googleapis.com/chart?chs={$tamaño}x{$tamaño}&cht=qr&chl={$datos_codificados}&choe=UTF-8";
+}
+
+// Uso básico para URL
+$url_qr = generar_codigo_qr("https://www.example.com");
+echo "<img src='{$url_qr}' alt='Código QR'>";
+
+// Uso para vCard
+$vcard = "BEGIN:VCARD\nVERSION:3.0\nN:Apellidos;Nombre\nTEL:+34612345678\nEMAIL:email@ejemplo.com\nEND:VCARD";
+$vcard_qr = generar_codigo_qr($vcard);
+echo "<img src='{$vcard_qr}' alt='Código QR vCard'>";
+
+```
+
+
+### Generar nombres de archivos únicos
+
+```php
+function generar_nombre_archivo_unico($nombre_original, $directorio = '') {
+    // Obtener la extensión del archivo
+    $extension = pathinfo($nombre_original, PATHINFO_EXTENSION);
+    
+    // Crear un nombre base único (sin extensión)
+    $nombre_base = pathinfo($nombre_original, PATHINFO_FILENAME);
+    
+    // Sanitizar el nombre (eliminar caracteres especiales)
+    $nombre_base = preg_replace('/[^a-zA-Z0-9-_]/', '', $nombre_base);
+    
+    // Añadir timestamp para garantizar unicidad
+    $nombre_unico = $nombre_base . '_' . time() . '_' . mt_rand(1000, 9999);
+    
+    // Comprobar si ya existe un archivo con este nombre
+    if (!empty($directorio)) {
+        $contador = 1;
+        $nombre_archivo = $nombre_unico . '.' . $extension;
+        
+        while (file_exists($directorio . '/' . $nombre_archivo)) {
+            $nombre_archivo = $nombre_unico . '_' . $contador . '.' . $extension;
+            $contador++;
+        }
+        
+        return $nombre_archivo;
+    }
+    
+    return $nombre_unico . '.' . $extension;
+}
+
+echo generar_nombre_archivo_unico('documento.pdf') . "<br>";
+echo generar_nombre_archivo_unico('mi foto.jpg') . "<br>";
+echo generar_nombre_archivo_unico('archivo con espacios!.docx') . "<br>";
+```
+
+
+### Generar colores aleatorioes en formato hexadecimal
+```php
+function color_aleatorio($brillante = false) {
+    if ($brillante) {
+        // Colores con alta luminosidad
+        $r = mt_rand(150, 255);
+        $g = mt_rand(150, 255);
+        $b = mt_rand(150, 255);
+    } else {
+        $r = mt_rand(0, 255);
+        $g = mt_rand(0, 255);
+        $b = mt_rand(0, 255);
+    }
+    
+    return sprintf("#%02x%02x%02x", $r, $g, $b);
+}
+
+echo "Color aleatorio: <span style='background-color:" . color_aleatorio() . "; padding: 5px 10px;'>" . color_aleatorio() . "</span><br>";
+echo "Color brillante: <span style='background-color:" . color_aleatorio(true) . "; padding: 5px 10px;'>" . color_aleatorio(true) . "</span><br>";
+```
+
+
+
+### Eliminar acentos y caracteres especiales
+```php
+function eliminar_acentos($texto) {
+    $no_permitidos = [
+        'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ü' => 'u',
+        'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U', 'Ü' => 'U',
+        'à' => 'a', 'è' => 'e', 'ì' => 'i', 'ò' => 'o', 'ù' => 'u',
+        'À' => 'A', 'È' => 'E', 'Ì' => 'I', 'Ò' => 'O', 'Ù' => 'U',
+        'ñ' => 'n', 'Ñ' => 'N',
+        'ç' => 'c', 'Ç' => 'C'
+    ];
+    
+    return strtr($texto, $no_permitidos);
+}
+
+echo eliminar_acentos("Murciélago áéíóú ÀÈÌÒÙ ñÑ çÇ") . "<br>"; // "Murcielago aeiou AEIOU nN cC"
+```
+
+
+### Calcular la distancia entre coordenadas GPS
+```php
+function calcular_distancia_gps($lat1, $lon1, $lat2, $lon2, $unidad = 'km') {
+    // Radio de la Tierra en kilómetros
+    $radio_tierra = 6371;
+    
+    // Convertir grados a radianes
+    $lat1 = deg2rad($lat1);
+    $lon1 = deg2rad($lon1);
+    $lat2 = deg2rad($lat2);
+    $lon2 = deg2rad($lon2);
+    
+    // Fórmula de Haversine
+    $dlat = $lat2 - $lat1;
+    $dlon = $lon2 - $lon1;
+    
+    $a = sin($dlat/2) * sin($dlat/2) + cos($lat1) * cos($lat2) * sin($dlon/2) * sin($dlon/2);
+    $c = 2 * atan2(sqrt($a), sqrt(1-$a));
+    $distancia = $radio_tierra * $c;
+    
+    // Convertir unidades si es necesario
+    if ($unidad == 'mi') {
+        $distancia *= 0.621371; // Convertir a millas
+    } elseif ($unidad == 'm') {
+        $distancia *= 1000; // Convertir a metros
+    }
+    
+    return round($distancia, 2);
+}
+
+// Ejemplo: Madrid a Barcelona
+$madrid_lat = 40.416775;
+$madrid_lon = -3.703790;
+$barcelona_lat = 41.385064;
+$barcelona_lon = 2.173404;
+
+echo "Distancia entre Madrid y Barcelona: " . 
+     calcular_distancia_gps($madrid_lat, $madrid_lon, $barcelona_lat, $barcelona_lon) . " km<br>";
+echo "Distancia en millas: " . 
+     calcular_distancia_gps($madrid_lat, $madrid_lon, $barcelona_lat, $barcelona_lon, 'mi') . " millas<br>";
+```
 
 
 
