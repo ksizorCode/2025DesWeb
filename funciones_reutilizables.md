@@ -14,6 +14,7 @@ Ejemplo:
 - La letra B se convierte en O.
 - La letra M se convierte en Z.
 - La letra N se convierte en A.
+- 
 ROT13 es un cifrado simétrico, por lo que aplicarlo dos veces al mismo texto lo devuelve a su forma original.
 
 ```php
