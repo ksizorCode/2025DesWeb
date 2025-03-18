@@ -350,6 +350,20 @@ echo "Enlace WhatsApp completo: $enlace";
 
 ```
 
+Si necesitamos compartir la URL actual:
+
+```php
+$current_url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$enlace_compartir = 'https://wa.me/?text=' . urlencode('Hola, mira esto: ' . $current_url);
+```
+
+Pudiendo insertar la URL en un enlace tipo:    
+```php
+<a href="https://wa.me/?text=Hola, mira esto: <?php echo $current_url; ?>" class="btn btn-primary">Compartir en WhatsApp</a>
+```
+
+
+
 
 
 
