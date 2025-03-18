@@ -10,10 +10,10 @@ El alfabeto inglés tiene 26 caracteres.
 La función `str_rot13` realiza una transformación de cifrado simple conocida como ROT13. Este algoritmo rota cada letra del alfabeto 13 posiciones (13+13 = 26). Es decir, cambia cada letra por la que está 13 lugares adelante en el alfabeto (y viceversa), lo que da como resultado un texto "cifrado" que, al aplicarse de nuevo, devuelve el texto original.
 
 Ejemplo:
-La letra A se convierte en N.
-La letra B se convierte en O.
-La letra M se convierte en Z.
-La letra N se convierte en A.
+- La letra A se convierte en N.
+- La letra B se convierte en O.
+- La letra M se convierte en Z.
+- La letra N se convierte en A.
 ROT13 es un cifrado simétrico, por lo que aplicarlo dos veces al mismo texto lo devuelve a su forma original.
 
 ```php
