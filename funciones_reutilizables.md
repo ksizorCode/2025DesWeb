@@ -364,9 +364,6 @@ Pudiendo insertar la URL en un enlace tipo:
 
 
 
-
-
-
 ### Share
 Genera enlaces para compartir contenido en distintas plataformas:
 
@@ -437,10 +434,7 @@ echo "<a href='{$enlaces_share['twitter']}' target='_blank'>Compartir en Twitter
 echo "<a href='{$enlaces_share['whatsapp']}' target='_blank'>Enviar por WhatsApp</a><br>";
 echo "<a href='{$enlaces_share['email']}'>Enviar por correo</a><br>";
 echo "<a href='{$enlaces_share['print']}'>Imprimir página</a><br>";
-
 ```
-
-
 
 
 # Mapas
@@ -449,7 +443,7 @@ echo "<a href='{$enlaces_share['print']}'>Imprimir página</a><br>";
 Genera enlaces para mostrar un mapa usando latitud y longitud.
 
 
-### -OpenStreetMap:
+### - OpenStreetMap:
 ```php
 $lat = 40.416775;
 $lon = -3.703790;
