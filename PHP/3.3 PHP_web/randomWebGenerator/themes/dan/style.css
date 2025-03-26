@@ -1,0 +1,94 @@
+body{background: lightblue;
+    /* height: 100%; */
+    display:grid;
+      justify-content: center;
+      align-content: center;
+    align-items:center;
+  }
+  
+  section{
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    width:600px;
+    height:430px;
+    
+  }
+  
+  section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  
+  section img:hover{
+    cursor: crosshair;
+    width:300px;
+    opacity:1;
+    filter: contrast(120%);
+  }
+
+  p{
+    text-align: center;
+  }
+
+  header{
+    background: lightgreen;
+    font-size: 25px;
+    border-radius: 20px;
+    border: green solid 3px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer{
+    background: lightgreen;
+    border: green solid 3px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+  }
+
+  main{
+    background: lightgreen;
+    border: green solid 3px;
+    border-radius: 20px;
+    padding: 50px;
+  }
+
+  h1{
+    animation: ani 6s infinite alternate;
+
+  }
+
+  @keyframes ani {
+    0% {
+      rotate: -10deg;
+    }
+    50% {
+        rotate: 0deg;
+    }
+    
+    100% {
+      rotate: 10deg;
+    }
+  }
+
+  #menu1{
+    font-family: 'Shantell Sans', cursive;
+   background:blue;
+   color: white;
+   display:flex;
+  justify-content:center;
+  gap: 15px;
+  list-style: none;
+ }
+
+ #goku{
+    border-radius: 30px;
+    width: 600px;
+ }
