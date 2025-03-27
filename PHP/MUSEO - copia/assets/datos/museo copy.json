@@ -1,0 +1,55 @@
+{
+    "obras": [
+      {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_%28Ecclesia%27s_Paradise%29.jpg/400px-Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_%28Ecclesia%27s_Paradise%29.jpg",
+        "titulo": "El jardín de las delicias",
+        "autor": "El Bosco",
+        "anio": "1490-1510",
+        "estilo": "Renacimiento nórdico",
+        "estilo": "Renacimiento nórdico",
+        "tecnica": "Óleo sobre tabla"
+      },
+      {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/9/99/Las_Meninas_01.jpg",
+        "titulo": "Las meninas",
+        "autor": "Diego Velázquez",
+        "anio": "1656",
+        "estilo": "Barroco",
+        "tecnica": "Óleo sobre lienzo"
+      },
+      {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/1200px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg",
+        "titulo": "El 3 de mayo en Madrid (Los fusilamientos del 3 de mayo)",
+        "autor": "Francisco de Goya",
+        "anio": "1814",
+        "estilo": "Romanticismo",
+        "tecnica": "Óleo sobre lienzo"
+      },
+      {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/7/72/Museo_Sorolla_-_00834_-_Paseo_a_orillas_del_mar.jpg",
+        "titulo": "Paseo a orillas del mar",
+        "autor": "Joaquín Sorolla",
+        "anio": "1909",
+        "estilo": "Impresionismo",
+        "tecnica": "Óleo sobre lienzo"
+      },
+      {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Michelangelo_Caravaggio_060.jpg",
+        "titulo": "Santa Catalina de Alejandría",
+        "autor": "Caravaggio",
+        "anio": "1598-1599",
+        "estilo": "Barroco",
+        "tecnica": "Óleo sobre lienzo"
+      },
+      {
+        "img": "https://content3.cdnprado.net/imagenes/Documentos/imgsem/d3/d3d8/d3d82b0b-9bf2-4082-ab04-66ed53196ccc/6ae08086-cafc-4cfe-b8d8-c3849c4136db.jpg",
+        "titulo": "El triunfo de la muerte",
+        "autor": "Pieter Brueghel el Viejo",
+        "anio": "1562",
+        "estilo": "Renacimiento nórdico",
+        "tecnica": "Óleo sobre tabla"
+      }
+    ]
+  }
+  
+

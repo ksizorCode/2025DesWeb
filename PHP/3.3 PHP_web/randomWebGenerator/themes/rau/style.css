@@ -1,0 +1,14 @@
+body{
+background: blue;
+font-family: monospace;
+padding: 20px;
+max-width:960px;
+margin-inline:auto;
+}
+
+header, main, footer{
+    background: white;
+    padding: 20px;
+    border-radius: 0px;
+    margin-top: 20px;
+}

@@ -2,16 +2,25 @@
 > Sesión CodeSandBox de hoy: https://codesandbox.io/p/live/833bc701-2bff-4510-9ddd-a1ab41817c7a
 
 >[!TIP]
-> Otra cosa
+> Fotos Arca de noe: https://drive.google.com/drive/folders/1-C5gvOxGJuDI6mcX5acXvMyHehk-VpjA?usp=drive_link
 
 >[!IMPORTANT]
-> Otra cosa
+> Enace a Figma: https://www.figma.com/board/IJkWysWf8HBJrBOZ5UGrHl/Base-de-Datos?node-id=0-1&t=DlUKij1bNTnxlyv4-1
 
 >[!WARNING]
-> Otra cosa
+> Ui - https://uiverse.io/
 
 >[!CAUTION]
-> Otra cosa
+> Herramientas para dibujar Diagramas de Bases de datos:
+> - https://www.drawdb.app/
+> - https://dbdiagram.io/d
+> - https://drawsql.app/
+> - https://excalidraw.com/
+> - https://erdlab.io/#home
+> - https://www.figma.com/es-es/figjam/
+> - https://azimutt.app/45f571a6-d9b8-4752-8a13-93ac0d2b7984/c00d0c45-8db2-46b7-9b51-eba661640c3c?token=9a59ccbb-7a58-4c88-9dfc-692de6177be9
+> - https://app.quickdatabasediagrams.com/#/
+> - https://www.mysql.com/products/workbench/
 
 
 
@@ -202,6 +211,7 @@ Contenido:
 ## ScalyDraw
 - [Pizarra ScaliDraw](https://excalidraw.com/#json=NyNiviYVNxrXFps7SkfDS,zOEaAUk8DBTOrAQtaBbwOQ)
 - [Pizarra Compartida222](https://excalidraw.com/#room=08f2441bb25496ccd93e,GPOx_NZfCLcVSTROu8yzrA)
+  [draw.io](https://app.diagrams.net/)
 
 - [🤖🤖🤖 Alumnator - Lunes 24B]([https://codesandbox.io/p/live/52f4314c-9c77-488e-bc7c-93b8aadb6970](https://codesandbox.io/p/live/b006d70d-83d7-45e2-96c3-6d8ee3eab04d)
 

@@ -1,0 +1,86 @@
+/* Laura */
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Foldit:wght@100&display=swap');
+:root{
+    --l1:white;
+    --l2:rgb(222, 156, 244);
+    --l3:rgb(163, 211, 217);
+    --c1:rgb(90, 14, 90);
+    --c2:rgb(108, 108, 169);
+    --c3:black;
+}
+body{
+    max-width: 960px;
+    background-image: linear-gradient(30deg,var(--l2),var(--l1),var(--c2),var(--l1),var(--c1));
+    text-align: center;
+    min-height: 100vh;
+    color:var(--c1);
+    text-shadow: 2px 2px 4px var(--l1);
+    font-family: 'Chilanka', cursive;
+    margin:10px auto;
+    padding: 10px auto;
+    border:1px solid red;
+}
+
+p{font-family: 'Foldit', cursive;}
+a{
+    text-decoration: none;
+}
+img{
+    max-width:100%;
+    width:400px;
+    height:250px;
+    object-fit: cover;
+    border:10px dashed var(--c2);
+    border-radius:10px;
+    transition:.7s;
+}
+img:hover{
+    scale:2;
+}
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+}
+  
+nav{
+    position: sticky;
+    margin:0 auto;
+    overflow: hidden;
+}
+  ul{
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    background:var(--l2);
+    padding:10px;
+    height:20%;
+    gap:10px;
+    text-align: center;
+    border:1px solid red;
+    list-style: none;
+   
+}
+ul.menu li{
+    list-style: none;
+}
+ button{
+    background: var(--l2);
+    color:var(--c2);
+ }
+  
+footer{
+    background: aliceblue;
+    border: 10px dotted #475fad;
+    border-radius: 20px;
+    filter:sepia(1);
+    transition:.7s;
+}
+footer:hover{
+    filter:sepia(0);
+}
+  

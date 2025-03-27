@@ -1,0 +1,326 @@
+/* Eric */
+
+
+
+:root{
+  --c:black;
+  --ff:monospace;
+}
+select{
+  margin:10px;
+}
+body{
+    font-family: var(--ff);
+    background: var(--c);
+    max-width:750px;
+    min-width: 320px;
+    margin-inline: auto;
+    padding: 20px;
+    color:white;
+
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    /* position: fixed; */
+    justify-content: center;
+  
+
+    background-image: linear-gradient(-180deg,rgba(73,74,79,0) 2%,#252525),radial-gradient(50% 137%,rgba(73,74,79,0) 0,#252525 100%), url(/randomwebgenerator/themes/eri/img/thumb-1920-59190.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    }
+
+header{
+  background: black;
+  color:white;
+  border:1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+main{
+  background: black;
+  color:white;
+  border:1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+
+header nav ul{
+  list-style: none;
+  color:white;
+  padding: 0;
+  display: flex;
+  gap:20px;
+  margin:5px;
+  flex-wrap: wrap;
+}
+header{
+  display:flex;
+  gap:30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+header img{
+  max-width:100px;
+}
+img{
+  max-width:100%;
+  border-radius:20px;
+  filter:grayscale(0);
+  transition:2s;
+  scale:.9;
+}
+img:hover{
+  filter:grayscale(1);
+  scale:1;
+}
+
+
+a{
+  text-decoration: none;
+  color:white;
+  border:1px solid white;
+  padding:2px 10px;
+  border-radius:20px;
+}
+
+a:hover{
+  background:white;
+  color:black;
+}
+
+button, .btn{
+  text-align: center;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  background:none;
+  border: white 2px solid;
+  color: white;
+}
+
+button:hover, .btn:hover,
+button.selected, .btn.selected{
+  background: var(--c);
+  color:black;
+  background:white;
+  cursor:pointer;
+
+}
+
+button.unactive, button.disable,
+.btn.unactive, .btn.disable,
+button.unactive:hover, button.disable:hover,
+.btn.unactive:hover, .btn.disable:hover{
+  cursor:not-allowed;
+  color:grey;
+  border: grey solid 1px;
+  background: none;
+  opacity:0.6;
+}
+
+
+
+pre{
+  background:#1c1919;
+  padding:20px;
+  border-radius:20px;
+  border: solid #888 1px;
+}
+
+.pie{
+  display:flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pie img{
+  max-width: 100px;
+  position:relative;
+  left: 30%;
+}
+footer a{
+  margin:0 auto;
+  color:white;
+  text-transform:uppercase;
+  text-align:center;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+  display:grid;
+  border:none;
+  max-width:100px;
+}
+
+footer{
+  background:#000000d4;
+  color:white;
+  padding: 20px;
+  border-radius: 20px;
+  border:white 1px solid;
+}
+
+
+
+/* Animacion typewriter (maquina de escribir) */
+
+
+
+
+@keyframes typing {
+  0.0000%, 50.3488%  { content: ""; }
+  2.1395%, 49.2093%  { content: "T"; }
+  4.2791%, 48.0698%  { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302%  { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907%  { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512%  { content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116%  { content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721%  { content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326%  { content: "TÃƒÂ­tulo 1"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 1 "; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 1 '"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 1 '<"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 1 '<h"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 1 '<h1"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 1 '<h1>"; }
+  30.1163%, 35.2326%  { content: "TÃƒÂ­tulo 1 '<h1>'"; }
+}
+
+@keyframes typing2 {
+  0.0000%, 50.3488% { content: ""; }
+  2.1395%, 49.2093% { content: "T"; }
+  4.2791%, 48.0698% { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302% { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907% { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512%{ content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116%{ content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721%{ content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326%{ content: "TÃƒÂ­tulo 2"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 2 '"; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 2 '<"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 2 '<h"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 2 '<h2"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 2 '<h2>"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 2 '<h2>'"; }
+}
+@keyframes typing3 {
+  0.0000%, 50.3488% { content: ""; }
+  2.1395%, 49.2093% { content: "T"; }
+  4.2791%, 48.0698% { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302% { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907% { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512%{ content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116%{ content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721%{ content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326%{ content: "TÃƒÂ­tulo 3"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 3 '"; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 3 '<"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 3 '<h"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 3 '<h3"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 3 '<h3>"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 3 '<h3>'"; }
+}
+@keyframes typing4 {
+  0.0000%, 50.3488% { content: ""; }
+  2.1395%, 49.2093% { content: "T"; }
+  4.2791%, 48.0698% { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302% { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907% { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512%{ content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116%{ content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721%{ content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326%{ content: "TÃƒÂ­tulo 4"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 4 '"; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 4 '<"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 4 '<h"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 4 '<h4"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 4 '<h4>"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 4 '<h4>'";}
+}
+@keyframes typing5 {
+  0.0000%, 50.3488% { content: ""; }
+  2.1395%, 49.2093% { content: "T"; }
+  4.2791%, 48.0698% { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302% { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907% { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512%{ content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116%{ content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721%{ content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326%{ content: "TÃƒÂ­tulo 5"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 5 '"; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 5 '<"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 5 '<h"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 5 '<h5"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 5 '<h5>"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 5 '<h5>'";}
+}
+@keyframes typing6 {
+  0.0000%, 50.3488% { content: ""; }
+  2.1395%, 49.2093% { content: "T"; }
+  4.2791%, 48.0698% { content: "TÃƒÂ­"; }
+  6.4186%, 47.9302% { content: "TÃƒÂ­t"; }
+  8.5581%, 46.7907% { content: "TÃƒÂ­tu"; }
+  10.6977%, 45.6512% { content: "TÃƒÂ­tul"; }
+  12.8372%, 44.5116% { content: "TÃƒÂ­tulo"; }
+  14.9767%, 43.3721% { content: "TÃƒÂ­tulo "; }
+  16.1163%, 42.2326% { content: "TÃƒÂ­tulo 6"; }
+  18.1163%, 41.2326% { content: "TÃƒÂ­tulo 6 '"; }
+  20.1163%, 40.2326% { content: "TÃƒÂ­tulo 6 '<"; }
+  22.1163%, 39.2326% { content: "TÃƒÂ­tulo 6 '<h"; }
+  24.1163%, 38.2326% { content: "TÃƒÂ­tulo 6 '<h6"; }
+  26.1163%, 37.2326% { content: "TÃƒÂ­tulo 6 '<h6>"; }
+  28.1163%, 36.2326% { content: "TÃƒÂ­tulo 6 '<h6>'"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 8s infinite;
+}
+.typewriter2::before {
+  content: "";
+  animation: typing2 8s infinite;
+}
+.typewriter3::before {
+  content: "";
+  animation: typing3 8s infinite;
+}
+.typewriter4::before {
+  content: "";
+  animation: typing4 8s infinite;
+}
+.typewriter5::before {
+  content: "";
+  animation: typing5 8s infinite;
+}
+.typewriter6::before {
+  content: "";
+  animation: typing6 8s infinite;
+}
+
+
+
+.section1, .section2{
+  display:flex;
+}
+.section1 img{
+  max-width:40%;
+}
+.section2 img{
+  max-width:45%;
+}
+.section2{
+justify-content: center;
+}

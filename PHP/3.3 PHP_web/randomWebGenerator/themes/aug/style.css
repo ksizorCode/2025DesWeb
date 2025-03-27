@@ -1,0 +1,35 @@
+/* Augusto Lunar */
+body{
+background: rgb(27, 202, 255);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 10px;
+max-width:960px;
+margin-inline:auto;
+}
+
+header, main, footer{
+    background: whitesmoke;
+    padding: 10px;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+img{
+         border-radius: 10px;
+    max-width: 50%;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             display: block;
+             margin: auto;
+}
+ h1, h2, h3, h4, h5, h6{
+    color:whitesmoke;
+    text-align: center;
+    border-style: initial;
+    border-radius: 30px;
+ }
+ aside{
+    border-style: double;
+ }
+ 
