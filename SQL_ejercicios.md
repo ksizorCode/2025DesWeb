@@ -44,12 +44,17 @@ VALUES ('elefante', 'ele.jpg', 'bichu grandón con trompa', 1),
 ('pez espada', 'espada.jpg', 'el pez que hace esgrima', 3),
 ('rinoceronte', 'rino.jpg', 'cuidado con el cuerno', 1);
 ```
-|id_especie	|nombre_especie	|icono|
-|-----------|---------------|-----|
-|1	|paquidermo	|paquidermo.jpg|
-|2	|felino	|icono_gato.jpg|
-|3	|pez	|iconoPez.jpg|
-|4	|canino	|icono-perro.jpg|
+
+| ID | Nombre del Animal | Foto | Descripción | ID Especie |
+|----|------------------|------|-------------|------------|
+| 1  | elefante        | ele.jpg | bichu grandón con trompa | 1 |
+| 2  | león            | leon.jpg | el rey de la selva | 2 |
+| 3  | tiburón         | tiburon.jpg | el malo de nemo | 3 |
+| 4  | perro          | rex.jpg | el mejor amigo del hombre | 4 |
+| 5  | gato           | tirso.jpg | el peor amigo del hombre | 2 |
+| 6  | pez espada     | espada.jpg | el pez que hace esgrima | 3 |
+| 7  | rinoceronte    | rino.jpg | cuidado con el cuerno | 1 |
+
 
 si quieres puedes insertar más datos volviendo a añadir esto:
 ```sql
@@ -65,6 +70,36 @@ VALUES ('camello', 'cammel.jpg', 'aguante mucho sin beber', 5),
 ('vacas','cow.jpg','tienen varios estómagos',8),
 ('oveja','oveja.jpg','tienen mucha lana',9);
 ```
+
+
+### 3.2 Inserción de datos en la Tabla Especies
+```sql
+INSERT INTO `especie` (`nombre_especie`, `icono`)
+VALUES ('paquidermo', 'i_paquidermo.jpg'),
+('felino', 'icono_gato.jpg'),
+('pez', 'iconoPez.jpg'),
+('canino', 'icono-perro.jpg');
+```
+|id_especie	|nombre_especie	|icono|
+|-----------|---------------|-----|
+|1	|paquidermo	|paquidermo.jpg|
+|2	|felino	|icono_gato.jpg|
+|3	|pez	|iconoPez.jpg|
+|4	|canino	|icono-perro.jpg|
+
+
+Si has añadido el segundo bloque de animales, añade también sus especies:
+```sql
+INSERT INTO especies (nombre_especie, icono)
+VALUES
+('camelido', 'camello.jpg'),
+('insecto', 'icono_bug.jpg'),
+('equino', 'icono_caballo.png'),
+('bovino', 'icono_vaca.png'),
+('ovino', 'ico_ovino.svg');
+```
+
+
 
 Tras haber insertado estos elementos esta sería la estructura con lo anterior y actual actualizado (si se ha actualizado tanto la tabla Animales como la tabla Especies):
 
@@ -108,25 +143,6 @@ Tras haber insertado estos elementos esta sería la estructura con lo anterior y
 
 
 
-### 3.2 Inserción de datos en la Tabla Especies
-```sql
-INSERT INTO `especie` (`nombre_especie`, `icono`)
-VALUES ('paquidermo', 'i_paquidermo.jpg'),
-('felino', 'icono_gato.jpg'),
-('pez', 'iconoPez.jpg'),
-('canino', 'icono-perro.jpg');
-```
-
-Si has añadido el segundo bloque de animales, añade también sus especies:
-```sql
-INSERT INTO especies (nombre_especie, icono)
-VALUES
-('camelido', 'camello.jpg'),
-('insecto', 'icono_bug.jpg'),
-('equino', 'icono_caballo.png'),
-('bovino', 'icono_vaca.png'),
-('ovino', 'ico_ovino.svg');
-```
 
 # Relacionamos las Dos Tablas:
 
