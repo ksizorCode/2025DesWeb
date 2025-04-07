@@ -1,6 +1,7 @@
-# TCP-IP
+### TCP-IP
 https://www.figma.com/board/DfVugxiMtNOVcVjmyEeBiH/TCP-IP?node-id=0-1&t=aL8mtn6rJlg0I4MG-1
 
+---
 
 >[!NOTE]
 > Sesión CodeSandBox de hoy: https://codesandbox.io/p/live/833bc701-2bff-4510-9ddd-a1ab41817c7a
