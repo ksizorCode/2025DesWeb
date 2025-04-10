@@ -1,4 +1,4 @@
-# ** 💍Relaciones entre Tablas de Bases de Datos**
+# 💍 Relaciones entre Tablas de Bases de Datos
 
 Este documento cubre conceptos fundamentales en el diseño de bases de datos, tales como **claves primarias**, **claves foráneas** y **normalización**, además de describir los distintos tipos de relaciones entre tablas. A continuación, se presenta un resumen con ejemplos y esquemas para facilitar el aprendizaje.
 
