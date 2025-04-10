@@ -12,8 +12,10 @@ Una **clave primaria** es un campo o conjunto de campos en una tabla que **ident
 
 Ejemplo: Si tienes una tabla de Usuarios, la clave primaria podría ser el ID de usuario, ya que cada usuario tiene un ID único.
 
+Clave Primaria = Primary Key = PK
+
 ### **Ejemplo: Tabla de Usuarios**
-| **ID (PK)** | **Nombre** | **Edad** |
+| **ID🔑(PK)** | **Nombre** | **Edad** |
 |-------------|------------|----------|
 | 1           | Ana        | 30       |
 | 2           | Luis       | 25       |
