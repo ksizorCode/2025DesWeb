@@ -28,6 +28,8 @@ Clave Primaria = Primary Key = PK
 ## **2. Claves Foráneas (Foreign Key)**
 Una **clave foránea** es un campo en una tabla que se refiere a una **clave primaria** en otra tabla.
 Esto **establece una relación** entre ambas tablas y asegura la integridad de los datos.
+Un ejemplo en el mundo real podría ser: el DNI:99 444 333 tiene es conductor del coche MATRÍCULA: 234555BR
+(Es decir, en ambos casos estamos dando referencias únicas)
 
 La clave foránea asegura que los datos entre las tablas estén relacionados de manera consistente.
 
