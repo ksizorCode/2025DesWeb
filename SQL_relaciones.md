@@ -7,7 +7,7 @@ Este documento cubre conceptos fundamentales en el diseño de bases de datos, ta
 ## **1. Claves Primarias (Primary Key)**
 Una **clave primaria** es un campo o conjunto de campos en una tabla que **identifica de forma única cada fila** de esa tabla. Algunas características importantes son:
 - **Única**: No puede haber dos registros con el mismo valor.
-- **No nula**: Cada registro debe tener un valor en la clave primaria.
+- **No nula**: No debe estar vacío; cada registro debe tener un valor en la clave primaria.
 - **Ejemplos en el mundo real**: Matrícula, DNI o ID.
 
 Ejemplo: Si tienes una tabla de Usuarios, la clave primaria podría ser el ID de usuario, ya que cada usuario tiene un ID único.
